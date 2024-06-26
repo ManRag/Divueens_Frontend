@@ -1,0 +1,40 @@
+.carousel {
+    position: relative;
+  }
+  
+  .slide-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .custom-slide {
+    min-width: 100%;
+    max-height: 100%;
+  }
+  
+  .dot-container {
+    position:relative;
+    align-items: center;
+    bottom: -1em;
+    left: 100%;
+    transform: translateX(-50%);
+    display: flex;
+  }
+  
+  .dot {
+    width: 1.5vh;
+    height: 1.5vh;
+    background-color: #fbbdbb;
+    border-radius: 50%;
+    margin: 0 0.1vw;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .dot.current {
+    background-color: #ff5bb1; 
+    border-radius: 1rem;
+    width: 2.5vw;
+    height: 1vh; 
+  }
+  

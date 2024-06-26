@@ -1,0 +1,59 @@
+.custom-slide {
+    display: flex;
+    justify-content: space-around;
+    background-size:cover;
+  }
+  
+  .slide-content {
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    width: 70%;
+  }  
+  .slide-image {
+    max-width: 40%;
+    margin-top: 14vh;
+    margin-bottom: 6vh;
+  }
+  .slide-text-content{
+    width: 50%;
+    margin-top: 5vw;
+  }
+  .slide-text {
+    font-size: 2.2vw;
+  }
+  
+  .slide-button {
+    padding: 0.5vw 1vw;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    border-radius: 0.5vw;
+    font-size: 1vw;
+  }
+  
+  .bold-text{
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 3vw;
+  }
+  .slide-logo{
+    width:10%;
+  }
+  @media (max-width: 950px) {
+    .slide-content {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .slide-image {
+      max-width: 45%;
+      margin-bottom: 1vh;
+      margin-top: 1vh;
+    }
+  
+    .slide-text-content {
+      width: 80%;
+      text-align: center;
+    }
+  }
