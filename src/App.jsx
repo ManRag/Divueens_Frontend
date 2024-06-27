@@ -9,6 +9,8 @@ import FooterBlock from './components/Footer/Footer';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './components/Header/Home';
 
+// testing
+
 function App() {
   return (
     <BrowserRouter>
