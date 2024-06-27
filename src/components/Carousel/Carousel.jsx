@@ -5,13 +5,13 @@ import CustomSlide from '../CustomSlide/CustomSlide';
 const Carousel = ({ slides }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
-  //   }, 4000); 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
+    }, 4000); 
 
-  //   return () => clearInterval(interval); 
-  // }, [slides.length]);
+    return () => clearInterval(interval); 
+  }, [slides.length]);
 
   return (
     <div className="carousel">
