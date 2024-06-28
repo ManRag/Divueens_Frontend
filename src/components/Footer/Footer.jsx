@@ -66,7 +66,7 @@ const baadiList = [
     ],
   },
   {
-    title: "INSPIRE US",
+    title: "Inspire Us",
     chhotiList: [
       {
         url: "",
@@ -79,7 +79,7 @@ const baadiList = [
     ],
   },
   {
-    title: "QUICK LINKS",
+    title: "Quick Links",
     chhotiList: [
       {
         url: "",
@@ -100,7 +100,7 @@ const baadiList = [
     ],
   },
   {
-    title: "TOP CATEGORIES",
+    title: "Top Categories",
     chhotiList: [
       {
         url: "",
@@ -125,7 +125,7 @@ function FooterBlock() {
   function ListItemsAll() {
     return (
       <>
-        <div className="col" style={{gridArea: `col${index}`}} data-footer-part="">
+        <div className="col_" style={{gridArea: 'col_Head'}} data-footer-part="">
           <span>
             <img
               alt=""
@@ -147,9 +147,9 @@ function FooterBlock() {
         </div>
         {baadiList.map((lst, index) => {
           return (
-            <div className="col" style={{gridArea: `col${index}`}} key={index} data-footer-part="">
+            <div className="col_" style={{gridArea: `col_${index}`}} key={index} data-footer-part="">
               <h3 onClick={()=> prev !== index + 1 ? cngView(index + 1) : cngView(0) } className="drpBtn">
-                {lst.title}{toggleView === index + 1 ? <FaChevronUp /> : <FaChevronDown />}
+                {lst.title}{toggleView === index + 1 ? <FaChevronUp className="btnShow" /> : <FaChevronDown className="btnShow"/>}
               </h3>
               <ul className={`close ${toggleView === index + 1 ? "all_Items" : "" }`}>
                 {lst.chhotiList.map((list2, int) => {
@@ -176,25 +176,25 @@ function FooterBlock() {
 
   return (
     <footer data-footer-part="">
-      <div className="row" data-footer-part="">
-        <ListItemsAll />
-        <div className="col socialIcons" data-footer-part="">
-          <a href="">
-            <FaFacebookF />
-          </a>
-          <a href="">
-            <FaInstagram />
-          </a>
-          <a href="">
-            <FaWhatsapp />
-          </a>
-          <a href="">
-            <FaPinterest />
-          </a>
-      </div>
-          <hr />
-          <p class="copyright" data-footer-part="">DIVUEENS ©️ 2024 - All Rights Reserved</p>
+      <div className="row_" data-footer-part="">
+          <ListItemsAll />
+          <div className="col_ socialIcons" style={{gridArea: 'col_Icon'}} data-footer-part="">
+            <a href="">
+              <FaFacebookF />
+            </a>
+            <a href="">
+              <FaInstagram />
+            </a>
+            <a href="">
+              <FaWhatsapp />
+            </a>
+            <a href="">
+              <FaPinterest />
+            </a>
         </div>
+      </div>
+      <hr />
+      <p class="copyright" data-footer-part="">DIVUEENS ©️ 2024 - All Rights Reserved</p>
     </footer>
   );
 }
