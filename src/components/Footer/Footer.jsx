@@ -125,7 +125,7 @@ function FooterBlock() {
   function ListItemsAll() {
     return (
       <>
-        <div className="col _1st" data-footer-part="">
+        <div className="col" style={{gridArea: `col${index}`}} data-footer-part="">
           <span>
             <img
               alt=""
@@ -147,7 +147,7 @@ function FooterBlock() {
         </div>
         {baadiList.map((lst, index) => {
           return (
-            <div className="col" key={index} data-footer-part="">
+            <div className="col" style={{gridArea: `col${index}`}} key={index} data-footer-part="">
               <h3 onClick={()=> prev !== index + 1 ? cngView(index + 1) : cngView(0) } className="drpBtn">
                 {lst.title}{toggleView === index + 1 ? <FaChevronUp /> : <FaChevronDown />}
               </h3>
