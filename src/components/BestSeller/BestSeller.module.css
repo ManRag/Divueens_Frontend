@@ -1,30 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap');
-
-
 .heading {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    /* font-family: "Playwrite DE Grund", cursive; */
     align-items: center;
     width: 100%;
     height: 10vh;
     margin-top: 1rem;
 }
 
-.heading hr {
-    width: 200px;
-    height: 7px;
-    outline: none;
-    border: none;
+.heading h2 {
+    margin: 20px;
+    font-weight: 900;
+    font-size: 1.5rem;
+    font-family: "Playwrite DE Grund", cursive;
 }
 
-.heading h2 {
-  font-family: "Playwrite DE Grund", cursive;
-
-    margin: 20px;
-    font-weight: 600;
-    font-size: 2rem;
+.heading hr {
+    width: 200px;
+    height: 3px;
+    outline: none;
+    border: none;
 }
 
 .heading .hr-right {
@@ -92,7 +87,7 @@
     padding: 10px 0;
     background-color: #f3edef;
     position: relative;
-    
+
 }
 
 
@@ -108,7 +103,7 @@
     max-width: 100%;
     overflow: hidden;
     cursor: pointer;
-   
+
     /* margin: auto; */
 }
 
@@ -135,7 +130,7 @@
     border: none;
     box-shadow: 10px 5px 10px #888;
     /* position: absolute; */
-    
+
 }
 
 .slideBtn {
@@ -188,29 +183,23 @@
 .product-card {
     /* border: 1px solid#E9ACB6; */
     border: 1px solid #FF5BB1;
- 
+
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
-    /* overflow: hidden; */
+    overflow: hidden;
     /* min-width: 200px; */
-    min-width: 200px;
-    
-
+    min-width: 300px;
     text-align: center;
     /* position: relative; */
     /* transition: transform .5s ease-in-out; */
-    transition: box-shadow 0.3s ease;
+    transition: 0.3s ease;
 }
 
 
-.product-card.hover{
-
+.product-card.hover {
     /* transform: scale(1.2) !important; */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
-
-  
-
 }
 
 /* .image-wrapper{
@@ -222,7 +211,7 @@
 .product-card img {
     width: 100%;
     border-radius: 10px 10px 0px 0px;
-    
+
 }
 
 /* .product-card img.hover{
@@ -232,30 +221,42 @@
 } */
 
 .product-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     /* background-color: #E9ACB6; */
-    padding: 10px;
+    /* padding-top: 5px; */
+    padding-bottom: 10px;
     border-radius: 0px 0px 10px 10px;
-
+    
+}
+.product-info>div {
+    flex-direction: column;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 .product-info h3 {
-    margin: 10px 0 5px 0;
-    font-size: 16px;
+    float: left;
+    font-size: 19px;
+    /* font-weight: 300; */
 }
 
 .product-info p {
-    margin: 5px 0 10px 0;
+    float: right;
+    margin-top: 30px;
     color: #666;
 }
 
 .product-info .buy-now {
     /* background-color:#E9ACB6; */
-    background-color:#FF5BB1;
-    
+    background-color: #FF5BB1;
     color: #fff;
     border: none;
+    font-size: 15px;
+    font-weight: bold;
     border-radius: 5px;
-    padding: 10px 20px;
+    padding: 15px 30px;
     cursor: pointer;
     margin-bottom: 5px;
 

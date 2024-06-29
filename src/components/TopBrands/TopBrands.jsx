@@ -1,7 +1,6 @@
 import React from 'react'
 import styles from './TopBrands.module.css'
 import { brands } from '../../assets/assets'
-import BestSeller from '../BestSeller/BestSeller'
 
 const TopBrands = () => {
 
@@ -12,26 +11,24 @@ const TopBrands = () => {
 
 
 
-        <div className={styles["heading"]}>
-          <hr className={styles["hr-left"]} />
-          <h2>Top Brands</h2>
-          <hr className={styles["hr-right"]} />
+      <div className="heading">
+        <hr className="hr-left" />
+        <h2>Top Brands</h2>
+        <hr className="hr-right" />
+      </div>
+      <div className="bar">
+        {brands.map((item,index)=>(
+            <div key={index} className="card">
+            <img src={item} alt="" />
         </div>
-        <div className={styles["brand-background"]}>
-          <div className={styles["bar"]}>
-            {brands.map((item, index) => (
-              <div key={index} className={styles["card"]}>
-                <img src={item} alt="" />
-              </div>
-            ))}
-          </div>
-        </div>
-        <div className={styles["heading-2"]}>
-          <div class={`${styles["spot"]} ${styles["spot1"]}`}></div>
-          <div class={`${styles["spot"]} ${styles["spot2"]}`}></div>
-          <div class={`${styles["spot"]} ${styles["spot3"]}`}></div>
-          <h1>Get Div coins on every order</h1>
-        </div>
+        ))}
+      </div>
+      <div className="heading-2">
+        <div className="spot spot1"></div>
+        <div className="spot spot2"></div>
+        <div className="spot spot3"></div>
+        <h1>Get Div coins on every order</h1>
+      </div>
 
 
       </div>

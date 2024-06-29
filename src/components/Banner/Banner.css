@@ -1,68 +1,83 @@
-.banner-slider {
-    position: relative;
-    width: 100%;
-  
-    margin: auto;
-    overflow: hidden;
-}
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@300;700;900&display=swap");
 
-.banner-slides {
+.header {
+    font-family: "Exo 2", sans-serif;
+    /* background: #3fa1fb; */
+    /* background: linear-gradient(142deg, #3fa1fb 0%, #fc46a8 100%); */
+    max-width: 100vw;
+    margin: 0 auto;
+    padding: 1rem;
     display: flex;
-    transition: transform 0.5s ease-in-out;
-    overflow: hidden;
-}
-
-.banner-slide {
-    min-width: 100%;
-    display: flex;
-    justify-content: space-around;
     align-items: center;
-    flex-wrap: wrap;
-    overflow: hidden;
-}
-.banner-image img {
-    width: 100%; 
-    height: auto; 
-    border-radius: .2rem; 
-    overflow: hidden;
+    justify-content: center;
+    color: #333;
+    /* height: calc(100vh - 4rem); */
 }
 
-
-
-.banner-navigation {
-    position: absolute;
-    width: 100%;
-    top: 50%;
-    display: flex;
-    justify-content: space-between;
-    transform: translateY(-50%);
+.header>h1 {
+    font-size: 60px;
+    /* color: rgb(255, 255, 255); */
+    background-image: linear-gradient(to bottom, #ff71d0, #ffbaba);
+    -webkit-background-clip: text;
+    color: transparent;
+    /* text-shadow: 2px 2px 5px #333 */
 }
 
-.banner-navigation button {
-    background-color: rgba(0, 0, 0, 0.5);
+.title-wrapper {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    transform: skew(0, -10deg);
+}
+
+.top-title {
+    order: 1;
+    text-align: center;
+    display: block;
     color: #fff;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 5px;
+    font-size: clamp(1rem, 4vw, 1.5rem);
+    margin-bottom: 1rem;
+    padding-right: 2rem;
 }
 
-.banner-navigation button:hover {
-    background-color: rgba(0, 0, 0, 0.7);
+.bottom-title {
+    order: 3;
+    text-align: center;
+    display: block;
+    color: #fff;
+    font-size: clamp(1rem, 4vw, 1.5rem);
+    margin-top: 2rem;
+    padding-left: 2rem;
 }
 
-
-
-@media (max-width: 480px) {
-    .banner-image {
-        width: 100%; 
-        height: 100%;
-    }
+.sweet-title {
+    order: 2;
+    color: #fde9ff;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: clamp(3rem, 10vw, 6rem);
+    line-height: 0.75em;
+    text-align: center;
+    text-shadow: 3px 1px 1px #4af7ff, 2px 2px 1px #165bfb, 4px 2px 1px #4af7ff, 3px 3px 1px #165bfb, 5px 3px 1px #4af7ff, 4px 4px 1px #165bfb, 6px 4px 1px #4af7ff, 5px 5px 1px #165bfb, 7px 5px 1px #4af7ff, 6px 6px 1px #165bfb, 8px 6px 1px #4af7ff, 7px 7px 1px #165bfb, 9px 7px 1px #4af7ff;
 }
 
-@media (max-width: 300px) {
-    .banner-image {
-        width: 100%; 
-        height: 100%;
-    }
+.sweet-title span {
+    display: block;
+    position: relative;
 }
+
+.sweet-title span:before {
+    content: attr(data-text);
+    position: absolute;
+    text-shadow: 2px 2px 1px #e94aa1, -1px -1px 1px #c736f9, -2px 2px 1px #e94aa1, 1px -1px 1px #f736f9;
+    z-index: 1;
+}
+
+.sweet-title span:nth-child(1) {
+    padding-right: 2.25rem;
+}
+
+.sweet-title span:nth-child(2) {
+    padding-left: 2.25rem;
+}
+    

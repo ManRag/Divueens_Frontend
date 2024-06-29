@@ -7,7 +7,6 @@
     padding: 15px;
     display: flex;
     flex-direction: column;
-    /* background-image: url(/images/Shop_By_Category/background.svg); */
     background-position: center;
     background-size:cover;
 }
@@ -68,36 +67,11 @@
     color: white;
     position: absolute;
     bottom: 0;
-    transition: max-height 0.4s ease;
+    transition: max-height .3s ease;
     overflow: hidden;
     cursor: pointer;
     text-decoration: none;
-    font-family: 'Montserrat', sans-serif;
 }
-
-/* .categ .eyes {
-    background-image: url(/images/Shop_By_Category/Eyes.webp);
-}
-
-.categ .face {
-    background-image: url(/images/Shop_By_Category/Face.jpg);
-}
-
-.categ .lips {
-    background-image: url(/images/Shop_By_Category/Lips.webp);
-}
-
-.categ .skincare {
-    background-image: url( /images/Shop_By_Category/SkinCare.webp);
-}
-
-.categ .nails {
-    background-image: url(/images/Shop_By_Category/Nails.webp);
-}
-
-.categ .brush {
-    background-image: url(/images/Shop_By_Category/Brush.webp);
-} */
 
 .categories-item:hover .label {
     max-height: 100%;
