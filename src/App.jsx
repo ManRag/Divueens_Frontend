@@ -9,6 +9,8 @@ import FooterBlock from './components/Footer/Footer';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './components/Header/Home';
 
+// Just checking
+
 function App() {
   return (
     <BrowserRouter>
@@ -19,7 +21,7 @@ function App() {
           element={
             <>
               {/* Components for the home page */}
-              <Home />
+              {/* <Home /> */}
               <div className="app">
                 <Banner />
                 <BestSeller />

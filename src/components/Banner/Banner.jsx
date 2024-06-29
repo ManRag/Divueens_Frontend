@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-// import './banner.js'
+import './Banner.css'
 import { banner } from '../../assets/assets.js'
 
 
