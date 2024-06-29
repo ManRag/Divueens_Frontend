@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import './Navbar.css'; 
-import { FaHeart, FaShoppingCart} from 'react-icons/fa'; // Import icons from react-icons/fa
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min';
+import { FaHeart, FaShoppingCart, FaUser, FaBars} from 'react-icons/fa';
 
 const Navbar = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 1250);
-
+  const [showMenu, setShowMenu] = useState(false);
   const handleResize = () => {
     setIsMobile(window.innerWidth <= 1250);
   };
-
+  const toggleMenu = () => {
+    setShowMenu(!showMenu);
+  };
   useEffect(() => {
     window.addEventListener('resize', handleResize);
     return () => {
@@ -19,57 +19,58 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="navbar bg-body-tertiary fixed-top">
+    <nav className="navbar">
       {isMobile ? (
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">Divueens</a>
-          <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
+          <div className='logotoggler'>
+          <img src="/path/to/your/logo.png" alt="Divueens" className="brand-icon" />
+          <button className="navbar-toggler" onClick={toggleMenu}>
+            <FaBars className="navbar-icon" />
           </button>
-          <div className="offcanvas offcanvas-end" tabIndex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          </div>
+          <div className={`offcanvas ${showMenu ? 'show' : ''}`}>
             <div className="offcanvas-header">
-              <h5 className="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
-              <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              <h5 className="offcanvas-title">Divueens</h5>
+              <button type="button" className="btn-close" onClick={toggleMenu}>&times;</button>
             </div>
             <div className="offcanvas-body">
-              <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
-                <li className="nav-item">
-                  <a className="nav-link active" aria-current="page" href="#">Makeup</a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="#">Skin</a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="#">Hair Care</a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="#">Nail Care</a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="#">Body Care</a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="#">Tools and Accessories</a>
-                </li>
+              <ul className="navbar-nav">
+                <li className="nav-item"><a className="nav-link active" href="#">Makeup</a></li>
+                <li className="nav-item"><a className="nav-link" href="#">Skin</a></li>
+                <li className="nav-item"><a className="nav-link" href="#">Hair Care</a></li>
+                <li className="nav-item"><a className="nav-link" href="#">Nail Care</a></li>
+                <li className="nav-item"><a className="nav-link" href="#">Body Care</a></li>
+                <li className="nav-item"><a className="nav-link" href="#">Tools and Accessories</a></li>
               </ul>
-              <form className="d-flex mt-3" role="search">
-                <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"></input>
-                <button className="btn btn-outline-success" type="submit">Search</button>
+              <form className="search-form">
+                <input type="search" placeholder="Search" aria-label="Search" />
+                <button type="submit">Search</button>
               </form>
-              <div className="navbar-icons mt-3">
+              <div className="navbar-icons">
+              <button onClick={toggleCardVisibility} className="icon-button">
+          <FaUser className="navbar-icon" />
+        </button>
+        {isCardVisible && (
+          <div className="card-container">
+            <div className="card">
+              <h2>Card Title</h2>
+              <p>This is the content of the card.</p>
+            </div>
+          </div>
+        )}
+              <FaHeart className="navbar-icon" />
                 <FaShoppingCart className="navbar-icon" />
-                <FaHeart className="navbar-icon" />
               </div>
             </div>
           </div>
         </div>
       ) : (
-        <div className="navbar">
+        <div className="navbar-desktop">
           <div className="navbar-brand">
             <img src="/path/to/your/logo.png" alt="Divueens" className="brand-icon" />
           </div>
           <div className="navbar-search">
-            <input type="text" className="search-input" />
+            <input type="text" className="search-input" placeholder="Search" />
             <button className="search-button">Search</button>
           </div>
           <div className="navbar-links">
@@ -81,13 +82,14 @@ const Navbar = () => {
             <a href="#">Tools and Accessories</a>
           </div>
           <div className="navbar-icons">
+          
+          <FaHeart className="navbar-icon" />
             <FaShoppingCart className="navbar-icon" />
-            <FaHeart className="navbar-icon" />
+            <FaUser className="navbar-icon" />
           </div>
         </div>
       )}
     </nav>
   );
 };
-
 export default Navbar;
