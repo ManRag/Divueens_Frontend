@@ -1,3 +1,5 @@
+import MainLogo from   './Logo.png'
+
 import product_1 from   './product-1.jpg'
 import product_2 from   './product-2.jpeg'
 import product_3 from   './product-3.jpeg'
@@ -6,12 +8,25 @@ import product_5 from   './product-5.jpeg'
 import product_6 from   './product-6.jpeg'
 import product_7 from   './product-7.jpg'
 import product_8 from   './product-8.jpg'
+import product_9 from   './product-9.jpeg'
+import product_10 from   './product-10.jpeg'
+import product_11 from   './product-5.jpeg'
+import product_12 from   './product-12.jpeg'
+import product_13 from   './product-2.jpeg'
+import product_14 from   './product-1.jpg'
+import product_15 from   './product-5.jpeg'
+import product_16 from   './product-8.jpg'
+
+import bg_prod from   './background.jpg'
 
 import brand_1 from './brand-1.jpeg'
 import brand_2 from './brand-2.jpeg'
 import brand_3 from './brand-3.png'
 import brand_4 from './brand-4.png'
 import brand_5 from './brand-5.png'
+import brand_6 from './brand-6.png'
+import brand_7 from './brand-7.png'
+import brand_8 from './brand-8.png'
 
 import banner_1 from './Banner/banner_1.png'
 import banner_2 from './Banner/banner_2.png'
@@ -45,10 +60,33 @@ import ref_pic from './Subscription/ref_pic.jpg'
 
 
 
+// header banner
+import header_1 from './Images/Image1.png'
+import header_2 from './Images/Image2.jpg'
+import header_3 from './Images/Image3.jpg'
+import header_4 from './Images/Image4.jpg'
+
+// Logink and SignUp Pages
+import img1 from "./Authentic/LoginImagesBackground.jpg";
+import googleImg from "./Authentic/google.svg";
+import appleImg from "./Authentic/apple.svg";
+import divLogo from "./Authentic/LOGOLOgin.png";
+
+export {
+      img1,
+      googleImg,
+      appleImg,
+      divLogo
+}
 
 
-
-
+export  { 
+      header_1,
+      header_2,
+      header_3,
+      header_4,
+}
+// header banner 
 
 
 
@@ -57,8 +95,6 @@ export const banner =[
       banner_2,
       banner_3,
       banner_4,
-
-
 ];
 
 export {
@@ -82,7 +118,7 @@ export {
      Face,
     }
 
-export{
+export {
       sub_1,
       sub_2,
       sub_3,
@@ -100,15 +136,37 @@ export const imageUrls = [
      product_6,
      product_7,
      product_8,
+     product_9,
+     product_10,
+     product_11,
+     product_12,
+     product_13,
+     product_14,
+     product_15,
+     product_16,
+     product_9,
+     product_10,
+     product_11,
+     product_12,
+     product_13,
+     product_14,
+     product_15,
+     product_16,
 
     // Add more image filenames or paths as needed
   ];
+  
+export const background_prod = bg_prod;
 
-  export const brands = [
-        brand_1,
-        brand_2,
-        brand_3,
-        brand_4,
-        brand_5,
+export default MainLogo;
 
+export const brands = [
+      brand_1,
+      brand_2,
+      brand_3,
+      brand_4,
+      brand_5,
+      brand_6,
+      brand_7,
+      brand_8,
   ]

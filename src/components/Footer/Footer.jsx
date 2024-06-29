@@ -194,7 +194,7 @@ function FooterBlock() {
         </div>
       </div>
       <hr />
-      <p class="copyright" data-footer-part="">DIVUEENS ©️ 2024 - All Rights Reserved</p>
+      <p className="copyright" data-footer-part="">DIVUEENS ©️ 2024 - All Rights Reserved</p>
     </footer>
   );
 }
