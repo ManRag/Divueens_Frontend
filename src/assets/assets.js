@@ -29,12 +29,10 @@ import brand_7 from './brand-7.png'
 import brand_8 from './brand-8.png'
 // import brand_9 from './brand-9.png'
 
-
 import banner_1 from './Banner/banner_1.png'
 import banner_2 from './Banner/banner_2.png'
 import banner_3 from './Banner/banner_3.png'
 import banner_4 from './Banner/banner_4.png'
-
 
 import bestsellers_1 from './Exclusive_Discount/bestsellers_1.jpg'
 import example from './Exclusive_Discount/EXAMPLE- heading.jpg'
@@ -90,8 +88,6 @@ export  {
 }
 // header banner 
 
-
-
 export const banner =[
       banner_1,
       banner_2,
@@ -146,15 +142,6 @@ export const imageUrls = [
      product_14,
      product_15,
      product_16,
-     product_9,
-     product_10,
-     product_11,
-     product_12,
-     product_13,
-     product_14,
-     product_15,
-     product_16,
-
     // Add more image filenames or paths as needed
   ];
   
