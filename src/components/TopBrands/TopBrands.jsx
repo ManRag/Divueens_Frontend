@@ -1,7 +1,6 @@
 import React from 'react'
 import './TopBrands.css'
 import { brands } from '../../assets/assets'
-import BestSeller from '../BestSeller/BestSeller'
 
 const TopBrands = () => {
 
@@ -23,9 +22,9 @@ const TopBrands = () => {
         ))}
       </div>
       <div className="heading-2">
-        <div class="spot spot1"></div>
-        <div class="spot spot2"></div>
-        <div class="spot spot3"></div>
+        <div className="spot spot1"></div>
+        <div className="spot spot2"></div>
+        <div className="spot spot3"></div>
         <h1>Get Div coins on every order</h1>
       </div>
 

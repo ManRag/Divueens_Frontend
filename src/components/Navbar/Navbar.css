@@ -1,8 +1,4 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-}
+
 .navbar-desktop{
   display: flex;
   position: sticky;
@@ -146,6 +142,7 @@ body {
   /* background-color: #feaed2; */
   color: #ff5bb1;
   text-decoration-color: #ff5bb1;
+  text-underline-offset: 5px;
   text-decoration-thickness: 0.01rem;
 }
 
