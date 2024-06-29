@@ -25,10 +25,6 @@ const BestSeller = () => {
     const [isClicked, setIsClicked] = useState(false);
     const [isClicked2, setIsClicked2] = useState(false);
 
-    // buttons
-    const [isClicked, setIsClicked] = useState(false);
-    const [isClicked2, setIsClicked2] = useState(false);
-
     // Hover effect
     const [hoveredIndex, setHoveredIndex] = useState(null);
     const [hoveredImageIndex, setHoveredImageIndex] = useState(null);
@@ -206,13 +202,9 @@ const BestSeller = () => {
 
             <div className={styles["heading"]}>
                 <hr className={styles["hr-left"]} />
-            <div className={styles["heading"]}>
-                <hr className={styles["hr-left"]} />
                 <h2>Best Seller</h2>
                 <hr className={styles["hr-right"]} />
-                <hr className={styles["hr-right"]} />
             </div>
-            <div className={styles["subheading"]}>
             <div className={styles["subheading"]}>
                 <p>Your Cosmetics and Skincare Products</p>
             </div>
@@ -227,17 +219,6 @@ const BestSeller = () => {
                         backgroundColor: isClicked ? '#ffff' : '#FF5BB1',
                         color: isClicked ? '#000' : '#fff',
                     }} className={styles["second"]}>Trending Now</button>
-            <div className={`${styles["slideBtn"]} ${styles["bestseller_container"]}`}>
-                <button onClick={() => { HandleBtnClicked("newArrivals") }}
-                    style={{
-                        backgroundColor: isClicked ? '#FF5BB1' : '#ffff',
-                        color: isClicked ? '#fff' : '#000',
-                    }} className={styles["first"]}>New Arrivals</button>
-                <button onClick={() => { HandleBtnClicked2("trending") }}
-                    style={{
-                        backgroundColor: isClicked ? '#ffff' : '#FF5BB1',
-                        color: isClicked ? '#000' : '#fff',
-                    }} className={styles["second"]}>Trending Now</button>
             </div>
             <div 
             className={styles['products']}>
@@ -250,25 +231,11 @@ const BestSeller = () => {
                 <div className={styles['controllers']}>
                     <button onClick={prevSlide}><GrPrevious /></button>
                     <button onClick={nextSlide}><GrNext /></button>
-            <div 
-            className={styles['products']}>
 
-                <div className={styles["product-container"]} >
-
-                   {renderProducts()}
-
-                </div>
-                <div className={styles['controllers']}>
-                    <button onClick={prevSlide}><GrPrevious /></button>
-                    <button onClick={nextSlide}><GrNext /></button>
-
-                </div>
                 </div>
             </div>
-            {/* <div className={styles["see-all"]}>
             {/* <div className={styles["see-all"]}>
                 <button>See All</button>
-            </div> */}
             </div> */}
 
         </>
