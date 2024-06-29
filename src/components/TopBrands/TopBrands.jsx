@@ -1,13 +1,15 @@
 import React from 'react'
-import './TopBrands.css'
+import styles from './TopBrands.module.css'
 import { brands } from '../../assets/assets'
 
 const TopBrands = () => {
 
   return (
     <>
-    
-    <div className="brand-section">
+
+      <div className={styles["brand-section"]}>
+
+
 
       <div className="heading">
         <hr className="hr-left" />
@@ -28,7 +30,8 @@ const TopBrands = () => {
         <h1>Get Div coins on every order</h1>
       </div>
 
-    </div>
+
+      </div>
     </>
   )
 }

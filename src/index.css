@@ -16,18 +16,22 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  font-family: "Playwrite DE Grund", cursive;
+
   width: 100%;
   height: 10vh;
 }
 
 .heading hr {
-  width: 200px;
-  height: 3px;
+  width: 300px;
+  height: 4px;
   outline: none;
   border: none;
 }
 
 .heading h2 {
+  font-family: "Playwrite DE Grund", cursive;
+
   margin: 20px;
   font-weight: 900;
   font-size: 2rem;
@@ -41,11 +45,12 @@ body {
 .heading .hr-left {
   background: linear-gradient(to right, #e9acb600, #e9acb646, #e9acb6bd, #E9ACB6);
 }
-.subheading{
+
+.subheading {
   text-align: center;
-    font-size: 0.9rem;
-    font-weight: 400;
-    margin-bottom: 1rem;
+  font-size: 0.9rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
 }
 
 @media (max-width: 767px) {
@@ -59,28 +64,30 @@ body {
 
 @media (max-width: 480px) {
   .heading {
-      font-size: .8rem;
+    font-size: .8rem;
   }
-  .subheading{
+
+  .subheading {
     font-size: .7rem;
     text-align: center;
   }
 
- 
+
 }
 
 
 @media (max-width: 400px) {
   .heading {
-      font-size: .57rem;
-      text-align: center;
+    font-size: .57rem;
+    text-align: center;
   }
-  .subheading{
+
+  .subheading {
     /* font-size: .5rem; */
     text-align: center;
   }
 
- 
+
 }
 
 

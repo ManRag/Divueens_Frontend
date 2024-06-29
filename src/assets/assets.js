@@ -27,6 +27,9 @@ import brand_5 from './brand-5.png'
 import brand_6 from './brand-6.png'
 import brand_7 from './brand-7.png'
 import brand_8 from './brand-8.png'
+import brand_6 from './brand-6.png'
+import brand_7 from './brand-7.png'
+import brand_8 from './brand-8.png'
 
 import banner_1 from './Banner/banner_1.png'
 import banner_2 from './Banner/banner_2.png'
@@ -136,6 +139,14 @@ export const imageUrls = [
      product_6,
      product_7,
      product_8,
+     product_9,
+     product_10,
+     product_11,
+     product_12,
+     product_13,
+     product_14,
+     product_15,
+     product_16,
      product_9,
      product_10,
      product_11,
