@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './TopBrands.module.css'
+import styles from './TopBrands.module.css'
 import { brands } from '../../assets/assets'
-import BestSeller from '../BestSeller/BestSeller'
 
 const TopBrands = () => {
 
@@ -30,6 +30,8 @@ const TopBrands = () => {
           <h1>Get Div coins on every order</h1>
         </div>
 
+
+      </div>
 
       </div>
     </>
