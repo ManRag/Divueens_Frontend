@@ -47,27 +47,9 @@ const Banner = () => {
 
     return (
         <>
-            <h2 className='primary'> Welcome to Divueens</h2>
+            <h1 className='primary'> Welcome to Divueens</h1>
             <section className="banner">
                 <div className="banner-slider">
-                    <div className="slides">
-                        {/* Slide 1 */}
-
-                        {
-                            banner.map((item, index) => (
-                                <div key={index} className="slide">
-                                    <div className="banner-image">
-                                    <img src={item} alt="Beauty Combo 1" />
-                                    </div>
-                                </div>
-
-                            ))
-                        }
-         
-
-                        {/* end slide */}
-
-                    </div>
                     <div className="navigation">
                         <button className="prev" onClick={() => changeBannerSlide(-1)}>❮</button>
                         <button className="next" onClick={() => changeBannerSlide(1)}>❯</button>
