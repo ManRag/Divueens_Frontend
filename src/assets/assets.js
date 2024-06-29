@@ -28,8 +28,7 @@ import brand_6 from './brand-6.png'
 import brand_7 from './brand-7.png'
 import brand_8 from './brand-8.png'
 import brand_9 from './brand-9.png'
-import brand_7 from './brand-7.png'
-import brand_8 from './brand-8.png'
+
 
 import banner_1 from './Banner/banner_1.png'
 import banner_2 from './Banner/banner_2.png'
