@@ -8,7 +8,7 @@ const Carousel = ({ slides }) => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
-    }, 4000); 
+    }, 2000); 
 
     return () => clearInterval(interval); 
   }, [slides.length]);
