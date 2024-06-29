@@ -12,6 +12,7 @@ const newArrivals = [
 ].slice(8,16)
 
 const BestSeller = () => {
+    
     const [selectedCategory, setSelectedCategory] = useState('trending');
     // slider
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
@@ -207,12 +208,12 @@ const BestSeller = () => {
             <div className={`${styles["slideBtn"]} ${styles["bestseller_container"]}`}>
                 <button onClick={() => { HandleBtnClicked("newArrivals") }}
                     style={{
-                        backgroundColor: isClicked ? '#E9ACB6' : '#ffff',
+                        backgroundColor: isClicked ? '#FF5BB1' : '#ffff',
                         color: isClicked ? '#fff' : '#000',
                     }} className={styles["first"]}>New Arrivals</button>
                 <button onClick={() => { HandleBtnClicked2("trending") }}
                     style={{
-                        backgroundColor: isClicked ? '#ffff' : '#E9ACB6',
+                        backgroundColor: isClicked ? '#ffff' : '#FF5BB1',
                         color: isClicked ? '#000' : '#fff',
                     }} className={styles["second"]}>Trending Now</button>
             </div>
