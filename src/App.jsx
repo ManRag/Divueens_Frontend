@@ -21,8 +21,8 @@ function App() {
           element={
             <>
               {/* Components for the home page */}
+              <Home />
               <div className="app">
-                <Home />
                 <Banner />
                 <BestSeller />
                 <TopBrands />
