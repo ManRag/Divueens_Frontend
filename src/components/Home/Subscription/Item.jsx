@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const Item = ({ image }) => {
   const buyNow = (productName, productPrice) => {
@@ -8,32 +8,36 @@ const Item = ({ image }) => {
   return (
     <div className="item">
       <img src={image} alt="Beauty Combo" />
-      <div className="star icon">
-        <span className="fa fa-star checked star"></span>
-        <span className="fa fa-star checked star"></span>
-        <span className="fa fa-star checked star"></span>
-        <span className="fa fa-star checked star"></span>
-        <i className="fa fa-star-o" aria-hidden="true"></i>
+      <div className="Addedpart">
+        <div>
+          <div className="star icon">
+            <span className="fa fa-star checked star"></span>
+            <span className="fa fa-star checked star"></span>
+            <span className="fa fa-star checked star"></span>
+            <span className="fa fa-star checked star"></span>
+            <i className="fa fa-star-o" aria-hidden="true"></i>
+          </div>
+          <p style={{ fontFamily: "Montserrat" }}>
+            Beauty Combo
+            <br />
+            <span style={{ fontWeight: 600, fontSize: 16 }}>
+              Rs. 8400/- <br />
+            </span>
+            <span style={{ fontWeight: 300, fontSize: 12, color: "lightgrey" }}>
+              <del>Rs. 12000/-</del>
+            </span>
+            <span style={{ fontWeight: 300, fontSize: 12, color: "green" }}>
+              30%{" "}
+            </span>
+          </p>
+        </div>
+        <button
+          onClick={() => buyNow("Beauty Combos", 6000)}
+          style={{ fontFamily: "Montserrat" }}
+        >
+          Buy Now
+        </button>
       </div>
-      <p style={{ fontFamily: 'Montserrat' }}>
-        Beauty Combo
-        <br />
-        <span style={{ fontWeight: 600, fontSize: 16 }}>
-          Rs. 8400/- <br />
-        </span>
-        <span style={{ fontWeight: 300, fontSize: 12, color: 'lightgrey' }}>
-          <del>Rs. 12000/-</del>
-        </span>
-        <span style={{ fontWeight: 300, fontSize: 12, color: 'green' }}>
-          30%{' '}
-        </span>
-      </p>
-      <button
-        onClick={() => buyNow('Beauty Combos', 6000)}
-        style={{ fontFamily: 'Montserrat' }}
-      >
-        Buy Now
-      </button>
     </div>
   );
 };
