@@ -47,17 +47,18 @@ const Navbar = () => {
                 <button type="submit">Search</button>
               </form>
               <div className="navbar-icons">
-              <button onClick={toggleCardVisibility} className="icon-button">
+              {/* <button onClick={toggleCardVisibility} className="icon-button"> */}
+              <button className="icon-button">
           <FaUser className="navbar-icon" />
         </button>
-        {isCardVisible && (
+        {/* {isCardVisible && (
           <div className="card-container">
             <div className="card">
               <h2>Card Title</h2>
               <p>This is the content of the card.</p>
             </div>
           </div>
-        )}
+        )} */}
               <FaHeart className="navbar-icon" />
                 <FaShoppingCart className="navbar-icon" />
               </div>

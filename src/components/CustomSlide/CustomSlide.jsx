@@ -12,6 +12,7 @@ const CustomSlide = ({ background, image, text, buttonText, buttonLink }) => {
         </div>
         <img src={image} alt="slide content" className="slide-image" />
       </div>
+
     </div>
   );
 };
