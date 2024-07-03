@@ -22,7 +22,7 @@ footer[data-footer-part] {
   border-top-left-radius: 80px;
   border-top-right-radius: 80px;
   font-family: "Josefin Sans", sans-serif;
-  background: linear-gradient(to bottom, var(--color-light-3), var(--color-light-6));
+  background: linear-gradient(to bottom, var(--color-light-4), var(--color-light-6));
 }
 
 footer[data-footer-part]>p{
