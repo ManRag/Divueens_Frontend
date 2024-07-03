@@ -1,4 +1,5 @@
 import React from "react";
+import { FaRegStar, FaStar, FaStarHalfStroke } from "react-icons/fa6";
 
 const Item = ({ image }) => {
   const buyNow = (productName, productPrice) => {
@@ -11,11 +12,11 @@ const Item = ({ image }) => {
       <div className="Addedpart">
         <div>
           <div className="star icon">
-            <span className="fa fa-star checked star"></span>
-            <span className="fa fa-star checked star"></span>
-            <span className="fa fa-star checked star"></span>
-            <span className="fa fa-star checked star"></span>
-            <i className="fa fa-star-o" aria-hidden="true"></i>
+            <FaStar />
+            <FaStar />
+            <FaStar />
+            <FaStarHalfStroke className="star" />
+            <FaRegStar className="star" />
           </div>
           <p style={{ fontFamily: "Montserrat" }}>
             Beauty Combo
