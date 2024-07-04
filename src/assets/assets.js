@@ -1,23 +1,23 @@
-import MainLogo from   './Logo.png'
+import MainLogo from './Logo.png'
 
-import product_1 from   './product-1.jpg'
-import product_2 from   './product-2.jpeg'
-import product_3 from   './product-3.jpeg'
-import product_4 from   './product-4.jpg'
-import product_5 from   './product-5.jpeg'
-import product_6 from   './product-6.jpeg'
-import product_7 from   './product-7.jpg'
-import product_8 from   './product-8.jpg'
-import product_9 from   './product-9.jpeg'
-import product_10 from   './product-10.jpeg'
-import product_11 from   './product-5.jpeg'
-import product_12 from   './product-12.jpeg'
-import product_13 from   './product-2.jpeg'
-import product_14 from   './product-1.jpg'
-import product_15 from   './product-5.jpeg'
-import product_16 from   './product-8.jpg'
+import product_1 from './product-1.jpg'
+import product_2 from './product-2.jpeg'
+import product_3 from './product-3.jpeg'
+import product_4 from './product-4.jpg'
+import product_5 from './product-5.jpeg'
+import product_6 from './product-6.jpeg'
+import product_7 from './product-7.jpg'
+import product_8 from './product-8.jpg'
+import product_9 from './product-9.jpeg'
+import product_10 from './product-10.jpeg'
+import product_11 from './product-5.jpeg'
+import product_12 from './product-12.jpeg'
+import product_13 from './product-2.jpeg'
+import product_14 from './product-1.jpg'
+import product_15 from './product-5.jpeg'
+import product_16 from './product-8.jpg'
 
-import bg_prod from   './background.jpg'
+import bg_prod from './background.jpg'
 
 import brand_1 from './brand-1.jpeg'
 import brand_2 from './brand-2.jpeg'
@@ -80,7 +80,7 @@ export {
 }
 
 
-export  { 
+export {
       header_1,
       header_2,
       header_3,
@@ -88,7 +88,7 @@ export  {
 }
 // header banner 
 
-export const banner =[
+export const banner = [
       banner_1,
       banner_2,
       banner_3,
@@ -104,17 +104,17 @@ export {
       output,
       prototype,
       suntan,
-    }
+}
 
 export {
-     background,
-     Brush,
-     Eyes,
-     Lips,
-     SkinCare,
-     Nails,
-     Face,
-    }
+      background,
+      Brush,
+      Eyes,
+      Lips,
+      SkinCare,
+      Nails,
+      Face,
+}
 
 export {
       sub_1,
@@ -126,25 +126,121 @@ export {
 
 
 export const imageUrls = [
-     product_1,
-     product_2,
-     product_3,
-     product_4,
-     product_5,
-     product_6,
-     product_7,
-     product_8,
-     product_9,
-     product_10,
-     product_11,
-     product_12,
-     product_13,
-     product_14,
-     product_15,
-     product_16,
-    // Add more image filenames or paths as needed
-  ];
-  
+      {
+            'Name': 'MAC\' Face Mask',
+            'Image': product_1,
+            'Rating': 4.6,
+            'Price': 3000.00,
+            'Original_Price': 5000.00
+      },
+      {
+            'Name': 'MAC\' Face Mask',
+            'Image': product_2,
+            'Rating': 3.5,
+            'Price': 3000.00,
+            'Original_Price': 5000.00
+      },
+      {
+            'Name': 'MAC\' Face Mask',
+            'Image': product_3,
+            'Rating': 4,
+            'Price': 3000.00,
+            'Original_Price': 5000.00
+      },
+      {
+            'Name': 'MAC\' Face Mask',
+            'Image': product_4,
+            'Rating': 4.6,
+            'Price': 3000.00,
+            'Original_Price': 5000.00
+      },
+      {
+            'Name': 'MAC\' Face Mask',
+            'Image': product_5,
+            'Rating': 5,
+            'Price': 3000.00,
+            'Original_Price': 5000.00
+      },
+      {
+            'Name': 'MAC\' Face Mask',
+            'Image': product_6,
+            'Rating': 4.6,
+            'Price': 3000.00,
+            'Original_Price': 5000.00
+      },
+      {
+            'Name': 'MAC\' Face Mask',
+            'Image': product_7,
+            'Rating': 4.4,
+            'Price': 3000.00,
+            'Original_Price': 5000.00
+      },
+      {
+            'Name': 'MAC\' Face Mask',
+            'Image': product_8,
+            'Rating': 3.7,
+            'Price': 3000.00,
+            'Original_Price': 5000.00
+      },
+      {
+            'Name': 'MAC\' Face Mask',
+            'Image': product_9,
+            'Rating': 1.6,
+            'Price': 3000.00,
+            'Original_Price': 5000.00
+      },
+      {
+            'Name': 'MAC\' Face Mask',
+            'Image': product_10,
+            'Rating': 3.6,
+            'Price': 3000.00,
+            'Original_Price': 5000.00
+      },
+      {
+            'Name': 'MAC\' Face Mask',
+            'Image': product_11,
+            'Rating': 4.2,
+            'Price': 3000.00,
+            'Original_Price': 5000.00
+      },
+      {
+            'Name': 'MAC\' Face Mask',
+            'Image': product_12,
+            'Rating': 2.9,
+            'Price': 3000.00,
+            'Original_Price': 5000.00
+      },
+      {
+            'Name': 'MAC\' Face Mask',
+            'Image': product_13,
+            'Rating': 3.6,
+            'Price': 3000.00,
+            'Original_Price': 5000.00
+      },
+      {
+            'Name': 'MAC\' Face Mask',
+            'Image': product_14,
+            'Rating': 4.2,
+            'Price': 3000.00,
+            'Original_Price': 5000.00
+      },
+      {
+            'Name': 'MAC\' Face Mask',
+            'Image': product_15,
+            'Rating': 3.6,
+            'Price': 3000.00,
+            'Original_Price': 5000.00
+      },
+      {
+            'Name': 'MAC\' Face Mask',
+            'Image': product_16,
+            'Rating': 2,
+            'Price': 3000.00,
+            'Original_Price': 5000.00
+      },
+      // Add more image filenames or paths as needed
+];
+
 export const background_prod = bg_prod;
 
 export default MainLogo;
@@ -158,4 +254,4 @@ export const brands = [
       brand_6,
       brand_7,
       brand_8,
-  ]
+]
