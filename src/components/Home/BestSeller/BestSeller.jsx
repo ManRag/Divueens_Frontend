@@ -142,11 +142,11 @@ const BestSeller = () => {
               }}
               key={index}
               style={{ transform: `translateX(-${offset}%)` }}
-              className={`${styles["product-card"]} rounded-[10px] shadow-[0_4px_8px_#bbb] overflow-hidden my-[10px] mx-0 min-w-[300px] text-center transition-[0.3s_ease]   ${hoveredIndex === index ? styles.hover : ""
+              className={`${styles["product-card"]} rounded-[10px] shadow-[0_4px_8px_#bbb] overflow-hidden my-[10px] mx-0 md:min-w-[300px] text-center transition-[0.3s_ease] ${hoveredIndex === index ? styles.hover : ""
                 }`}
             >
               <div className={styles["image-wrapper"]} style={{ overflow: "hidden" }}>
-                <img className="w-full rounded-l-[10px]"
+                <img className="w-full rounded-l-[10px] h-[15rem] md:h-full object-cover"
                   // onMouseLeave={hoverEndHandler} onMouseEnter={()=>{hoverStartHandler(index)}}
                   onMouseEnter={() => {
                     scaleImagehandler(index);
@@ -175,7 +175,7 @@ const BestSeller = () => {
                   <FaArrowsRotate />
                 </a>
               </div>
-              <div className={`${styles["product-info"]} flex justify-evenly items-center rounded-b-[10px] text-[13px] font-bold`}>
+              <div className={`${styles["product-info"]} flex justify-around items-center rounded-b-[10px] font-bold`}>
                 <div className="flex flex-col my-[10px] mx-0 items-start">
                   <div className={`${styles["rating"]} flex items-center`}>
                     {[...Array(Math.floor(list.Rating))].map((_, i) => (
@@ -194,10 +194,10 @@ const BestSeller = () => {
                       <FaRegStar />
                     ))}
                   </div>
-                  <h3 className="text-black my-[5px] mx-0 text-[18px] font-medium">{list.Name}</h3>
-                  <h4 className="text-[16px] text-[#333] font-bold">
+                  <h3 className="text-black my-[5px] mx-0 text-[12px] md:text-[18px] font-medium">{list.Name}</h3>
+                  <h4 className="text-[12px] md:text-[16px] text-[#333] font-bold">
                     ₹{list.Price}/-
-                    <del className="ml-[10px] text-[14px] text-[#aaa] font-normal">
+                    <del className="ml-[10px] text-[11px] md:text-[14px] text-[#aaa] font-normal">
                       <span className={styles["money"]}>
                         ₹{list.Original_Price}/-
                       </span>
@@ -205,7 +205,7 @@ const BestSeller = () => {
                   </h4>
                 </div>
                 <div>
-                  <button className={`${styles["buy-now"]} bg-[#ff5bb1] text-white border-[3px] border-[#ff5bb1] text-[15px] font-bold rounded-[8px] py-[5px] px-[10px] cursor-pointer shadow-[0px_1px_2px_#000] mb-[5px] hover:bg-white hover:text-[#ff5bb1]`}>Buy Now</button>
+                  <button className={`${styles["buy-now"]} bg-[#ff5bb1] text-white border-[3px] border-[#ff5bb1] text-[12px] md:text-[15px] font-bold rounded-[8px] py-[5px] px-[10px] cursor-pointer shadow-[0px_1px_2px_#000] mb-[5px] hover:bg-white hover:text-[#ff5bb1]`}>Buy Now</button>
                 </div>
               </div>
             </div>
@@ -223,11 +223,11 @@ const BestSeller = () => {
               }}
               key={index}
               style={{ transform: `translateX(-${offset}%)` }}
-              className={`${styles["product-card"]} rounded-[10px] shadow-[0_4px_8px_#bbb] overflow-hidden my-[10px] mx-0 min-w-[300px] text-center transition-[0.3s_ease]   ${hoveredIndex === index ? styles.hover : ""
+              className={`${styles["product-card"]} rounded-[10px] shadow-[0_4px_8px_#bbb] overflow-hidden my-[10px] mx-0 md:min-w-[300px] text-center transition-[0.3s_ease] ${hoveredIndex === index ? styles.hover : ""
                 }`}
             >
               <div className={styles["image-wrapper"]} style={{ overflow: "hidden" }}>
-                <img className="w-full rounded-l-[10px]"
+                <img className="w-full rounded-l-[10px] h-[15rem] md:h-full object-cover"
                   // onMouseLeave={hoverEndHandler} onMouseEnter={()=>{hoverStartHandler(index)}}
                   onMouseEnter={() => {
                     scaleImagehandler(index);
@@ -256,7 +256,7 @@ const BestSeller = () => {
                   <FaArrowsRotate />
                 </a>
               </div>
-              <div className={`${styles["product-info"]} flex justify-evenly items-center rounded-b-[10px] text-[13px] font-bold`}>
+              <div className={`${styles["product-info"]} flex justify-around items-center rounded-b-[10px] font-bold`}>
                 <div className="flex flex-col">
                   <div className={`${styles["rating"]} flex items-center`}>
                     {[...Array(Math.floor(list.Rating))].map((_, i) => (
@@ -275,10 +275,10 @@ const BestSeller = () => {
                       <FaRegStar />
                     ))}
                   </div>
-                  <h3 className="text-black my-[5px] mx-0 text-[18px] font-medium">{list.Name}</h3>
-                  <h4 className="text-[16px] text-[#333] font-bold">
+                  <h3 className="text-black my-[5px] mx-0 text-[12px] md:text-[18px] font-medium">{list.Name}</h3>
+                  <h4 className="text-[12px] md:text-[16px] text-[#333] font-bold">
                     ₹{list.Price}/-
-                    <del className="ml-[10px] text-[14px] text-[#aaa] font-normal">
+                    <del className="ml-[10px] text-[11px] md:text-[14px] text-[#aaa] font-normal">
                       <span className={styles["money"]}>
                         ₹{list.Original_Price}/-
                       </span>
@@ -286,7 +286,7 @@ const BestSeller = () => {
                   </h4>
                 </div>
                 <div>
-                  <button className={`${styles["buy-now"]}  bg-[#ff5bb1] text-white border-[3px] border-[#ff5bb1] text-[15px] font-bold rounded-[8px] py-[5px] px-[10px] cursor-pointer shadow-[0px_1px_2px_#000] mb-[5px] hover:bg-white hover:text-[#ff5bb1]`}>Buy Now</button>
+                  <button className={`${styles["buy-now"]}  bg-[#ff5bb1] text-white border-[3px] border-[#ff5bb1] text-[12px] md:text-[15px] font-bold rounded-[8px] py-[5px] px-[10px] cursor-pointer shadow-[0px_1px_2px_#000] mb-[5px] hover:bg-white hover:text-[#ff5bb1]`}>Buy Now</button>
                 </div>
               </div>
             </div>
@@ -303,30 +303,33 @@ const BestSeller = () => {
         <h2>Best Seller</h2>
         <hr className="hr-right" />
       </div>
-      <div className={`${styles["subheading"]} text-center text-[1.2rem] font-normal text-[#808080]`}>
+      <div className={`${styles["subheading"]} text-center text-[0.7rem] md:text-[1.2rem] font-normal text-[#808080]`}>
         <p>Your Cosmetics and Skincare Products</p>
       </div>
+
       <div className={`${styles["slideBtn"]} my-[25px] mx-auto ${styles["bestseller_container"]} text-center`}>
         <button onClick={() => { HandleBtnClicked2("trending"); }}
           style={{ backgroundColor: isClicked ? "#ffff" : "#FF5BB1", color: isClicked ? "#FF5BB1" : "#fff", }}
-          className={`${styles["first"]} rounded-l-[5px] bg-[#ff5bb1] py-[0.5rem] px-[0.2rem] w-[160px] h-[50px] border-[2px] border-[#ff5bb1] outline-none text-[16px] transition-[all_0.8s_ease] font-extrabold`}>Trending Now</button>
+          className={`${styles["first"]} rounded-l-[5px] bg-[#ff5bb1] py-[0.5rem] px-[0.2rem] w-[115px] h-[35px] md:w-[160px] md:h-[50px] border-[2px] border-[#ff5bb1] outline-none text-[10px] md:text-[16px] transition-[all_0.8s_ease] font-extrabold`}>Trending Now</button>
+
         <button onClick={() => { HandleBtnClicked("newArrivals"); }}
           style={{ backgroundColor: isClicked ? "#FF5BB1" : "#ffff", color: isClicked ? "#fff" : "#FF5BB1", }}
-          className={`${styles["second"]} rounded-r-[5px] bg-white py-[0.5rem] px-[0.2rem] w-[160px] h-[50px] border-[2px] border-[#ff5bb1] outline-none text-[16px] transition-[all_0.8s_ease] font-extrabold`}>New Arrivals</button>
+          className={`${styles["second"]} rounded-r-[5px] bg-white py-[0.5rem] px-[0.2rem] w-[115px] h-[35px] md:w-[160px] md:h-[50px] border-[2px] border-[#ff5bb1] outline-none text-[10px] md:text-[16px] transition-[all_0.8s_ease] font-extrabold`}>New Arrivals</button>
       </div>
-      <div className={`${styles["products"]} py-[10px] px-0 bg-[#f3edef] relative`}>
-        <div className={`${styles["product-container"]} relative flex justify-start items-center gap-[20px] my-[20px] mx-[10px] max-w-full overflow-hidden cursor-pointer`}>{renderProducts()}</div>
+
+      <div className={`${styles["products"]} py-[10px] px-0 md:mx-[50px] relative`}>
+        <div className={`${styles["product-container"]} relative flex justify-start items-center gap-[20px] my-[20px] md:mx-[30px] max-w-full overflow-hidden cursor-pointer`}>{renderProducts()}</div>
         <div className={`${styles["controllers"]}`}>
-          <button className="absolute w-[50px] h-[50px] flex ml-[5px] mr-[5px] items-center justify-center rounded-[50%] bg-white text-[#888] border-none shadow-[2px_2px_10px_#888] left-[0%] top-1/2 -translate-y-[50%] " onClick={prevSlide}>
+          <button className="absolute w-[30px] h-[30px] md:w-[50px] md:h-[50px] flex ml-[5px] mr-[5px] items-center justify-center rounded-[50%] bg-white text-[#888] border-none shadow-[2px_2px_10px_#888] left-[0%] top-1/2 -translate-y-[50%] " onClick={prevSlide}>
             <FaAngleLeft />
           </button>
-          <button className="absolute w-[50px] h-[50px] flex ml-[5px] mr-[5px] items-center justify-center rounded-[50%] bg-white text-[#888] border-none shadow-[2px_2px_10px_#888] right-[0%] top-1/2 -translate-y-[50%] " onClick={nextSlide}>
+          <button className="absolute w-[30px] h-[30px] md:w-[50px] md:h-[50px] flex ml-[5px] mr-[5px] items-center justify-center rounded-[50%] bg-white text-[#888] border-none shadow-[2px_2px_10px_#888] right-[0%] top-1/2 -translate-y-[50%] " onClick={nextSlide}>
             <FaAngleRight />
           </button>
         </div>
       </div>
       <div className={`${styles["see-all"]} my-[20px] mx-auto`}>
-        <button className="text-[#ff5bb1] bg-white border-[2px] border-[#ff5bb1] rounded-[5px] py-[10px] px-[20px] cursor-pointer text-[18px] font-semibold block m-auto transition-[.2s] hover:text-[#fff] hover:bg-[#ff5bb1]">View More</button>
+        <button className="text-[#ff5bb1] bg-white border-[2px] border-[#ff5bb1] rounded-[5px] py-[10px] px-[40px] md:px-[20px] cursor-pointer text-[10px] md:text-[18px] font-semibold block m-auto transition-[.2s] hover:text-[#fff] hover:bg-[#ff5bb1]">View More</button>
       </div>
     </>
   );
