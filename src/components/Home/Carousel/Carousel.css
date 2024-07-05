@@ -1,15 +1,15 @@
-.carousel {
+/* .carousel {
     position: relative;
     overflow-x: hidden;
   }
   .slide-container {
     display: flex;
     transition: transform 0.5s ease-in-out;
-  }
-  .custom-slide {
-    min-width: 100%;
-  }
-  .dot-container {
+  } */
+/* .custom-slide {
+  min-width: 100%;
+} */
+/* .dot-container {
     display: flex;
     position:relative;
     align-items: center;
@@ -31,5 +31,4 @@
     border-radius: 1rem;
     width: 2.5vw;
     height: 0.8vh; 
-  }
-  
+  } */

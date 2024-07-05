@@ -49,35 +49,34 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="navbar">
+    <nav className="navbar bg-[#f8f9fa] p-2 sticky top-0 z-[1000]">
       {isMobile ? (
         <div className="container-fluid">
-          <div className='logotoggler'>
-          <img src={DivueensLogoImage} alt="Divueens" className="brand-icon" />
-            <button className="navbar-toggler" onClick={toggleMenu}>
-              <FaBars className="navbar-icon" />
+          <div className='logotoggler flex py-0 px-4 justify-between'>
+          <img src={DivueensLogoImage} alt="Divueens" className="brand-icon h-[3em]" />
+            <button className="navbar-toggler bg-none border-none" onClick={toggleMenu}>
+              <FaBars className="navbar-icon flex cursor-pointer text-[1.2rem] ml-4 hover:text-[#ff5bb1] " />
             </button>
           </div>
-          <div className={`offcanvas ${showMenu ? 'show' : ''}`}>
-            <div className="offcanvas-header">
-            <button type="button" className="btn-close" onClick={toggleMenu}>&times;</button>
+          <div className={`offcanvas  fixed top-0 right-0 h-full min-w-60 w-[30%] bg-white shadow-[-2px_0_5px_rgba(173, 65, 65, 0.5)] p-4 translate-x-full transition-[transform_0.5s_ease-in-out] ${showMenu ? 'show' : ''}`}>
+            <div className="offcanvas-header flex justify-between items-center">
+            <button type="button" className="btn-close  bg-none border-none py-0 px-[0.8rem] rounded-[3rem] bg-[#fdaad5] text-[2.5rem] cursor-pointer" onClick={toggleMenu}>&times;</button>
 
-
-              <div className="navbar-icons">
+              <div className="navbar-icons flex items-center">
               <span
-                  className="navbar-icon"
+                  className="navbar-icon flex cursor-pointer text-[1.2rem] ml-4 hover:text-[#ff5bb1]"
                   onMouseEnter={() => setIsHeartHovered(true)}
                   onMouseLeave={() => setIsHeartHovered(false)}
                 >
                   {isHeartHovered ? <FaHeart /> : <FaRegHeart />}
                 </span>
-                <FaShoppingCart className="navbar-icon" />
+                <FaShoppingCart className="navbar-icon flex cursor-pointer text-[1.2rem] ml-4 hover:text-[#ff5bb1]" />
                 <div className="navbar-icon-wrapper"
                   onMouseEnter={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}
                 >
                   <span
-                  className="navbar-icon"
+                  className="navbar-icon flex cursor-pointer text-[1.2rem] ml-4 hover:text-[#ff5bb1]"
                   onMouseEnter={() => setIsUserHovered(true)}
                   onMouseLeave={() => setIsUserHovered(false)}
                 >
@@ -86,7 +85,7 @@ const Navbar = () => {
                   {showPopover && (
                     <div className="popover-content">
                       <h2>Login or SignUp</h2>
-                      <div className='button-loginsignup'>
+                      <div className='button-loginsignup '>
                         <Link to="/signup" className='ThisLinkStyle SignUp'> Sign Up </Link>
                         <Link to="/login" className='ThisLinkStyle  Login'> Login </Link>
                         <Link className='ThisLinkStyle  ViaGoogle'> Login/Signup via Google </Link>
@@ -96,9 +95,9 @@ const Navbar = () => {
                 </div>
               </div>
             </div>
-            <form className="search-form">
-                <input type="search" placeholder="Search" aria-label="Search" />
-                <button type="submit">Search</button>
+            <form className="search-form flex items-center my-[1rem]">
+                <input className='p-[0.5rem] border-[0.1rem] border-black rounded-l-[0.5rem] rounded-r-[0rem]' type="search" placeholder="Search" aria-label="Search" />
+                <button className='py-[0.5rem] px-[1rem] border-[0.1rem] border-black rounded-r-[0.5rem] rounded-l-[0rem] hover:bg-black hover:text-white' type="submit">Search</button>
               </form>
             <div className="offcanvas-body">
               <ul className="navbar-nav">
@@ -117,7 +116,7 @@ const Navbar = () => {
       ) : (
         <div className="navbar-desktop">
           <div className="navbar-brand">
-          <img src={DivueensLogoImage} alt="Divueens" className="brand-icon" />
+          <img src={DivueensLogoImage} alt="Divueens" className="brand-icon h-[3em]" />
           </div>
           <div className="navbar-search">
             <input type="text" className="search-input" placeholder="Search" />
@@ -131,21 +130,21 @@ const Navbar = () => {
             <a href="#">Body Care</a>
             <a href="#">Tools and Accessories</a>
           </div>
-          <div className="navbar-icons">
+          <div className="navbar-icons flex items-center">
               <span
-                  className="navbar-icon"
+                  className="navbar-icon flex cursor-pointer text-[1.2rem] ml-4 hover:text-[#ff5bb1]"
                   onMouseEnter={() => setIsHeartHovered(true)}
                   onMouseLeave={() => setIsHeartHovered(false)}
                 >
                   {isHeartHovered ? <FaHeart /> : <FaRegHeart />}
                 </span>
-                <FaShoppingCart className="navbar-icon" />
+                <FaShoppingCart className="navbar-icon flex cursor-pointer text-[1.2rem] ml-4 hover:text-[#ff5bb1]" />
                 <div className="navbar-icon-wrapper"
                   onMouseEnter={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}
                 >
                   <span
-                  className="navbar-icon"
+                  className="navbar-icon flex cursor-pointer text-[1.2rem] ml-4 hover:text-[#ff5bb1]"
                   onMouseEnter={() => setIsUserHovered(true)}
                   onMouseLeave={() => setIsUserHovered(false)}
                 >
@@ -154,7 +153,7 @@ const Navbar = () => {
                   {showPopover && (
                     <div className="popover-content">
                       <h2>Login or SignUp</h2>
-                      <div className='button-loginsignup'>
+                      <div className='button-loginsignup '>
                         <Link to="/signup" className='ThisLinkStyle SignUp'> Sign Up </Link>
                         <Link to="/login" className='ThisLinkStyle Login'> Login </Link>
                         <Link className='ThisLinkStyle ViaGoogle'> Login/Signup via Google </Link>

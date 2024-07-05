@@ -6,51 +6,51 @@ body{
     /* font-family: "Playwrite DE Grund", cursive; */
     box-sizing: border-box;
 }
-
+/* 
 .Exclusive_Discount {
     overflow: hidden;
     font-weight: bold;
     background-color: #edede9;
-}
+} */
 
-.Exclusive_Discount .container {
+/* .Exclusive_Discount .container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     margin-top: 30px;
-}
+} */
 
-.Exclusive_Discount .card {
+/* .Exclusive_Discount .card {
     width: 600px;
     margin: 10px;
     margin-right: 60px;
     margin-left: 60px;
-}
+} */
 
-.Exclusive_Discount .card img {
+/* .Exclusive_Discount .card img {
     width: 100%; 
     height: auto;
     display: block; 
     border-radius: 20px; 
-    box-shadow: 2px 2px 3px grey;
-}
+    box-shadow: 2px 2px 3px #808080;
+} */
 
-.Exclusive_Discount .banner-image img {
+/* .Exclusive_Discount .banner-image img {
     width: 100%; 
     height: auto; 
     border-radius: .6rem; 
-}
+} */
 
 .Exclusive_Discount button {
-    border: none;
+    /* border: none;
     outline: none;
     padding: 0;
-    background: transparent;
+    background: transparent; */
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 @media (max-width: 768px) {

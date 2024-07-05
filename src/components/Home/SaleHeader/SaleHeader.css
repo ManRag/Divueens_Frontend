@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
-.sale-header {
+
+/* .sale-header {
   background-color: #7c85d2;
   overflow: hidden;
 }
@@ -7,12 +8,12 @@
   color: #fff;
   padding: 0.1rem;
   font-family: 'Montserrat', sans-serif; 
-}
-.marquee {
+} */
+/* .marquee {
   white-space: nowrap;
   animation: marquee 10s linear infinite; 
-}
-.sale-item {
+} */
+/* .sale-item {
   display: inline-flex;
   align-items: center;
 }
@@ -22,7 +23,7 @@
 .sale-icon {
   color: #000000;
   margin-right: 0.5rem;
-}
+} */
 @keyframes marquee {
   0% {
     transform: translateX(0%);
