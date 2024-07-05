@@ -76,11 +76,7 @@
   }
   
   .star {
-    font-size: 20px;
-    color: rgb(228, 219, 220);
-  }
-  
-  .checked {
+    font-size: 18px;
     color: #ffa200;
   }
   
@@ -205,10 +201,12 @@
   }
   
   .prev {
+    margin-left: 5px;
     box-shadow: 1px 0px 3px #444;
   }
   
   .next {
+    margin-right: 5px;
     box-shadow: -1px 0px 3px #444;
   }
   /* ... (rest of the CSS remains the same) ... */

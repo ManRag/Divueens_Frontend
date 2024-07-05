@@ -12,7 +12,7 @@ export default function Banner() {
         <span className="top-title">Divueens</span>
         <span className="bottom-title">Divueens</span>
       </div> */}
-      <h1>Welcome To Divueens</h1>
+      {/* <h1>Welcome To Divueens</h1> */}
     </section>
   );
 }
