@@ -25,9 +25,9 @@ const Slider = () => {
   };
 
   return (
-    <div className="slider">
+    <div className="slider relative w-full max-w-[1200px] m-auto overflow-hidden py-[20px] px-0">
       <div
-        className="slides"
+        className="slides flex transition-[0.2s] hover:cursor-pointer"
         style={{ transform: `translateX(${-currentSlide * 100}%)` }}
       >
         {slidesData.map((slide, index) => (
