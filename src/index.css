@@ -1,13 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 /* @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); */
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 * {
-    margin: 0;
-    padding: 0;
-    /* font-family: "Poppins", "sans-serif"; */
-    font-family: "Share Tech Mono", monospace;
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
 }
 
+body {
+  font-family: "Montserrat", sans-serif;
+}
 
 .heading {
   display: flex;
@@ -19,8 +26,8 @@
 }
 
 .heading hr {
-  width: 200px;
-  height: 3px;
+  width: 300px;
+  height: 4px;
   outline: none;
   border: none;
 }
@@ -28,21 +35,38 @@
 .heading h2 {
   margin: 20px;
   font-weight: 900;
-  font-size: 1.2rem;
+  font-size: 2rem;
+  font-family: "Montserrat", sans-serif;
+  /* font-family: "Playwrite DE Grund", cursive; */
 }
 
 .heading .hr-right {
-  background: linear-gradient(to left, #e9acb600, #e9acb646, #e9acb6bd, #E9ACB6);
+  border-radius: 10px 0px 0px 10px;
+  background: linear-gradient(
+    to left,
+    #e9acb600,
+    #e9acb646,
+    #e9acb6bd,
+    #e9acb6
+  );
 }
 
 .heading .hr-left {
-  background: linear-gradient(to right, #e9acb600, #e9acb646, #e9acb6bd, #E9ACB6);
+  border-radius: 0px 10px 10px 0px;
+  background: linear-gradient(
+    to right,
+    #e9acb600,
+    #e9acb646,
+    #e9acb6bd,
+    #e9acb6
+  );
 }
-.subheading{
+
+.subheading {
   text-align: center;
-    font-size: 0.9rem;
-    font-weight: 400;
-    margin-bottom: 1rem;
+  font-size: 0.9rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
 }
 
 @media (max-width: 767px) {
@@ -56,30 +80,30 @@
 
 @media (max-width: 480px) {
   .heading {
-      font-size: .8rem;
+    font-size: 0.8rem;
   }
-  .subheading{
-    font-size: .7rem;
+
+  .heading h2{
+    font-size: 1.2rem;
+  }
+
+  .subheading {
+    font-size: 0.7rem;
     text-align: center;
   }
-
- 
 }
-
 
 @media (max-width: 400px) {
   .heading {
-      font-size: .57rem;
-      text-align: center;
-  }
-  .subheading{
-    /* font-size: .5rem; */
+    font-size: 0.57rem;
     text-align: center;
   }
 
- 
+  .subheading {
+    /* font-size: .5rem; */
+    text-align: center;
+  }
 }
-
 
 /* Footer code by Mr. gaurav */
 
