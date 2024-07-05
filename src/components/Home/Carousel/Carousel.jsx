@@ -14,8 +14,8 @@ const Carousel = ({ slides }) => {
   }, [slides.length]);
 
   return (
-    <div className="carousel">
-      <div className="slide-container" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
+    <div className="carousel relative overflow-x-hidden">
+      <div className="slide-container flex transition-[transform_0.5s_ease-in-out]" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
         {slides.map((slide, index) => (
           <CustomSlide
             key={index}
@@ -27,11 +27,11 @@ const Carousel = ({ slides }) => {
           />
         ))}
       </div>
-      <div className="dot-container">
+      <div className="dot-container flex relative items-center justify-center b-[1rem] mb-8">
         {slides.map((_, index) => (
           <span
             key={index}
-            className={index === currentSlide ? 'dot current' : 'dot'}
+            className={index === currentSlide ? 'dot current bg-[#ff5bb1] rounded-2xl w-[2.5vw] h-[0.8vh]' : 'dot w-[1.4vw] h-[2.9vh] bg-[#fbbdbb] rounded-[50%] my-1 mx-[0.1vw] cursor-pointer transition-[background-color_0.3s_ease]'}
             onClick={() => setCurrentSlide(index)}
           >
           </span>

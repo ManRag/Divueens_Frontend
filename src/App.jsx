@@ -1,4 +1,3 @@
-import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import TopBrands from './components/Home/TopBrands/TopBrands';
 import Banner from './components/Home/Banner/Banner';
@@ -21,8 +20,8 @@ function App() {
           element={
             <>
               {/* Components for the home page */}
+              <Home />
               <div className="app">
-                <Home />
                 <Banner />
                 <BestSeller />
                 <TopBrands />
