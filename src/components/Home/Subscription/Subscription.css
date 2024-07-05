@@ -1,37 +1,36 @@
-  .slider {
+  /* .slider {
     position: relative;
     width: 100%;
     max-width: 1200px;
     margin: auto;
     overflow: hidden;
     padding: 20px 0 20px 0;
-  }
+  } */
   
-  .slides {
+  /* .slides {
     display: flex;
     transition: 0.2s;
-    /* background: linear-gradient(to right, #FEAED2, pink, #FEAED2); */
-  }
+  } */
+  /* background: linear-gradient(to right, #FEAED2, pink, #FEAED2); */
   
-  .slides:hover {
+  /* .slides:hover {
     cursor: pointer;
-  }
+  } */
   
-  .slide {
+  /* .slide {
     min-width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    /* background: linear-gradient(to right, #FEAED2, pink, #FEAED2); */
-  }
+  } */
+  /* background: linear-gradient(to right, #FEAED2, pink, #FEAED2); */
   
   .item {
-    text-align: center;
+    /* text-align: center; */
     flex: 1 0 21%; /* Responsive item size */
-    margin: 20px;
+    /* margin: 20px;
     box-sizing: border-box;
-    /* border: solid 2px grey; */
     border-radius: 5px;
     padding-bottom: 5px;
     padding-top: 5px;
@@ -39,7 +38,8 @@
     transition: 0.3s ease-in-out;
     margin-left: 20px;
     margin-right: 20px;
-    box-shadow: 0px 1px 2px #444;
+    box-shadow: 0px 1px 2px #444; */
+    /* border: solid 2px grey; */
   }
   
   .item:hover {
@@ -47,7 +47,7 @@
     z-index: 2;
   }
   
-  .item img {
+  /* .item img {
     width: 90%;
     height: auto;
     border-radius: 5px;
@@ -55,9 +55,9 @@
     margin-right: 2px;
     margin-top: 5px;
     transition: 1s ease-in-out;
-  }
+  } */
   
-  .item p {
+  /* .item p {
     margin: 10px 0;
     font-size: 18px;
   }
@@ -73,41 +73,41 @@
   
   .item button:hover {
     background-color: #feaed2;
-  }
+  } */
   
   .star {
     font-size: 18px;
     color: #ffa200;
   }
   
-  .navigation {
+  /* .navigation {
     position: absolute;
     width: 100%;
     top: 50%;
     display: flex;
     justify-content: space-between;
     transform: translateY(-50%);
-  }
+  } */
 
-  .dots {
+  /* .dots {
     text-align: center;
     margin-top: 20px;
-  }
+  } */
   
   .dot {
-    height: 15px;
+    /* height: 15px;
     width: 15px;
     margin: 0 5px;
-    background-color: pink;
+    background-color: #ffc0cb;
     border-radius: 50%;
     display: inline-block;
-    cursor: pointer;
+    cursor: pointer; */
     transition: background-color 0.6s ease;
   }
   
-  .active {
-    background-color: rgb(196, 39, 146);
-  }
+  /* .active {
+    background-color: #c42792;
+  } */
   
   .see-all {
     text-align: center;
@@ -135,7 +135,7 @@
     background-color: pink;
   }
   
-  .contact-section {
+  /* .contact-section {
     background-color: #fff;
     padding: 50px 0;
     text-align: center;
@@ -151,17 +151,17 @@
     font-size: 16px;
     margin-bottom: 30px;
     color: #555;
-  }
+  } */
   
-  .contact-form {
+  /* .contact-form {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+  } */
   
-  .contact-section input {
+  /* .contact-section input {
     padding: 10px;
-    border: 1px solid maroon;
+    border: 1px solid #800000;
     border-radius: 5px;
     width: 300px;
   }
@@ -174,17 +174,17 @@
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-  }
+  } */
   
-  .image1 {
+  /* .image1 {
     height: 400px;
     width: 1200px;
     display: block;
     margin: auto;
-    box-shadow: 0px 0px 5px grey;
-  }
+    box-shadow: 0px 0px 5px #808080;
+  } */
 
-  .nav {
+  /* .nav {
     padding: 5px;
     display: flex;
     align-items: center;
@@ -192,7 +192,7 @@
     border: none;
     border-radius: 50%;
     background-color: white;
-  }
+  } */
   
   .nav svg {
     width: 25px;
@@ -200,7 +200,7 @@
     color: #555;
   }
   
-  .prev {
+  /* .prev {
     margin-left: 5px;
     box-shadow: 1px 0px 3px #444;
   }
@@ -208,7 +208,7 @@
   .next {
     margin-right: 5px;
     box-shadow: -1px 0px 3px #444;
-  }
+  } */
   /* ... (rest of the CSS remains the same) ... */
   
   /* Add media queries for responsiveness */
@@ -272,12 +272,12 @@
     .contact-section input {
       width: 100%;
     }
-    .try11::before {
+    /* .try11::before {
       width: 60px;
     }
     .try11::after {
       width: 60px;
-    }
+    } */
     .refer-section {
       height: 200px;
     }

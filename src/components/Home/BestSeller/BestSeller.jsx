@@ -142,12 +142,11 @@ const BestSeller = () => {
               }}
               key={index}
               style={{ transform: `translateX(-${offset}%)` }}
-              className={`${styles["product-card"]}   ${
-                hoveredIndex === index ? styles.hover : ""
-              }`}
+              className={`${styles["product-card"]} rounded-[10px] shadow-[0_4px_8px_#bbb] overflow-hidden my-[10px] mx-0 min-w-[300px] text-center transition-[0.3s_ease]   ${hoveredIndex === index ? styles.hover : ""
+                }`}
             >
               <div className={styles["image-wrapper"]} style={{ overflow: "hidden" }}>
-                <img
+                <img className="w-full rounded-l-[10px]"
                   // onMouseLeave={hoverEndHandler} onMouseEnter={()=>{hoverStartHandler(index)}}
                   onMouseEnter={() => {
                     scaleImagehandler(index);
@@ -162,23 +161,23 @@ const BestSeller = () => {
                   alt={`product ${index + currentIndex}`}
                 />
               </div>
-              <div className={styles["cart-info"]}>
-                <button title="Add to cart" style={{transition: '.2s'}}>
+              <div className={`${styles["cart-info"]} absolute left-[93%] top-1/2 -translate-x-[50%] -translate-y-[50%] flex flex-col justify-around w-[min-content] h-[40%] p-[10px] cursor-auto z-10 transition-[.3s]`}>
+                <button title="Add to cart" className="border-none bg-none no-underline text-[#ddd] cursor-pointer translate-x-[100px] hover:text-[#FF5BB1]" style={{ transition: '.2s' }}>
                   <FaCartShopping />
                 </button>
-                <a title="Add to Wishlist" style={{transition: '.3s'}}>
+                <a title="Add to Wishlist" className="border-none bg-none no-underline text-[#ddd] cursor-pointer translate-x-[100px] hover:text-[#FF5BB1]" style={{ transition: '.3s' }}>
                   <FaHeart />
                 </a>
-                <a title="Quick View" style={{transition: '.4s'}}>
+                <a title="Quick View" className="border-none bg-none no-underline text-[#ddd] cursor-pointer translate-x-[100px] hover:text-[#FF5BB1]" style={{ transition: '.4s' }}>
                   <FaMagnifyingGlass />
                 </a>
-                <a title="Compare" style={{transition: '.5s'}}>
+                <a title="Compare" className="border-none bg-none no-underline text-[#ddd] cursor-pointer translate-x-[100px] hover:text-[#FF5BB1]" style={{ transition: '.5s' }}>
                   <FaArrowsRotate />
                 </a>
               </div>
-              <div className={styles["product-info"]}>
-                <div>
-                  <div className={styles["rating"]}>
+              <div className={`${styles["product-info"]} flex justify-evenly items-center rounded-b-[10px] text-[13px] font-bold`}>
+                <div className="flex flex-col my-[10px] mx-0 items-start">
+                  <div className={`${styles["rating"]} flex items-center`}>
                     {[...Array(Math.floor(list.Rating))].map((_, i) => (
                       <FaStar />
                     ))}
@@ -195,10 +194,10 @@ const BestSeller = () => {
                       <FaRegStar />
                     ))}
                   </div>
-                  <h3>{list.Name}</h3>
-                  <h4>
+                  <h3 className="text-black my-[5px] mx-0 text-[18px] font-medium">{list.Name}</h3>
+                  <h4 className="text-[16px] text-[#333] font-bold">
                     ₹{list.Price}/-
-                    <del>
+                    <del className="ml-[10px] text-[14px] text-[#aaa] font-normal">
                       <span className={styles["money"]}>
                         ₹{list.Original_Price}/-
                       </span>
@@ -206,7 +205,7 @@ const BestSeller = () => {
                   </h4>
                 </div>
                 <div>
-                  <button className={styles["buy-now"]}>Buy Now</button>
+                  <button className={`${styles["buy-now"]} bg-[#ff5bb1] text-white border-[3px] border-[#ff5bb1] text-[15px] font-bold rounded-[8px] py-[5px] px-[10px] cursor-pointer shadow-[0px_1px_2px_#000] mb-[5px] hover:bg-white hover:text-[#ff5bb1]`}>Buy Now</button>
                 </div>
               </div>
             </div>
@@ -216,119 +215,118 @@ const BestSeller = () => {
     } else if (selectedCategory === "newArrivals") {
       return newArrivals.map((list, index) => {
         return (
-            <>
-              <div
-                onMouseLeave={hoverEndHandler}
-                onMouseEnter={() => {
-                  hoverStartHandler(index);
-                }}
-                key={index}
-                style={{ transform: `translateX(-${offset}%)` }}
-                className={`${styles["product-card"]}   ${
-                  hoveredIndex === index ? styles.hover : ""
+          <>
+            <div
+              onMouseLeave={hoverEndHandler}
+              onMouseEnter={() => {
+                hoverStartHandler(index);
+              }}
+              key={index}
+              style={{ transform: `translateX(-${offset}%)` }}
+              className={`${styles["product-card"]} rounded-[10px] shadow-[0_4px_8px_#bbb] overflow-hidden my-[10px] mx-0 min-w-[300px] text-center transition-[0.3s_ease]   ${hoveredIndex === index ? styles.hover : ""
                 }`}
-              >
-                <div className={styles["image-wrapper"]} style={{ overflow: "hidden" }}>
-                  <img
-                    // onMouseLeave={hoverEndHandler} onMouseEnter={()=>{hoverStartHandler(index)}}
-                    onMouseEnter={() => {
-                      scaleImagehandler(index);
-                    }}
-                    onMouseLeave={endScaleImagehandler}
-                    style={{
-                      transform:
-                        hoveredImageIndex === index ? "scale(1.2)" : "scale(1)",
-                      transition: "transform 0.3s ease",
-                    }}
-                    src={list.Image}
-                    alt={`product ${index + currentIndex}`}
-                  />
-                </div>
-                <div className={styles["cart-info"]}>
-                  <button title="Add to cart" style={{transition: '.2s'}}>
-                    <FaCartShopping />
-                  </button>
-                  <a title="Add to Wishlist" style={{transition: '.3s'}}>
-                    <FaHeart />
-                  </a>
-                  <a title="Quick View" style={{transition: '.4s'}}>
-                    <FaMagnifyingGlass />
-                  </a>
-                  <a title="Compare" style={{transition: '.5s'}}>
-                    <FaArrowsRotate />
-                  </a>
-                </div>
-                <div className={styles["product-info"]}>
-                  <div>
-                    <div className={styles["rating"]}>
-                      {[...Array(Math.floor(list.Rating))].map((_, i) => (
-                        <FaStar />
-                      ))}
-                      {list.Rating % 1 !== 0 ? (
-                        list.Rating % 1 <= 0.5 ? (
-                          <FaRegStarHalfStroke />
-                        ) : (
-                          <FaRegStar />
-                        )
+            >
+              <div className={styles["image-wrapper"]} style={{ overflow: "hidden" }}>
+                <img className="w-full rounded-l-[10px]"
+                  // onMouseLeave={hoverEndHandler} onMouseEnter={()=>{hoverStartHandler(index)}}
+                  onMouseEnter={() => {
+                    scaleImagehandler(index);
+                  }}
+                  onMouseLeave={endScaleImagehandler}
+                  style={{
+                    transform:
+                      hoveredImageIndex === index ? "scale(1.2)" : "scale(1)",
+                    transition: "transform 0.3s ease",
+                  }}
+                  src={list.Image}
+                  alt={`product ${index + currentIndex}`}
+                />
+              </div>
+              <div className={`${styles["cart-info"]} absolute left-[93%] top-1/2 -translate-x-[50%] -translate-y-[50%] flex flex-col justify-around w-[min-content] h-[40%] p-[10px] cursor-auto z-10 transition-[.3s]`}>
+                <button title="Add to cart" className="border-none bg-none no-underline text-[#ddd] cursor-pointer translate-x-[100px] hover:text-[#FF5BB1]" style={{ transition: '.2s' }}>
+                  <FaCartShopping />
+                </button>
+                <a title="Add to Wishlist" className="border-none bg-none no-underline text-[#ddd] cursor-pointer translate-x-[100px] hover:text-[#FF5BB1]" style={{ transition: '.3s' }}>
+                  <FaHeart />
+                </a>
+                <a title="Quick View" className="border-none bg-none no-underline text-[#ddd] cursor-pointer translate-x-[100px] hover:text-[#FF5BB1]" style={{ transition: '.4s' }}>
+                  <FaMagnifyingGlass />
+                </a>
+                <a title="Compare" className="border-none bg-none no-underline text-[#ddd] cursor-pointer translate-x-[100px] hover:text-[#FF5BB1]" style={{ transition: '.5s' }}>
+                  <FaArrowsRotate />
+                </a>
+              </div>
+              <div className={`${styles["product-info"]} flex justify-evenly items-center rounded-b-[10px] text-[13px] font-bold`}>
+                <div className="flex flex-col">
+                  <div className={`${styles["rating"]} flex items-center`}>
+                    {[...Array(Math.floor(list.Rating))].map((_, i) => (
+                      <FaStar />
+                    ))}
+                    {list.Rating % 1 !== 0 ? (
+                      list.Rating % 1 <= 0.5 ? (
+                        <FaRegStarHalfStroke />
                       ) : (
-                        <></>
-                      )}
-                      {[...Array(5 - Math.ceil(list.Rating))].map((_, i) => (
                         <FaRegStar />
-                      ))}
-                    </div>
-                    <h3>{list.Name}</h3>
-                    <h4>
-                      ₹{list.Price}/-
-                      <del>
-                        <span className={styles["money"]}>
-                          ₹{list.Original_Price}/-
-                        </span>
-                      </del>
-                    </h4>
+                      )
+                    ) : (
+                      <></>
+                    )}
+                    {[...Array(5 - Math.ceil(list.Rating))].map((_, i) => (
+                      <FaRegStar />
+                    ))}
                   </div>
-                  <div>
-                    <button className={styles["buy-now"]}>Buy Now</button>
-                  </div>
+                  <h3 className="text-black my-[5px] mx-0 text-[18px] font-medium">{list.Name}</h3>
+                  <h4 className="text-[16px] text-[#333] font-bold">
+                    ₹{list.Price}/-
+                    <del className="ml-[10px] text-[14px] text-[#aaa] font-normal">
+                      <span className={styles["money"]}>
+                        ₹{list.Original_Price}/-
+                      </span>
+                    </del>
+                  </h4>
+                </div>
+                <div>
+                  <button className={`${styles["buy-now"]}  bg-[#ff5bb1] text-white border-[3px] border-[#ff5bb1] text-[15px] font-bold rounded-[8px] py-[5px] px-[10px] cursor-pointer shadow-[0px_1px_2px_#000] mb-[5px] hover:bg-white hover:text-[#ff5bb1]`}>Buy Now</button>
                 </div>
               </div>
-            </>
-          );
+            </div>
+          </>
+        );
       });
     }
   };
 
   return (
     <>
-      <div className="heading">
-        <hr className="hr-left"/>
+      <div className="heading flex justify-center items-center w-full h-[10vh]">
+        <hr className="hr-left" />
         <h2>Best Seller</h2>
-        <hr className="hr-right"/>
+        <hr className="hr-right" />
       </div>
-      <div className={styles["subheading"]}>
+      <div className={`${styles["subheading"]} text-center text-[1.2rem] font-normal text-[#808080]`}>
         <p>Your Cosmetics and Skincare Products</p>
       </div>
-      <div className={`${styles["slideBtn"]} ${styles["bestseller_container"]}`}>
-        <button onClick={() => {HandleBtnClicked2("trending");}}
-          style={{backgroundColor: isClicked ? "#ffff" : "#FF5BB1", color: isClicked ? "#FF5BB1" : "#fff",}}
-          className={styles["first"]}>Trending Now</button>
-        <button onClick={() => {HandleBtnClicked("newArrivals");}}
-          style={{backgroundColor: isClicked ? "#FF5BB1" : "#ffff", color: isClicked ? "#fff" : "#FF5BB1",}}
-          className={styles["second"]}>New Arrivals</button>
+      <div className={`${styles["slideBtn"]} my-[25px] mx-auto ${styles["bestseller_container"]} text-center`}>
+        <button onClick={() => { HandleBtnClicked2("trending"); }}
+          style={{ backgroundColor: isClicked ? "#ffff" : "#FF5BB1", color: isClicked ? "#FF5BB1" : "#fff", }}
+          className={`${styles["first"]} rounded-l-[5px] bg-[#ff5bb1] py-[0.5rem] px-[0.2rem] w-[160px] h-[50px] border-[2px] border-[#ff5bb1] outline-none text-[16px] transition-[all_0.8s_ease] font-extrabold`}>Trending Now</button>
+        <button onClick={() => { HandleBtnClicked("newArrivals"); }}
+          style={{ backgroundColor: isClicked ? "#FF5BB1" : "#ffff", color: isClicked ? "#fff" : "#FF5BB1", }}
+          className={`${styles["second"]} rounded-r-[5px] bg-white py-[0.5rem] px-[0.2rem] w-[160px] h-[50px] border-[2px] border-[#ff5bb1] outline-none text-[16px] transition-[all_0.8s_ease] font-extrabold`}>New Arrivals</button>
       </div>
-      <div className={styles["products"]}>
-        <div className={styles["product-container"]}>{renderProducts()}</div>
-        <div className={styles["controllers"]}>
-          <button onClick={prevSlide}>
+      <div className={`${styles["products"]} py-[10px] px-0 bg-[#f3edef] relative`}>
+        <div className={`${styles["product-container"]} relative flex justify-start items-center gap-[20px] my-[20px] mx-[10px] max-w-full overflow-hidden cursor-pointer`}>{renderProducts()}</div>
+        <div className={`${styles["controllers"]}`}>
+          <button className="absolute w-[50px] h-[50px] flex ml-[5px] mr-[5px] items-center justify-center rounded-[50%] bg-white text-[#888] border-none shadow-[2px_2px_10px_#888] left-[0%] top-1/2 -translate-y-[50%] " onClick={prevSlide}>
             <FaAngleLeft />
           </button>
-          <button onClick={nextSlide}>
+          <button className="absolute w-[50px] h-[50px] flex ml-[5px] mr-[5px] items-center justify-center rounded-[50%] bg-white text-[#888] border-none shadow-[2px_2px_10px_#888] right-[0%] top-1/2 -translate-y-[50%] " onClick={nextSlide}>
             <FaAngleRight />
           </button>
         </div>
       </div>
-      <div className={styles["see-all"]}>
-        <button>View More</button>
+      <div className={`${styles["see-all"]} my-[20px] mx-auto`}>
+        <button className="text-[#ff5bb1] bg-white border-[2px] border-[#ff5bb1] rounded-[5px] py-[10px] px-[20px] cursor-pointer text-[18px] font-semibold block m-auto transition-[.2s] hover:text-[#fff] hover:bg-[#ff5bb1]">View More</button>
       </div>
     </>
   );
