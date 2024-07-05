@@ -1,13 +1,15 @@
 import './App.css';
-import BestSeller from './components/BestSeller/BestSeller';
-import TopBrands from './components/TopBrands/TopBrands';
-import ExclusiveDiscount from './components/Exclusive_discount/ExclusiveDiscount';
-import ShopByCategory from './components/ShopByCategory/ShopByCategory';
-import Subscription from './components/Subscription/Subscription';
-import Banner from './components/Banner/Banner';
-import FooterBlock from './components/Footer/Footer';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Home from './components/Header/Home';
+import TopBrands from './components/Home/TopBrands/TopBrands';
+import Banner from './components/Home/Banner/Banner';
+import FooterBlock from './components/Home/Footer/Footer';
+import Home from './components/Home/Header/Home';
+import BestSeller from './components/Home/BestSeller/BestSeller';
+import ExclusiveDiscount from './components/Home/Exclusive_discount/ExclusiveDiscount';
+import ShopByCategory from './components/Home/ShopByCategory/ShopByCategory';
+import Subscription from './components/Home/Subscription/Subscription';
+import SignUpPage from './components/Authenticate/SignUp';
+import LoginPage from './components/Authenticate/login';
 
 function App() {
   return (
@@ -32,6 +34,14 @@ function App() {
               <FooterBlock />
             </>
           }
+        />
+        <Route
+          path="/login"
+          element={<><LoginPage /></>}
+        />
+        <Route
+          path="/signup"
+          element={<><SignUpPage /></>}
         />
         {/* Add more routes here if needed */}
       </Routes>

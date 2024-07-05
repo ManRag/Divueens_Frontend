@@ -3,8 +3,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
 }
 
 body {
@@ -16,8 +17,6 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  font-family: "Playwrite DE Grund", cursive;
-
   width: 100%;
   height: 10vh;
 }
@@ -30,19 +29,20 @@ body {
 }
 
 .heading h2 {
-  font-family: "Playwrite DE Grund", cursive;
-
   margin: 20px;
   font-weight: 900;
   font-size: 2rem;
-  font-family: "Playwrite DE Grund", cursive;
+  font-family: 'Montserrat', sans-serif;
+  /* font-family: "Playwrite DE Grund", cursive; */
 }
 
 .heading .hr-right {
+  border-radius: 10px 0px 0px 10px;
   background: linear-gradient(to left, #e9acb600, #e9acb646, #e9acb6bd, #E9ACB6);
 }
 
 .heading .hr-left {
+  border-radius: 0px 10px 10px 0px;
   background: linear-gradient(to right, #e9acb600, #e9acb646, #e9acb6bd, #E9ACB6);
 }
 
