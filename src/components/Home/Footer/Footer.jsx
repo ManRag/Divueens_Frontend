@@ -126,7 +126,7 @@ const baadiList = [
   },
 ];
 
-function FooterBlock() {
+function Footer() {
   const [toggleView, cngView] = useState(0);
   const [prev, cngPrev] = useState(0);
 
@@ -239,4 +239,4 @@ function FooterBlock() {
   );
 }
 
-export default FooterBlock;
+export default Footer;
