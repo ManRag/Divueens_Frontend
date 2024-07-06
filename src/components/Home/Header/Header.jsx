@@ -1,5 +1,5 @@
 import React from 'react';
-import './Home.css'; 
+import './Header.css'; 
 // import { Link } from 'react-router-dom';
 import SaleHeader from '../SaleHeader/SaleHeader';
 import NavBar from '../Navbar/Navbar';
@@ -11,7 +11,7 @@ import Image6 from '../../../assets/CarouselImages/Image6.png';
 import Image3 from '../../../assets/CarouselImages/Image3.png';
 import Image4 from '../../../assets/CarouselImages/Image4.png';
 import Image5 from '../../../assets/CarouselImages/Image5.png';
-function Home() {
+function Header() {
   const slides = [
     // {
     //   background: 'linear-gradient(114deg, rgba(251,189,187,1) 0%, rgba(233,172,182,1) 12%, rgba(248,226,234,1) 100%)',
@@ -99,4 +99,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Header;
