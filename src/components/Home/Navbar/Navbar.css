@@ -15,26 +15,26 @@ body {
   align-items: center;
   justify-content: space-evenly;
 }
-.navbar {
+/* .navbar {
   background-color: #f8f9fa;
   padding: 0.5rem;
   position: sticky;
   top: 0;
   z-index: 1000;
-}
-.brand-icon{
+} */
+/* .brand-icon{
   height: 3em;
-}
-.navbar-toggler {
+} */
+/* .navbar-toggler {
   background: none;
   border: none;
-}
-.logotoggler{
+} */
+/* .logotoggler{
   display: flex;
   padding: 0rem 1rem 0rem 1rem;
   justify-content: space-between;
-}
-.offcanvas {
+} */
+/* .offcanvas {
   position: fixed;
   top: 0;
   right: 0;
@@ -46,16 +46,16 @@ body {
   padding: 1rem;
   transform: translateX(100%);
   transition: transform 0.5s ease-in-out;
-}
+} */
 .offcanvas.show {
-  /* display: block; */
   transform: translateX(0) ;
+  /* display: block; */
 }
-.offcanvas-header {
+/* .offcanvas-header {
   display: flex;
   justify-content: space-between;
   align-items:center;
-}
+} */
 .offcanvas-body .navbar-nav a{
   text-decoration: none;
   color: black;
@@ -64,7 +64,7 @@ body {
 .offcanvas-body .navbar-nav a:hover{
   color: #ff5bb1;
 }
-.btn-close {
+/* .btn-close {
   background: none;
   border: none;
   padding: 0rem 0.8rem ;
@@ -72,34 +72,34 @@ body {
   background-color: #fdaad5;
   font-size: 2.5rem;
   cursor: pointer;
-}
+} */
 .navbar-nav {
   list-style:  none;
 }
 .nav-item {
   margin-bottom: 0.5rem;
 }
-.search-form {
+/* .search-form {
   margin: 1rem 0rem;
-}
-.search-form input {
+} */
+/* .search-form input {
   padding: 0.5rem;
   border: #000000 0.01rem solid;  
   border-radius: 0.5rem 0rem 0rem 0.5rem;
-}
-.search-form button {
+} */
+/* .search-form button {
   padding: 0.5rem 1rem;
   border: black 0.01rem solid;
   border-radius: 0rem 0.5rem 0.5rem 0rem;
-}
-.navbar-icons {
+} */
+/* .navbar-icons {
   display: flex;
   align-items:center;
 }
 .navbar-icon {
   display: flex;
   cursor: pointer;
-}
+} */
 .search-input {
   padding: 0.5rem;
   width: 15rem;
@@ -137,11 +137,10 @@ body {
   font-size: 1.2rem;
   margin-left: 1rem;
   padding: 0.1rem;
-  border: #000000 0.1rem solid;
 }
 .navbar-icon:hover {
   color: #ff5bb1;
-  border: #ff5bb1 0.1rem solid;
+  /* border: #ff5bb1 0.1rem solid; */
 }
 .popover-content {
   position:absolute;

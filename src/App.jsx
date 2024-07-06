@@ -1,4 +1,3 @@
-import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import TopBrands from './components/Home/TopBrands/TopBrands';
 import Banner from './components/Home/Banner/Banner';
