@@ -9,7 +9,7 @@ import Subscription from "../components/Home/Subscription/Subscription";
 const Home = () => {
   return (
     <>
-      <Banner />
+      {/* <Banner /> */}
       <BestSeller />
       <TopBrands />
       <ExclusiveDiscount />
