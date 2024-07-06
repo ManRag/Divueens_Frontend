@@ -213,7 +213,7 @@ function FooterBlock() {
             </li>
           </ul>
         </div>
-        <hr data-footer-part="/>
+        <hr data-footer-part=""/>
         <div className="pt-4">
           <div className="sm:flex sm:justify-between">
             <p className="copyright text-xs text-gray-500" data-footer-part="">
@@ -234,7 +234,7 @@ function FooterBlock() {
             </ul>
           </div>
         </div>
-        </div>
+      </div>
     </footer>
   );
 }
