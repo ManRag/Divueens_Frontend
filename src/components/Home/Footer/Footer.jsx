@@ -126,10 +126,13 @@ const baadiList = [
   },
 ];
 
-function ListItemsAll() {
-  return (
-    <>
-      {baadiList.map((lst, index) => {
+function Footer() {
+  const [toggleView, cngView] = useState(0);
+  const [prev, cngPrev] = useState(0);
+
+  function ListItemsAll() {
+    return baadiList.map((lst, index) => {
+      return (
         <div
           className="col_ col-span-2 sm:col-span-1"
           // style={{ gridArea: `col_${index}` }}
@@ -167,15 +170,11 @@ function ListItemsAll() {
               );
             })}
           </ul>
-        </div>;
-      })}
-    </>
-  );
-}
+        </div>
+      );
+    });
+  }
 
-function Footer() {
-  const [toggleView, cngView] = useState(0);
-  const [prev, cngPrev] = useState(0);
   useEffect(() => {
     ListItemsAll();
     cngPrev(toggleView);
@@ -198,14 +197,16 @@ function Footer() {
             </Link>
             <ul className="all_Items mt-6 space-y-3 text-sm">
               {_1stList.map((list2, int) => {
-                <li key={int}>
-                  <Link
-                    to={list2.url}
-                    className="footerList text-gray-700 transition hover:text-pink-400"
-                  >
-                    {list2.txt}
-                  </Link>
-                </li>;
+                return (
+                  <li key={int}>
+                    <Link
+                      to={list2.url}
+                      className="footerList text-gray-700 transition hover:text-pink-400"
+                    >
+                      {list2.txt}
+                    </Link>
+                  </li>
+                );
               })}
             </ul>
           </div>
@@ -257,7 +258,8 @@ function Footer() {
                   href="/"
                   className="text-gray-500 transition hover:text-pink-400"
                 >
-                  Terms & Conditions
+                  {" "}
+                  Terms & Conditions{" "}
                 </a>
               </li>
 
@@ -266,7 +268,8 @@ function Footer() {
                   href="/"
                   className="text-gray-500 transition hover:text-pink-400"
                 >
-                  Privacy Policy
+                  {" "}
+                  Privacy Policy{" "}
                 </a>
               </li>
 
@@ -275,7 +278,8 @@ function Footer() {
                   href="/"
                   className="text-gray-500 transition hover:text-pink-400"
                 >
-                  Cookies
+                  {" "}
+                  Cookies{" "}
                 </a>
               </li>
             </ul>
