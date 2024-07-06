@@ -1,5 +1,5 @@
 import React from 'react';
-import './Subscription.css'
+// import './Subscription.css'
 import Slider from './Slider';
 import ReferSection from './ReferSection';
 import ContactSection from './ContactSection';

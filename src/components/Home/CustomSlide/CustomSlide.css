@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
-  .slide-content {
+  /* .slide-content {
     display: flex;
     align-items:center;
     justify-content: space-between;
@@ -26,8 +26,8 @@
     color: white;
     text-decoration: none;
     border-radius: 0.5vw;
-  }
- .additional-image{
+  } */
+ /* .additional-image{
   width: 13%;
  }
   .bold-text1{
@@ -43,7 +43,7 @@
   .logoANDname{
     display: flex;
     align-items: center;
-  }
+  } */
   @media (max-width: 950px) {
     .slide-content {
       flex-direction: column;
