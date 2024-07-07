@@ -15,14 +15,14 @@ const TopBrands = () => {
         <div className={`${styles["brand-background"]} flex mt-[4px] py-[20px] px-0`}>
           <div className={`${styles["bar"]} flex items-center gap-[30px] w-[100%] py-0 px-[40px] my-[25px] mx-auto relative overflow-hidden scroll-smooth snap-start pb-[10px]`}>
             {brands.map((item, index) => (
-              <div key={index} className={`${styles["card"]} min-w-[24%] h-full bg-white border-[2px] border-[#e9acb6] py-[5px] px-0 text-white flex items-center justify-center text-center snap-start`}>
+              <div key={index} className={`${styles["card"]} min-w-[24%] h-full bg-[#fff] border-[2px] border-[#e9acb6] py-[5px] px-0 text-[#fff] flex items-center justify-center text-center snap-start`}>
                 <img className="max-w-full max-h-[10vh] object-contain flex justify-center items-center w-auto h-auto p-0 box-border snap-start" src={item} alt="" />
               </div>
             ))}
           </div>
           <div className={`${styles["bar"]} flex items-center gap-[30px] w-[100%] py-0 px-[40px] my-[25px] mx-auto relative overflow-hidden scroll-smooth snap-start pb-[10px]`}>
             {brands.map((item, index) => (
-              <div key={index} className={`${styles["card"]} min-w-[24%] h-full bg-white border-[2px] border-[#e9acb6] py-[5px] px-0 text-white flex items-center justify-center text-center snap-start`}>
+              <div key={index} className={`${styles["card"]} min-w-[24%] h-full bg-[#fff] border-[2px] border-[#e9acb6] py-[5px] px-0 text-[#fff] flex items-center justify-center text-center snap-start`}>
                 <img className="max-w-full max-h-[10vh] object-contain flex justify-center items-center w-auto h-auto p-0 box-border snap-start" src={item} alt="" />
               </div>
             ))}

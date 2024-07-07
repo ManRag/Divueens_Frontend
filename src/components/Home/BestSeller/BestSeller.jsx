@@ -160,16 +160,16 @@ const BestSeller = () => {
                 />
               </div>
               <div className={`${styles["cart-info"]} absolute left-[93%] top-1/2 -translate-x-[50%] -translate-y-[50%] flex flex-col justify-around w-[min-content] h-[40%] p-[10px] cursor-auto z-10 transition-[.3s]`}>
-                <button title="Add to cart" className="border-none bg-none no-underline text-rose-300 cursor-pointer translate-x-[100px] hover:text-[#ddd]" style={{ transition: '.2s' }}>
+                <button title="Add to cart" className="border-none bg-none no-underline text-[#ddd] cursor-pointer translate-x-[100px] hover:text-darkerColor" style={{ transition: '.2s' }}>
                   <FaCartShopping />
                 </button>
-                <a title="Add to Wishlist" className="border-none bg-none no-underline text-rose-300 cursor-pointer translate-x-[100px] hover:text-[#ddd]" style={{ transition: '.3s' }}>
+                <a title="Add to Wishlist" className="border-none bg-none no-underline text-[#ddd] cursor-pointer translate-x-[100px] hover:text-darkerColor" style={{ transition: '.3s' }}>
                   <FaHeart />
                 </a>
-                <a title="Quick View" className="border-none bg-none no-underline text-rose-300 cursor-pointer translate-x-[100px] hover:text-[#ddd]" style={{ transition: '.4s' }}>
+                <a title="Quick View" className="border-none bg-none no-underline text-[#ddd] cursor-pointer translate-x-[100px] hover:text-darkerColor" style={{ transition: '.4s' }}>
                   <FaMagnifyingGlass />
                 </a>
-                <a title="Compare" className="border-none bg-none no-underline text-rose-300 cursor-pointer translate-x-[100px] hover:text-[#ddd]" style={{ transition: '.5s' }}>
+                <a title="Compare" className="border-none bg-none no-underline text-[#ddd] cursor-pointer translate-x-[100px] hover:text-darkerColor" style={{ transition: '.5s' }}>
                   <FaArrowsRotate />
                 </a>
               </div>
@@ -203,7 +203,7 @@ const BestSeller = () => {
                   </h4>
                 </div>
                 <div>
-                  <button className={`${styles["buy-now"]} bg-rose-700 text-white border-[1px] border-rose-700 text-[12px] md:text-[15px] font-semibold rounded-[8px] py-[5px] px-[10px] cursor-pointer shadow-[0px_1px_2px_#000] mb-[5px] hover:bg-white hover:text-rose-700`}>Buy Now</button>
+                  <button className={`${styles["buy-now"]} bg-darkerColor border-[2px] border-darkerColor text-[12px] md:text-[15px] font-bold rounded-[8px] py-[5px] px-[10px] cursor-pointer shadow-[0px_1px_2px_#000] mb-[5px] text-[#fff] hover:bg-[#fff] hover:text-darkerColor`}>Buy Now</button>
                 </div>
               </div>
             </div>
@@ -241,16 +241,16 @@ const BestSeller = () => {
                 />
               </div>
               <div className={`${styles["cart-info"]} absolute left-[93%] top-1/2 -translate-x-[50%] -translate-y-[50%] flex flex-col justify-around w-[min-content] h-[40%] p-[10px] cursor-auto z-10 transition-[.3s]`}>
-                <button title="Add to cart" className="border-none bg-none no-underline text-[#ddd] cursor-pointer translate-x-[100px] hover:text-rose-700" style={{ transition: '.2s' }}>
+                <button title="Add to cart" className="border-none bg-none no-underline text-[#ddd] cursor-pointer translate-x-[100px] hover:text-darkerColor" style={{ transition: '.2s' }}>
                   <FaCartShopping />
                 </button>
-                <a title="Add to Wishlist" className="border-none bg-none no-underline text-[#ddd] cursor-pointer translate-x-[100px] hover:text-rose-700" style={{ transition: '.3s' }}>
+                <a title="Add to Wishlist" className="border-none bg-none no-underline text-[#ddd] cursor-pointer translate-x-[100px] hover:text-darkerColor" style={{ transition: '.3s' }}>
                   <FaHeart />
                 </a>
-                <a title="Quick View" className="border-none bg-none no-underline text-[#ddd] cursor-pointer translate-x-[100px] hover:text-rose-700" style={{ transition: '.4s' }}>
+                <a title="Quick View" className="border-none bg-none no-underline text-[#ddd] cursor-pointer translate-x-[100px] hover:text-darkerColor" style={{ transition: '.4s' }}>
                   <FaMagnifyingGlass />
                 </a>
-                <a title="Compare" className="border-none bg-none no-underline text-[#ddd] cursor-pointer translate-x-[100px] hover:text-rose-700" style={{ transition: '.5s' }}>
+                <a title="Compare" className="border-none bg-none no-underline text-[#ddd] cursor-pointer translate-x-[100px] hover:text-darkerColor" style={{ transition: '.5s' }}>
                   <FaArrowsRotate />
                 </a>
               </div>
@@ -284,7 +284,10 @@ const BestSeller = () => {
                   </h4>
                 </div>
                 <div>
-                  <button className={`${styles["buy-now"]} bg-rose-700 text-white border-[3px] border-rose-700 text-[12px] md:text-[15px] font-bold rounded-[8px] py-[5px] px-[10px] cursor-pointer shadow-[0px_1px_2px_#000] mb-[5px] hover:bg-white hover:text-rose-700`}>Buy Now</button>
+                  <button
+                    className={`${styles["buy-now"]}  bg-darkerColor border-[2px] border-darkerColor text-[12px] md:text-[15px] font-bold rounded-[8px] py-[5px] px-[10px] cursor-pointer shadow-[0px_1px_2px_#000] mb-[5px] text-[#fff] hover:bg-[#fff] hover:text-darkerColor`}>
+                    Buy Now
+                  </button>
                 </div>
               </div>
             </div>
@@ -307,27 +310,27 @@ const BestSeller = () => {
 
       <div className={`${styles["slideBtn"]} my-[25px] mx-auto ${styles["bestseller_container"]} text-center`}>
         <button onClick={() => { HandleBtnClicked2("trending"); }}
-          style={{ backgroundColor: isClicked ? "#ffff" : "#C22C54", color: isClicked ? "#C22C54" : "#fff", }}
-          className={`${styles["first"]} rounded-l-[5px] bg-rose-700 py-[0.5rem] px-[0.2rem] w-[115px] h-[35px] md:w-[160px] md:h-[50px] border-[2px] border-rose-700 outline-none text-[10px] md:text-[16px] transition-[all_0.8s_ease] font-extrabold`}>Trending Now</button>
+          style={{ backgroundColor: isClicked ? "#ffff" : "#e93550", color: isClicked ? "#e93550" : "#fff", }}
+          className={`${styles["first"]} rounded-l-[5px] py-[0.5rem] px-[0.2rem] w-[115px] h-[35px] md:w-[160px] md:h-[50px] border-[2px] border-darkerColor outline-none text-[10px] md:text-[16px] transition-[all_0.8s_ease] font-extrabold`}>Trending Now</button>
 
         <button onClick={() => { HandleBtnClicked("newArrivals"); }}
-          style={{ backgroundColor: isClicked ? "#C22C54" : "#ffff", color: isClicked ? "#fff" : "#C22C54", }}
-          className={`${styles["second"]} rounded-r-[5px] bg-white py-[0.5rem] px-[0.2rem] w-[115px] h-[35px] md:w-[160px] md:h-[50px] border-[2px] border-rose-700 outline-none text-[10px] md:text-[16px] transition-[all_0.8s_ease] font-extrabold`}>New Arrivals</button>
+          style={{ backgroundColor: isClicked ? "#e93550" : "#ffff", color: isClicked ? "#fff" : "#e93550", }}
+          className={`${styles["second"]} rounded-r-[5px] py-[0.5rem] px-[0.2rem] w-[115px] h-[35px] md:w-[160px] md:h-[50px] border-[2px] border-darkerColor outline-none text-[10px] md:text-[16px] transition-[all_0.8s_ease] font-extrabold`}>New Arrivals</button>
       </div>
 
       <div className={`${styles["products"]} py-[10px] px-0 md:mx-[50px] relative`}>
         <div className={`${styles["product-container"]} relative flex justify-start items-center gap-[20px] my-[20px] md:mx-[30px] max-w-full overflow-hidden cursor-pointer`}><RenderProducts /></div>
         <div className={`${styles["controllers"]}`}>
-          <button className="absolute w-[30px] h-[30px] md:w-[50px] md:h-[50px] flex ml-[5px] mr-[5px] items-center justify-center rounded-[50%] bg-white text-[#888] border-none shadow-[2px_2px_10px_#888] left-[0%] top-1/2 -translate-y-[50%] " onClick={prevSlide}>
+          <button className="absolute w-[30px] h-[30px] md:w-[50px] md:h-[50px] flex ml-[5px] mr-[5px] items-center justify-center rounded-[50%] bg-[#fff] text-[#888] border-none shadow-[2px_2px_10px_#888] left-[0%] top-1/2 -translate-y-[50%] " onClick={prevSlide}>
             <FaAngleLeft />
           </button>
-          <button className="absolute w-[30px] h-[30px] md:w-[50px] md:h-[50px] flex ml-[5px] mr-[5px] items-center justify-center rounded-[50%] bg-white text-[#888] border-none shadow-[2px_2px_10px_#888] right-[0%] top-1/2 -translate-y-[50%] " onClick={nextSlide}>
+          <button className="absolute w-[30px] h-[30px] md:w-[50px] md:h-[50px] flex ml-[5px] mr-[5px] items-center justify-center rounded-[50%] bg-[#fff] text-[#888] border-none shadow-[2px_2px_10px_#888] right-[0%] top-1/2 -translate-y-[50%] " onClick={nextSlide}>
             <FaAngleRight />
           </button>
         </div>
       </div>
       <div className={`${styles["see-all"]} my-[20px] mx-auto`}>
-        <button className="text-rose-700 bg-white border-[2px] border-rose-700 rounded-[5px] py-[10px] px-[40px] md:px-[20px] cursor-pointer text-[10px] md:text-[18px] font-semibold block m-auto transition-[.2s] hover:text-[#fff] hover:bg-rose-700">View More</button>
+        <button className="text-darkerColor bg-[#fff] border-[2px] border-darkerColor rounded-[5px] py-[10px] px-[40px] md:px-[20px] cursor-pointer text-[10px] md:text-[18px] font-semibold block m-auto transition-[.2s] hover:text-[#fff] hover:bg-darkestColor">View More</button>
       </div>
     </>
   );

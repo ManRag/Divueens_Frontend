@@ -44,12 +44,12 @@ body {
 
 .heading .hr-right {
   border-radius: 10px 0px 0px 10px;
-  background: linear-gradient(to left, #e9acb600, #e9acb646, #e9acb6bd, #E9ACB6);
+  background: linear-gradient(to left, #e9acb600, #e9acb646, #FF919D,  #E93550);
 }
 
 .heading .hr-left {
   border-radius: 0px 10px 10px 0px;
-  background: linear-gradient(to right, #e9acb600, #e9acb646, #e9acb6bd, #E9ACB6);
+  background: linear-gradient(to right, #e9acb600, #e9acb646, #FF919D,  #E93550);
 }
 
 .subheading {
