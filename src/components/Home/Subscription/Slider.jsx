@@ -1,8 +1,4 @@
 import React, { useState } from "react";
-// import Item from "./Item";
-// import Slide from './Slide';
-// import Navigation from "./Navigation";
-// import Dots from "./Dots";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { sub_1, sub_2, sub_3, sub_4 } from "../../../assets/assets";
 import { FaRegStar, FaRegStarHalfStroke, FaStar } from "react-icons/fa6";

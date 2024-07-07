@@ -157,19 +157,19 @@ const Navbar = () => {
             <input type="text" className="search-input" placeholder="Search" />
             <button className="search-button">Search</button>
           </div> */}
-          {/* <div class="wrap-input-17"><div class="search-box">
-  <button class="btn-search"><img src={searchImage} alt="Search" className="search-icon" /></button>
-  <input type="text" class="input-search" placeholder="Type to Search..."/>
+          {/* <div className="wrap-input-17"><div className="search-box">
+  <button className="btn-search"><img src={searchImage} alt="Search" className="search-icon" /></button>
+  <input type="text" className="input-search" placeholder="Type to Search..."/>
 </div>
 </div> */}
 
           <div className="navbar-icons flex items-center ">
-            <div class="wrap-input-17 box-border relative">
-              <div class="search-box relative">
-                <button class="btn-search w-[3rem] h-[3rem] border-none text-[1.3rem] cursor-pointer absolute bg-[#fff0] ">
+            <div className="wrap-input-17 box-border relative">
+              <div className="search-box relative">
+                <button className="btn-search w-[3rem] h-[3rem] border-none text-[1.3rem] cursor-pointer absolute bg-[#fff0] ">
                   <img src={searchImage} alt="Search" className="search-icon w-[1.15rem]" />
                 </button>
-                <input type="text" class="input-search h-[3rem] w-[3rem] border-none p-2 text-[1rem] outline-none transition-all duration-[0.5s] ease-in-out bg-[#fff0] placeholder:text-[#fff0]" placeholder="Type to Search..." />
+                <input type="text" className="input-search h-[3rem] w-[3rem] border-none p-2 text-[1rem] outline-none transition-all duration-[0.5s] ease-in-out bg-[#fff0] placeholder:text-[#fff0]" placeholder="Type to Search..." />
               </div>
             </div>
 

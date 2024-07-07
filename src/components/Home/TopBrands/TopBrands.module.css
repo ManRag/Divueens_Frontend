@@ -125,17 +125,17 @@ padding: 20px 0; */
   text-align: center;
   align-items: center;
   scroll-snap-align: start;*/
-  animation: marquee 12s infinite linear;
+  /* animation: marquee 12s infinite linear; */
 } 
 
-@keyframes marquee {
+/* @keyframes marquee {
   0% {
       transform: translateX(0);
   }
   100% {
       transform: translateX(-197.7vw);
   }
-}
+} */
 
 /* .bar img {
   max-width: 100%;
