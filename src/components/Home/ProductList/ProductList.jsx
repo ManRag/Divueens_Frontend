@@ -163,17 +163,17 @@ const ProductList = () => {
 
                     {/* Cards */}
                     <div>
-                        {/* Makeup */}
-                        <div className="makeup">
-
-                            <div>
-                                <span className="a">MakeUp</span> <span className="a"></span><span className="aa">Lipstick</span>
+                        <div className="makeup m-[40px] flex justify-between p-[5px] w-full">
+                            <div className='flex items-center gap-2'>
+                                <span className="a text-[1.5rem] font-medium text-gray-600">MakeUp</span>
+                                <IoIosArrowForward size={22} />
+                                <span className="aa text-[1.5rem] font-semibold text-black">Lipstick</span>
                             </div>
-                            <div className="prodline">
-                                <div className="show">Showing 1-10 of 100 products</div>
-                                <div className="sortby">
-                                    <label for="sort">Sort by: </label>
-                                    <select className="select" name="products" id="sort">
+                            <div className="prodline flex font-normal items-center gap-5">
+                                <div className="show text-[1.1rem] text-gray-600">Showing 1-10 of 100 Products</div>
+                                <div className="sortby text-[18px]">
+                                    <label for="sort" className='text-[1rem] text-gray-600'>Sort by: </label>
+                                    <select className="select bg-transparent border-none text-[16px]" name="products" id="sort">
                                         <option value="a" selected>Most popular</option>
                                         <option value="b">b</option>
                                         <option value="c">c</option>
