@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { IoIosArrowDown, IoIosArrowForward } from 'react-icons/io';
 import { Link } from 'react-router-dom'
 import Filter from './Filter'
+import CardItem from './CardItem';
 
 const ProductList = () => {
 
@@ -87,7 +88,7 @@ const ProductList = () => {
         <>
             <div className='flex flex-col items-center w-full h-full'>
                 {/* Home > Skin */}
-                <div className='flex flex-col gap-8 w-full px-40 mb-2'>
+                <div className='flex flex-col gap-8 w-full px-[3rem] mb-4'>
                     <div className='flex items-center'>
                         <ol className="inline-flex items-center gap-3">
                             <li className='inline-flex items-center'>
@@ -156,24 +157,24 @@ const ProductList = () => {
                 </div>
 
                 {/* Filters and Cards */}
-                <div className='flex items-center'>
+                <div className='flex'>
                     {/* Filters */}
-                    <div>
+                    <div className='w-[25%]'>
                         <Filter />
                     </div>
 
                     {/* Cards */}
-                    <div>
-                        <div className="makeup m-[40px] flex justify-between p-[5px] w-full">
+                    <div className='flex flex-col items-center w-[70%]'>
+                        <div className="makeup flex justify-between w-full">
                             <div className='flex items-center gap-2'>
-                                <span className="a text-[1.5rem] font-medium text-gray-600">MakeUp</span>
+                                <span className="a font-medium text-[1.3rem] text-gray-600">MakeUp</span>
                                 <IoIosArrowForward size={22} />
-                                <span className="aa text-[1.5rem] font-semibold text-black">Lipstick</span>
+                                <span className="aa font-semibold text-[1.3rem] text-black">Lipstick</span>
                             </div>
                             <div className="prodline flex font-normal items-center gap-5">
                                 <div className="show text-[1.1rem] text-gray-600">Showing 1-10 of 100 Products</div>
                                 <div className="sortby text-[18px]">
-                                    <label for="sort" className='text-[1rem] text-gray-600'>Sort by: </label>
+                                    <label for="sort" className='text-gray-600'>Sort by: </label>
                                     <select className="select bg-transparent border-none text-[16px]" name="products" id="sort">
                                         <option value="a" selected>Most popular</option>
                                         <option value="b">b</option>
@@ -186,7 +187,7 @@ const ProductList = () => {
 
                         {/* Cards*/}
                         <div>
-
+                            <CardItem />
                         </div>
 
                     </div>

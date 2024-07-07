@@ -126,7 +126,7 @@ const Shop = () => {
     const menuItem = [... new Set(data.map(val => val.category))]
 
     return (
-        <div className="flex flex-col items-center mx-auto my-2 min-h-[600px] w-[250px] rounded-xl border-[2px] border-gray-200 px-6 py-3">
+        <div className="flex flex-col items-center ml-8 min-h-[600px] w-[250px] rounded-xl border-[2px] border-gray-200 px-6 py-3">
             <div className="flex justify-between items-center w-full">
                 <h1 className="text-[20px] font-semibold text-black">Filters</h1>
                 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAa0lEQVR4nGNgGI4gGYqpKUcfC/ygChZAcTJUjGoWJOPAVPcBMvalRRzgA8lDwoJkEg3xIyJxUGRBMhGJgyo+SMaTOCiygGQwIBb4UZjLCSpMpjCXE+2DZDJzOXkKh6QFyYO6wqGbBQxDCgAAaDA4ICxX1IoAAAAASUVORK5CYII=" />
