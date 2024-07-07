@@ -32,7 +32,7 @@ function Header() {
       image: Image6,
       text:   `
       <span className="logoANDname flex items-center">
-      <img src=${logo} alt="Additional Content" className="additional-image w-[13%]" />
+      
         <span className="bold-text1 font-bold font-['Montserrat'] text-[2.5vw]">ELITE<span className="italic-text">Pro</span></span>
         </span>
         <div className="new-line"><span className="bold-text2 font-bold font-['Montserrat'] text-[2vw]"> FULL ON BEAUTY, FULL ON SAVINGS!</div></span>
@@ -46,7 +46,7 @@ function Header() {
       image: Image3,
       text:  `
       <span className="logoANDname flex items-center">
-      <img src=${logo} alt="Additional Content" className="additional-image w-[13%]" />
+      
         <span className="bold-text1 font-bold font-['Montserrat'] text-[2.5vw]">ELITE<span className="italic-text">Pro</span></span>
         </span>
         <div className="new-line"><span className="bold-text2 font-bold font-['Montserrat'] text-[2vw]"> FULL ON BEAUTY, FULL ON SAVINGS!</div></span>
@@ -60,7 +60,6 @@ function Header() {
       image:Image4,
       text:   `
       <span className="logoANDname flex items-center">
-      <img src=${logo} alt="Additional Content" className="additional-image w-[13%]" />
         <span className="bold-text1 font-bold font-['Montserrat'] text-[2.5vw]">ELITE<span className="italic-text">Pro</span></span>
         </span>
         <div className="new-line"><span className="bold-text2 font-bold font-['Montserrat'] text-[2vw]"> FULL ON BEAUTY, FULL ON SAVINGS!</div></span>
@@ -74,7 +73,7 @@ function Header() {
       image:Image5,
       text:  `
       <span className="logoANDname flex items-center">
-      <img src=${logo} alt="Additional Content" className="additional-image w-[13%]" />
+      
         <span className="bold-text1 font-bold font-['Montserrat'] text-[2.5vw]">ELITE<span className="italic-text">Pro</span></span>
         </span>
         <div className="new-line"><span className="bold-text2 font-bold font-['Montserrat'] text-[2vw]"> FULL ON BEAUTY, FULL ON SAVINGS!</div></span>
@@ -92,9 +91,9 @@ function Header() {
         <NavBar />
         <Carousel slides={slides} />
       </header>
-      <main className='mainhome'>
+      {/* <main className='mainhome'>
         
-      </main>
+      </main> */}
     </div>
   );
 }
