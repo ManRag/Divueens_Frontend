@@ -106,9 +106,9 @@ const Navbar = () => {
                     <div className="popover-content">
                       <h2 className='text-lg text-center drop-shadow-xl'>Login or SignUp</h2>
                       <div className='button-loginsignup'>
-                        <button className='SignUp bg-darkerColor border-darkerColor border-[0.1rem] w-full my-[0.5rem] text-[#fff] py-[0.5rem] px-[1rem] cursor-pointer font-bold rounded-[0.5rem] hover:bg-[#fff] hover:text-darkerColor hover:border-darkerColor hover:border-[0.1rem]'> Sign Up </button>
-                        <button className='Login bg-darkerColor border-darkerColor border-[0.1rem] w-full my-[0.5rem] text-[#fff] py-[0.5rem] px-[1rem] cursor-pointer font-bold rounded-[0.5rem] hover:bg-[#fff] hover:text-darkerColor hover:border-darkerColor hover:border-[0.1rem]'> Login </button>
-                        <button className='ViaGoogle bg-darkerColor border-darkerColor border-[0.1rem] w-full my-[0.5rem] text-[#fff] py-[0.5rem] px-[1rem] cursor-pointer font-bold rounded-[0.5rem] hover:bg-[#fff] hover:text-darkerColor hover:border-darkerColor hover:border-[0.1rem]'> Login / Signup via Google </button>
+                        <button className='SignUp bg-darkerColor border-darkerColor border-[0.1rem] w-full my-[0.5rem] text-[#fff] py-[0.5rem] px-[1rem] cursor-pointer font-bold rounded-[0.5rem] hover:bg-[#fff] hover:decoration-darkerColor hover:border-darkerColor hover:border-[0.1rem]'> Sign Up </button>
+                        <button className='Login bg-darkerColor border-darkerColor border-[0.1rem] w-full my-[0.5rem] text-[#fff] py-[0.5rem] px-[1rem] cursor-pointer font-bold rounded-[0.5rem] hover:bg-[#fff] hover:decoration-darkerColor hover:border-darkerColor hover:border-[0.1rem]'> Login </button>
+                        <button className='ViaGoogle bg-darkerColor border-darkerColor border-[0.1rem] w-full my-[0.5rem] text-[#fff] py-[0.5rem] px-[1rem] cursor-pointer font-bold rounded-[0.5rem] hover:bg-[#fff] hover:decoration-darkerColor hover:border-darkerColor hover:border-[0.1rem]'> Login / Signup via Google </button>
                       </div>
                     </div>
                   )}
@@ -124,14 +124,14 @@ const Navbar = () => {
             </form>
             <div className="offcanvas-body">
               <ul className="navbar-nav">
-                <li className="nav-item mb-[0.5rem]"><a className="nav-link no-underline text-[#000] hover:text-darkerColor" href="#">Makeup</a></li>
-                <li className="nav-item mb-[0.5rem]"><a className="nav-link no-underline text-[#000] hover:text-darkerColor" href="#">Skin</a></li>
-                <li className="nav-item mb-[0.5rem]"><a className="nav-link no-underline text-[#000] hover:text-darkerColor" href="#">Hair Care</a></li>
-                <li className="nav-item mb-[0.5rem]"><a className="nav-link no-underline text-[#000] hover:text-darkerColor" href="#">Nail Care</a></li>
-                <li className="nav-item mb-[0.5rem]"><a className="nav-link no-underline text-[#000] hover:text-darkerColor" href="#">Body Care</a></li>
-                <li className="nav-item mb-[0.5rem]"><a className="nav-link no-underline text-[#000] hover:text-darkerColor" href="#">Tools and Accessories</a></li>
-                <li className="nav-item mb-[0.5rem]"><a className="nav-link no-underline text-[#000] hover:text-darkerColor" href="#">Neauty Advice</a></li>
-                <li className="nav-item mb-[0.5rem]"><a className="nav-link no-underline text-[#000] hover:text-darkerColor" href="#">Categories</a></li>
+                <li className="nav-item mb-[0.5rem]"><a className="nav-link no-underline text-[#000] hover:decoration-darkerColor" href="#">Makeup</a></li>
+                <li className="nav-item mb-[0.5rem]"><a className="nav-link no-underline text-[#000] hover:decoration-darkerColor" href="#">Skin</a></li>
+                <li className="nav-item mb-[0.5rem]"><a className="nav-link no-underline text-[#000] hover:decoration-darkerColor" href="#">Hair Care</a></li>
+                <li className="nav-item mb-[0.5rem]"><a className="nav-link no-underline text-[#000] hover:decoration-darkerColor" href="#">Nail Care</a></li>
+                <li className="nav-item mb-[0.5rem]"><a className="nav-link no-underline text-[#000] hover:decoration-darkerColor" href="#">Body Care</a></li>
+                <li className="nav-item mb-[0.5rem]"><a className="nav-link no-underline text-[#000] hover:decoration-darkerColor" href="#">Tools and Accessories</a></li>
+                <li className="nav-item mb-[0.5rem]"><a className="nav-link no-underline text-[#000] hover:decoration-darkerColor" href="#">Neauty Advice</a></li>
+                <li className="nav-item mb-[0.5rem]"><a className="nav-link no-underline text-[#000] hover:decoration-darkerColor" href="#">Categories</a></li>
               </ul>
 
             </div>
@@ -144,32 +144,32 @@ const Navbar = () => {
           </div>
 
           <div className="navbar-links flex justify-between w-[65%] ">
-            <a className='text-[#333] p-2 rounded-[0.4rem] font-bold hover:text-darkerColor' href="#">Makeup</a>
-            <a className='text-[#333] p-2 rounded-[0.4rem] font-bold hover:text-darkerColor' href="#">Skin</a>
-            <a className='text-[#333] p-2 rounded-[0.4rem] font-bold hover:text-darkerColor' href="#">Hair Care</a>
-            <a className='text-[#333] p-2 rounded-[0.4rem] font-bold hover:text-darkerColor' href="#">Nail Care</a>
-            <a className='text-[#333] p-2 rounded-[0.4rem] font-bold hover:text-darkerColor' href="#">Body Care</a>
-            <a className='text-[#333] p-2 rounded-[0.4rem] font-bold hover:text-darkerColor' href="#">Tools and Accessories</a>
-            <a className='text-[#333] p-2 rounded-[0.4rem] font-bold hover:text-darkerColor' href="#">Beauty Advice</a>
-            <a className="nav-link text-[#333] p-2 rounded-[0.4rem] font-bold hover:text-darkerColor" href="#">Categories</a>
+            <a className='text-[#333] p-2 rounded-[0.4rem] font-medium' href="#">Makeup</a>
+            <a className='text-[#333] p-2 rounded-[0.4rem] font-medium' href="#">Skin</a>
+            <a className='text-[#333] p-2 rounded-[0.4rem] font-medium' href="#">Hair Care</a>
+            <a className='text-[#333] p-2 rounded-[0.4rem] font-medium' href="#">Nail Care</a>
+            <a className='text-[#333] p-2 rounded-[0.4rem] font-medium' href="#">Body Care</a>
+            <a className='text-[#333] p-2 rounded-[0.4rem] font-medium' href="#">Tools & Accessories</a>
+            <a className='text-[#333] p-2 rounded-[0.4rem] font-medium' href="#">Beauty Advice</a>
+            <a className="nav-link text-[#333] p-2 rounded-[0.4rem] font-medium" href="#">Categories</a>
           </div>
           {/* <div className="navbar-search">
             <input type="text" className="search-input" placeholder="Search" />
             <button className="search-button">Search</button>
           </div> */}
-          {/* <div className="wrap-input-17"><div className="search-box">
-  <button className="btn-search"><img src={searchImage} alt="Search" className="search-icon" /></button>
-  <input type="text" className="input-search" placeholder="Type to Search..."/>
+          {/* <div class="wrap-input-17"><div class="search-box">
+  <button class="btn-search"><img src={searchImage} alt="Search" className="search-icon" /></button>
+  <input type="text" class="input-search" placeholder="Type to Search..."/>
 </div>
 </div> */}
 
           <div className="navbar-icons flex items-center ">
-            <div className="wrap-input-17 box-border relative">
-              <div className="search-box relative">
-                <button className="btn-search w-[3rem] h-[3rem] border-none text-[1.3rem] cursor-pointer absolute bg-[#fff0] ">
+            <div class="wrap-input-17 box-border relative">
+              <div class="search-box relative">
+                <button class="btn-search w-[3rem] h-[3rem] border-none text-[1.3rem] cursor-pointer absolute bg-[#fff0] ">
                   <img src={searchImage} alt="Search" className="search-icon w-[1.15rem]" />
                 </button>
-                <input type="text" className="input-search h-[3rem] w-[3rem] border-none p-2 text-[1rem] outline-none transition-all duration-[0.5s] ease-in-out bg-[#fff0] placeholder:text-[#fff0]" placeholder="Type to Search..." />
+                <input type="text" class="input-search h-[3rem] w-[3rem] border-none p-2 text-[1rem] outline-none transition-all duration-[0.5s] ease-in-out bg-[#fff0] placeholder:text-[#fff0]" placeholder="Type to Search..." />
               </div>
             </div>
 
@@ -189,12 +189,12 @@ const Navbar = () => {
               onMouseEnter={() => setIsCartHovered(true)}
               onMouseLeave={() => setIsCartHovered(false)}
             >
-              {isCartHovered ? <img src={Cart} alt="Cart" className="cart-icon w-[1.3rem] hover:text-darkerColor" /> : <img src={ShoppingCart} alt="Cart" className="cart-icon w-[1.3rem] hover:text-darkerColor" />}
+              {isCartHovered ? <img src={Cart} alt="Cart" className="cart-icon w-[1.3rem] hover:decoration-darkerColor" /> : <img src={ShoppingCart} alt="Cart" className="cart-icon w-[1.3rem] hover:decoration-darkerColor" />}
             </span>
 
 
 
-            {/* <img src={ShoppingCart} alt="Cart" className="cart-icon w-[1.3rem] p-[0.5rem] hover:text-darkerColor" /> */}
+            {/* <img src={ShoppingCart} alt="Cart" className="cart-icon w-[1.3rem] p-[0.5rem] hover:decoration-darkerColor" /> */}
             <div className="navbar-icon-wrapper"
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
@@ -210,9 +210,9 @@ const Navbar = () => {
                 <div className="popover-content">
                   <h2 className='text-lg text-center drop-shadow-xl'>Login or SignUp</h2>
                   <div className='button-loginsignup'>
-                    <button className='SignUp bg-darkerColor border-darkerColor border-[0.1rem] w-full my-[0.5rem] text-[#fff] py-[0.5rem] px-[1rem] cursor-pointer font-bold rounded-[0.5rem] hover:bg-[#fff] hover:text-darkerColor hover:border-darkerColor hover:border-[0.1rem]'> Sign Up </button>
-                    <button className='Login bg-darkerColor border-darkerColor border-[0.1rem] w-full my-[0.5rem] text-[#fff] py-[0.5rem] px-[1rem] cursor-pointer font-bold rounded-[0.5rem] hover:bg-[#fff] hover:text-darkerColor hover:border-darkerColor hover:border-[0.1rem]'> Login </button>
-                    <button className='ViaGoogle bg-darkerColor border-darkerColor border-[0.1rem] w-full my-[0.5rem] text-[#fff] py-[0.5rem] px-[1rem] cursor-pointer font-bold rounded-[0.5rem] hover:bg-[#fff] hover:text-darkerColor hover:border-darkerColor hover:border-[0.1rem]'> Login / Signup via Google </button>
+                    <button className='SignUp bg-darkerColor border-darkerColor border-[0.1rem] w-full my-[0.5rem] text-[#fff] py-[0.5rem] px-[1rem] cursor-pointer font-bold rounded-[0.5rem] hover:bg-[#fff] hover:decoration-darkerColor hover:border-darkerColor hover:border-[0.1rem]'> Sign Up </button>
+                    <button className='Login bg-darkerColor border-darkerColor border-[0.1rem] w-full my-[0.5rem] text-[#fff] py-[0.5rem] px-[1rem] cursor-pointer font-bold rounded-[0.5rem] hover:bg-[#fff] hover:decoration-darkerColor hover:border-darkerColor hover:border-[0.1rem]'> Login </button>
+                    <button className='ViaGoogle bg-darkerColor border-darkerColor border-[0.1rem] w-full my-[0.5rem] text-[#fff] py-[0.5rem] px-[1rem] cursor-pointer font-bold rounded-[0.5rem] hover:bg-[#fff] hover:decoration-darkerColor hover:border-darkerColor hover:border-[0.1rem]'> Login / Signup via Google </button>
                   </div>
                 </div>
               )}

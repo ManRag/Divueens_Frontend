@@ -6,18 +6,18 @@ import './Subscription.css'
 
 
 function Subscription() {
-    return (
-      <div className="combos_here">
-        <div className="heading">
+  return (
+    <div className="combos_here">
+      <div className="heading">
         <hr className="hr-left" />
         <h2>Exclusive Combos</h2>
         <hr className="hr-right" />
       </div>
-        <Slider />
-        <ReferSection />
-        <ContactSection />
-      </div>
-    );
-  }
+      <Slider />
+      <ReferSection />
+      <ContactSection />
+    </div>
+  );
+}
 
 export default Subscription
