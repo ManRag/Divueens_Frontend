@@ -207,7 +207,7 @@ padding: 20px 0; */
   background-color: white;
   border-radius: 50%;
   filter: blur(10px); */
-  animation: move 10s infinite alternate ease-in-out;
+  animation: move 20s infinite alternate ease-in-out;
 }
 
 .spot1 {
@@ -218,9 +218,17 @@ padding: 20px 0; */
   animation-delay: 2.5s;
 }
 
+.spot3 {
+  animation-delay: 7.5s;
+}
+
+.spot4 {
+  animation-delay: 10s;
+}
+
 @keyframes move {
   0% {
-    top: 10%;
+    top: 0%;
     left: 10%;
   }
   /* 25% {

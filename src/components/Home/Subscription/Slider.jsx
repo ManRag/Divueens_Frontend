@@ -8,7 +8,7 @@ import "swiper/css/pagination";
 import 'swiper/css/navigation';
 
 // import required modules
-import {Pagination, Navigation } from "swiper/modules";
+import {Navigation } from "swiper/modules";
 import { Link } from "react-router-dom";
 const slidesData = [
   {
@@ -127,7 +127,7 @@ const slidesData = [
 
 const Item = ({ list }) => {
   return (
-    <div className="w-[17.5rem] h-[24.5em] bg-[#F0DFE5] overflow-hidden rounded-[10px] shadow-[0_4px_8px_#bbb] text-center transition-[0.3s_ease]">
+    <div className="w-[17.5rem] h-[24.5em] bg-[#fff] overflow-hidden rounded-[10px] shadow-[0_4px_8px_#bbb] text-center transition-[0.3s_ease]">
       <img
         src={list.img}
         className="w-full h-auto rounded-t-[10px] object-cover"
@@ -152,7 +152,7 @@ const Item = ({ list }) => {
               <FaRegStar key={i} />
             ))}
           </div>
-          <div className="text-black my-[5px] mx-0 text-[12px] md:text-[18px] font-medium">
+          <div className="text-black my-[5px] mx-0 text-[12px] md:text-[18px] font-medium text-left">
             {list.name}
             <h3 className="text-[12px] md:text-[16px] text-[#333] font-bold">
               Rs. {list.price}/- <br />
@@ -166,7 +166,7 @@ const Item = ({ list }) => {
           </div>
         </div>
         <Link to="/">
-          <button className="bg-[#8E2944] text-white border-[3px] border-[#8E2944] text-[12px] md:text-[15px] font-bold rounded-[8px] py-[5px] px-[10px] cursor-pointer shadow-[0px_1px_2px_#000] mb-[5px] hover:bg-white hover:text-[#8E2944]">
+          <button className="bg-rose-700 text-white border-[3px] border-rose-700 text-[12px] md:text-[15px] font-bold rounded-[8px] py-[5px] px-[10px] cursor-pointer shadow-[0px_1px_2px_#000] mb-[5px] hover:bg-white hover:text-rose-700">
             Buy Now
           </button>
         </Link>
@@ -179,12 +179,8 @@ const Slider = () => {
   return (
     <Swiper
       navigation={true}
-      slidesPerView={4.5}
-      pagination={{
-        clickable: true,
-      }}
-      // centeredSlides={true}
-      modules={[Pagination, Navigation]}
+      slidesPerView={4.3}
+      modules={[Navigation]}
       className="mySwiper w-[95vw] p-10"
     >
       {slidesData.map((data, i) => (
