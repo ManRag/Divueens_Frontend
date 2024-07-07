@@ -89,7 +89,7 @@
 
 .brand-background {
   /* background-color: #edeaf1; */
-  background: linear-gradient(to left, #e9acb600, #e9acb646, #e9acb6bd, white);
+  background: linear-gradient(to left, rgb(200, 200, 200), #e9acb6bd, #e9acb6bd, #e9acb6bd, rgb(200, 200, 200));
   /* margin-top: 4px;
 padding: 20px 0; */
 }
@@ -125,17 +125,17 @@ padding: 20px 0; */
   text-align: center;
   align-items: center;
   scroll-snap-align: start;*/
-  animation: marquee 12s infinite linear;
+  /* animation: marquee 12s infinite linear; */
 } 
 
-@keyframes marquee {
+/* @keyframes marquee {
   0% {
       transform: translateX(0);
   }
   100% {
       transform: translateX(-197.7vw);
   }
-}
+} */
 
 /* .bar img {
   max-width: 100%;
@@ -184,6 +184,7 @@ padding: 20px 0; */
   /* font-family: "Montserrat", sans-serif;
   position: relative; */
   background: linear-gradient(to left, #d3defa, #c7aeef, #d3c4ec, #c5afed);
+  /* background-color: #3E111A; */
   /* padding: 1rem 1rem;
   text-align: center; */
 }

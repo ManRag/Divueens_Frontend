@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styles from "./BestSeller.module.css";
-import { background_prod, imageUrls } from "../../../assets/assets";
-import { GrPrevious, GrNext } from "react-icons/gr";
+import { imageUrls } from "../../../assets/assets";
 import {
   FaAngleLeft,
   FaAngleRight,
@@ -14,7 +13,7 @@ import {
   FaStar,
   FaStarHalf,
 } from "react-icons/fa6";
-// console.log(background_prod,'background')
+
 
 const trending = [...imageUrls].slice(0, imageUrls.length / 2);
 const newArrivals = [...imageUrls].slice(
@@ -130,7 +129,7 @@ const BestSeller = () => {
   };
 
   // select category logic
-  const renderProducts = () => {
+  const RenderProducts = () => {
     if (selectedCategory === "trending") {
       return trending.map((list, index) => {
         return (
@@ -142,11 +141,10 @@ const BestSeller = () => {
               }}
               key={index}
               style={{ transform: `translateX(-${offset}%)` }}
-              className={`${styles["product-card"]} rounded-[10px] shadow-[0_4px_8px_#bbb] overflow-hidden my-[10px] mx-0 md:min-w-[300px] text-center transition-[0.3s_ease] ${hoveredIndex === index ? styles.hover : ""
-                }`}
+              className={`${styles["product-card"]} bg-rose-100 rounded-[10px] shadow-[0_4px_8px_#bbb] overflow-hidden my-[10px] mx-0 md:min-w-[300px] text-center transition-[0.3s_ease] ${hoveredIndex === index ? styles.hover : ""}`}
             >
-              <div className={styles["image-wrapper"]} style={{ overflow: "hidden" }}>
-                <img className="w-full rounded-l-[10px] h-[15rem] md:h-full object-cover"
+              <div className={`${styles["image-wrapper"]} overflow-hidden`}>
+                <img className="w-full rounded-[10px] h-[15rem] md:h-full object-cover"
                   // onMouseLeave={hoverEndHandler} onMouseEnter={()=>{hoverStartHandler(index)}}
                   onMouseEnter={() => {
                     scaleImagehandler(index);
@@ -162,16 +160,16 @@ const BestSeller = () => {
                 />
               </div>
               <div className={`${styles["cart-info"]} absolute left-[93%] top-1/2 -translate-x-[50%] -translate-y-[50%] flex flex-col justify-around w-[min-content] h-[40%] p-[10px] cursor-auto z-10 transition-[.3s]`}>
-                <button title="Add to cart" className="border-none bg-none no-underline text-[#ddd] cursor-pointer translate-x-[100px] hover:text-[#FF5BB1]" style={{ transition: '.2s' }}>
+                <button title="Add to cart" className="border-none bg-none no-underline text-[#ddd] cursor-pointer translate-x-[100px] hover:text-darkerColor" style={{ transition: '.2s' }}>
                   <FaCartShopping />
                 </button>
-                <a title="Add to Wishlist" className="border-none bg-none no-underline text-[#ddd] cursor-pointer translate-x-[100px] hover:text-[#FF5BB1]" style={{ transition: '.3s' }}>
+                <a title="Add to Wishlist" className="border-none bg-none no-underline text-[#ddd] cursor-pointer translate-x-[100px] hover:text-darkerColor" style={{ transition: '.3s' }}>
                   <FaHeart />
                 </a>
-                <a title="Quick View" className="border-none bg-none no-underline text-[#ddd] cursor-pointer translate-x-[100px] hover:text-[#FF5BB1]" style={{ transition: '.4s' }}>
+                <a title="Quick View" className="border-none bg-none no-underline text-[#ddd] cursor-pointer translate-x-[100px] hover:text-darkerColor" style={{ transition: '.4s' }}>
                   <FaMagnifyingGlass />
                 </a>
-                <a title="Compare" className="border-none bg-none no-underline text-[#ddd] cursor-pointer translate-x-[100px] hover:text-[#FF5BB1]" style={{ transition: '.5s' }}>
+                <a title="Compare" className="border-none bg-none no-underline text-[#ddd] cursor-pointer translate-x-[100px] hover:text-darkerColor" style={{ transition: '.5s' }}>
                   <FaArrowsRotate />
                 </a>
               </div>
@@ -179,7 +177,7 @@ const BestSeller = () => {
                 <div className="flex flex-col my-[10px] mx-0 items-start">
                   <div className={`${styles["rating"]} flex items-center`}>
                     {[...Array(Math.floor(list.Rating))].map((_, i) => (
-                      <FaStar />
+                      <FaStar key={i}/>
                     ))}
                     {list.Rating % 1 !== 0 ? (
                       list.Rating % 1 <= 0.5 ? (
@@ -191,13 +189,13 @@ const BestSeller = () => {
                       <></>
                     )}
                     {[...Array(5 - Math.ceil(list.Rating))].map((_, i) => (
-                      <FaRegStar />
+                      <FaRegStar key={i}/>
                     ))}
                   </div>
                   <h3 className="text-black my-[5px] mx-0 text-[12px] md:text-[18px] font-medium">{list.Name}</h3>
                   <h4 className="text-[12px] md:text-[16px] text-[#333] font-bold">
                     ₹{list.Price}/-
-                    <del className="ml-[10px] text-[11px] md:text-[14px] text-[#aaa] font-normal">
+                    <del className="ml-[10px] text-[11px] md:text-[14px] text-[green] font-normal">
                       <span className={styles["money"]}>
                         ₹{list.Original_Price}/-
                       </span>
@@ -205,7 +203,7 @@ const BestSeller = () => {
                   </h4>
                 </div>
                 <div>
-                  <button className={`${styles["buy-now"]} bg-[#ff5bb1] text-white border-[3px] border-[#ff5bb1] text-[12px] md:text-[15px] font-bold rounded-[8px] py-[5px] px-[10px] cursor-pointer shadow-[0px_1px_2px_#000] mb-[5px] hover:bg-white hover:text-[#ff5bb1]`}>Buy Now</button>
+                  <button className={`${styles["buy-now"]} bg-darkerColor border-[2px] border-darkerColor text-[12px] md:text-[15px] font-bold rounded-[8px] py-[5px] px-[10px] cursor-pointer shadow-[0px_1px_2px_#000] mb-[5px] text-[#fff] hover:bg-[#fff] hover:text-darkerColor`}>Buy Now</button>
                 </div>
               </div>
             </div>
@@ -243,24 +241,24 @@ const BestSeller = () => {
                 />
               </div>
               <div className={`${styles["cart-info"]} absolute left-[93%] top-1/2 -translate-x-[50%] -translate-y-[50%] flex flex-col justify-around w-[min-content] h-[40%] p-[10px] cursor-auto z-10 transition-[.3s]`}>
-                <button title="Add to cart" className="border-none bg-none no-underline text-[#ddd] cursor-pointer translate-x-[100px] hover:text-[#FF5BB1]" style={{ transition: '.2s' }}>
+                <button title="Add to cart" className="border-none bg-none no-underline text-[#ddd] cursor-pointer translate-x-[100px] hover:text-darkerColor" style={{ transition: '.2s' }}>
                   <FaCartShopping />
                 </button>
-                <a title="Add to Wishlist" className="border-none bg-none no-underline text-[#ddd] cursor-pointer translate-x-[100px] hover:text-[#FF5BB1]" style={{ transition: '.3s' }}>
+                <a title="Add to Wishlist" className="border-none bg-none no-underline text-[#ddd] cursor-pointer translate-x-[100px] hover:text-darkerColor" style={{ transition: '.3s' }}>
                   <FaHeart />
                 </a>
-                <a title="Quick View" className="border-none bg-none no-underline text-[#ddd] cursor-pointer translate-x-[100px] hover:text-[#FF5BB1]" style={{ transition: '.4s' }}>
+                <a title="Quick View" className="border-none bg-none no-underline text-[#ddd] cursor-pointer translate-x-[100px] hover:text-darkerColor" style={{ transition: '.4s' }}>
                   <FaMagnifyingGlass />
                 </a>
-                <a title="Compare" className="border-none bg-none no-underline text-[#ddd] cursor-pointer translate-x-[100px] hover:text-[#FF5BB1]" style={{ transition: '.5s' }}>
+                <a title="Compare" className="border-none bg-none no-underline text-[#ddd] cursor-pointer translate-x-[100px] hover:text-darkerColor" style={{ transition: '.5s' }}>
                   <FaArrowsRotate />
                 </a>
               </div>
               <div className={`${styles["product-info"]} flex justify-around items-center rounded-b-[10px] font-bold`}>
-                <div className="flex flex-col">
+                <div className="flex flex-col my-[10px] mx-0 items-start">
                   <div className={`${styles["rating"]} flex items-center`}>
                     {[...Array(Math.floor(list.Rating))].map((_, i) => (
-                      <FaStar />
+                      <FaStar key={i}/>
                     ))}
                     {list.Rating % 1 !== 0 ? (
                       list.Rating % 1 <= 0.5 ? (
@@ -272,7 +270,7 @@ const BestSeller = () => {
                       <></>
                     )}
                     {[...Array(5 - Math.ceil(list.Rating))].map((_, i) => (
-                      <FaRegStar />
+                      <FaRegStar key={i}/>
                     ))}
                   </div>
                   <h3 className="text-black my-[5px] mx-0 text-[12px] md:text-[18px] font-medium">{list.Name}</h3>
@@ -286,7 +284,10 @@ const BestSeller = () => {
                   </h4>
                 </div>
                 <div>
-                  <button className={`${styles["buy-now"]}  bg-[#ff5bb1] text-white border-[3px] border-[#ff5bb1] text-[12px] md:text-[15px] font-bold rounded-[8px] py-[5px] px-[10px] cursor-pointer shadow-[0px_1px_2px_#000] mb-[5px] hover:bg-white hover:text-[#ff5bb1]`}>Buy Now</button>
+                  <button
+                    className={`${styles["buy-now"]}  bg-darkerColor border-[2px] border-darkerColor text-[12px] md:text-[15px] font-bold rounded-[8px] py-[5px] px-[10px] cursor-pointer shadow-[0px_1px_2px_#000] mb-[5px] text-[#fff] hover:bg-[#fff] hover:text-darkerColor`}>
+                    Buy Now
+                  </button>
                 </div>
               </div>
             </div>
@@ -309,27 +310,27 @@ const BestSeller = () => {
 
       <div className={`${styles["slideBtn"]} my-[25px] mx-auto ${styles["bestseller_container"]} text-center`}>
         <button onClick={() => { HandleBtnClicked2("trending"); }}
-          style={{ backgroundColor: isClicked ? "#ffff" : "#FF5BB1", color: isClicked ? "#FF5BB1" : "#fff", }}
-          className={`${styles["first"]} rounded-l-[5px] bg-[#ff5bb1] py-[0.5rem] px-[0.2rem] w-[115px] h-[35px] md:w-[160px] md:h-[50px] border-[2px] border-[#ff5bb1] outline-none text-[10px] md:text-[16px] transition-[all_0.8s_ease] font-extrabold`}>Trending Now</button>
+          style={{ backgroundColor: isClicked ? "#ffff" : "#e93550", color: isClicked ? "#e93550" : "#fff", }}
+          className={`${styles["first"]} rounded-l-[5px] py-[0.5rem] px-[0.2rem] w-[115px] h-[35px] md:w-[160px] md:h-[50px] border-[2px] border-darkerColor outline-none text-[10px] md:text-[16px] transition-[all_0.8s_ease] font-extrabold`}>Trending Now</button>
 
         <button onClick={() => { HandleBtnClicked("newArrivals"); }}
-          style={{ backgroundColor: isClicked ? "#FF5BB1" : "#ffff", color: isClicked ? "#fff" : "#FF5BB1", }}
-          className={`${styles["second"]} rounded-r-[5px] bg-white py-[0.5rem] px-[0.2rem] w-[115px] h-[35px] md:w-[160px] md:h-[50px] border-[2px] border-[#ff5bb1] outline-none text-[10px] md:text-[16px] transition-[all_0.8s_ease] font-extrabold`}>New Arrivals</button>
+          style={{ backgroundColor: isClicked ? "#e93550" : "#ffff", color: isClicked ? "#fff" : "#e93550", }}
+          className={`${styles["second"]} rounded-r-[5px] py-[0.5rem] px-[0.2rem] w-[115px] h-[35px] md:w-[160px] md:h-[50px] border-[2px] border-darkerColor outline-none text-[10px] md:text-[16px] transition-[all_0.8s_ease] font-extrabold`}>New Arrivals</button>
       </div>
 
       <div className={`${styles["products"]} py-[10px] px-0 md:mx-[50px] relative`}>
-        <div className={`${styles["product-container"]} relative flex justify-start items-center gap-[20px] my-[20px] md:mx-[30px] max-w-full overflow-hidden cursor-pointer`}>{renderProducts()}</div>
+        <div className={`${styles["product-container"]} relative flex justify-start items-center gap-[20px] my-[20px] md:mx-[30px] max-w-full overflow-hidden cursor-pointer`}><RenderProducts /></div>
         <div className={`${styles["controllers"]}`}>
-          <button className="absolute w-[30px] h-[30px] md:w-[50px] md:h-[50px] flex ml-[5px] mr-[5px] items-center justify-center rounded-[50%] bg-white text-[#888] border-none shadow-[2px_2px_10px_#888] left-[0%] top-1/2 -translate-y-[50%] " onClick={prevSlide}>
+          <button className="absolute w-[30px] h-[30px] md:w-[50px] md:h-[50px] flex ml-[5px] mr-[5px] items-center justify-center rounded-[50%] bg-[#fff] text-[#888] border-none shadow-[2px_2px_10px_#888] left-[0%] top-1/2 -translate-y-[50%] " onClick={prevSlide}>
             <FaAngleLeft />
           </button>
-          <button className="absolute w-[30px] h-[30px] md:w-[50px] md:h-[50px] flex ml-[5px] mr-[5px] items-center justify-center rounded-[50%] bg-white text-[#888] border-none shadow-[2px_2px_10px_#888] right-[0%] top-1/2 -translate-y-[50%] " onClick={nextSlide}>
+          <button className="absolute w-[30px] h-[30px] md:w-[50px] md:h-[50px] flex ml-[5px] mr-[5px] items-center justify-center rounded-[50%] bg-[#fff] text-[#888] border-none shadow-[2px_2px_10px_#888] right-[0%] top-1/2 -translate-y-[50%] " onClick={nextSlide}>
             <FaAngleRight />
           </button>
         </div>
       </div>
       <div className={`${styles["see-all"]} my-[20px] mx-auto`}>
-        <button className="text-[#ff5bb1] bg-white border-[2px] border-[#ff5bb1] rounded-[5px] py-[10px] px-[40px] md:px-[20px] cursor-pointer text-[10px] md:text-[18px] font-semibold block m-auto transition-[.2s] hover:text-[#fff] hover:bg-[#ff5bb1]">View More</button>
+        <button className="text-darkerColor bg-[#fff] border-[2px] border-darkerColor rounded-[5px] py-[10px] px-[40px] md:px-[20px] cursor-pointer text-[10px] md:text-[18px] font-semibold block m-auto transition-[.2s] hover:text-[#fff] hover:bg-darkestColor">View More</button>
       </div>
     </>
   );
