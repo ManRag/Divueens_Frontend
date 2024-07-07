@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { IoIosArrowDown, IoIosArrowForward } from 'react-icons/io';
 import { Link } from 'react-router-dom'
+import Filter from './Filter'
 
 const ProductList = () => {
 
@@ -86,17 +87,17 @@ const ProductList = () => {
         <>
             <div className='flex flex-col items-center w-full h-full'>
                 {/* Home > Skin */}
-                <div className='flex flex-col gap-8 w-full px-40 mb-10'>
+                <div className='flex flex-col gap-8 w-full px-40 mb-2'>
                     <div className='flex items-center'>
                         <ol className="inline-flex items-center gap-3">
                             <li className='inline-flex items-center'>
-                                <Link to={'/'} className='inline-flex items-center text-lg font-medium'>
+                                <Link to={'/'} className='inline-flex items-center tracking-tighter text-lg font-medium'>
                                     Home
                                 </Link>
                             </li>
                             <IoIosArrowForward size={22} />
                             <li className='inline-flex items-center'>
-                                <Link to={'/products'} className='inline-flex items-center text-lg font-medium'>
+                                <Link to={'/products'} className='inline-flex items-center tracking-tighter text-lg font-medium'>
                                     Skin care
                                 </Link>
                             </li>
@@ -107,8 +108,8 @@ const ProductList = () => {
                         <div className='flex items-center gap-2'>
                             {dropdown.map((d) => {
                                 return <div key={d.id} className='flex items-center relative'>
-                                    <button onClick={d.func} className='bg-[#d4d4d4] px-4 py-2 rounded-full flex items-center gap-2'>
-                                        <span>{d.name}</span> <IoIosArrowDown size={15} />
+                                    <button onClick={d.func} className='bg-[#d4d4d4] px-4 py-2 rounded-full flex items-center gap-2 font-medium'>
+                                        {d.name} <IoIosArrowDown size={15} />
                                     </button>
 
                                     {d.isOpen && (
@@ -155,10 +156,10 @@ const ProductList = () => {
                 </div>
 
                 {/* Filters and Cards */}
-                <div>
+                <div className='flex items-center'>
                     {/* Filters */}
                     <div>
-
+                        <Filter />
                     </div>
 
                     {/* Cards */}
