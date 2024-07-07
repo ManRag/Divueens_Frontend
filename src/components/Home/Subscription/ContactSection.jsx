@@ -28,6 +28,7 @@ const ContactSection = () => {
         <input
           type="email"
           className=" py-3 px-4 md:w-96 w-60 rounded-s-xl shadow-xl focus:outline focus:outline-rose-700 text-sm border "
+
           placeholder="Your Email Address"
         />
         <button

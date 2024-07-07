@@ -37,6 +37,11 @@ const BestSeller = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [hoveredImageIndex, setHoveredImageIndex] = useState(null);
 
+  // color of BestSeller
+  const [ButtonBg, ButtonCng] = useState('rose-700');
+  const [CardBg, CardCng] = useState('rose-100');
+
+
   //    slider begin
   useEffect(() => {
     const handleResize = () => {
@@ -237,6 +242,7 @@ const BestSeller = () => {
                   Buy Now
                 </button>
               </div>
+
             </div>
           </>
         );
@@ -350,7 +356,7 @@ const BestSeller = () => {
                     Buy Now
                   </button>
                 </div>
-              </div>
+              </div> 
             </div>
           </>
         );

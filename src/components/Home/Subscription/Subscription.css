@@ -399,15 +399,23 @@
   .swiper-button-next {
     width: 3em;
     height: 3em;
+    color: #be123c;
     background-color: white;
     border-radius: 50%;
-    color: grey;
+    font-weight: bold;
+    border: 2px solid #be123c;
     box-shadow: 1px 1px 5px grey;
+  }
+  
+  .swiper-button-prev:hover,
+  .swiper-button-next:hover{
+    color: #fff;
+    background-color: #be123c;
   }
 
   .swiper-button-prev::after,
   .swiper-button-next::after {
     font-size: 1.2em;
     font-weight: bolder;
-    text-shadow: 1px 0px 0px gray;
+    text-shadow: 1px 0px 0px rgb(255, 255, 255);
   }

@@ -4,10 +4,10 @@ import { ref_pic } from "../../../assets/assets";
 const ReferSection = () => {
   return (
     <>
-      <div className="heading">
-        <hr className="hr-left" />
-        <h2>Refer your Friend</h2>
-        <hr className="hr-right" />
+      <div className="heading pt-16 pb-8">
+        <hr className="bg-gradient-to-l from-rose-700" />
+        <h2 className="text-nowrap">Refer your Friend</h2>
+        <hr className="bg-gradient-to-r from-rose-700" />
       </div>
       <br />
       <div className="refer-section">
