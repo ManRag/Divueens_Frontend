@@ -13,11 +13,11 @@ import "./ExclusiveDiscount.css";
 
 const ExclusiveDiscount = () => {
   return (
-    <section className="Exclusive_Discount overflow-hidden font-semibold bg-[#edede9] flex justify-center items-center flex-wrap mt-[30px] ">
-      <div className="heading">
-        <hr className="hr-left" />
-        <h2>Exclusive Discounts</h2>
-        <hr className="hr-right" />
+    <section className="Exclusive_Discount overflow-hidden font-semibold bg-[#edede9] flex justify-center items-center flex-wrap mt-[30px]">
+      <div className="heading pt-16 pb-8">
+        <hr className="bg-gradient-to-l from-rose-700" />
+        <h2 className="text-nowrap">Exclusive Discounts</h2>
+        <hr className="bg-gradient-to-r from-rose-700" />
       </div>
 
       <div className="container grid grid-cols-1 md:grid-cols-2 md:grid-rows-2 mt-[30px]">
@@ -52,10 +52,10 @@ const ExclusiveDiscount = () => {
         </div>
       </div>
       <br />
-      <div className="heading">
-        <hr className="hr-left" />
-        <h2>Freebies of the Month</h2>
-        <hr className="hr-right" />
+      <div className="heading pt-16 pb-8">        
+      <hr className="bg-gradient-to-l from-rose-700" />
+        <h2 className="text-nowrap">Freebies of the Month</h2>
+      <hr className="bg-gradient-to-r from-rose-700" />
       </div>
       <br />
       <div className="banner-image">
