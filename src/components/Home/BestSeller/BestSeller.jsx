@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styles from "./BestSeller.module.css";
-import { background_prod, imageUrls } from "../../../assets/assets";
-import { GrPrevious, GrNext } from "react-icons/gr";
+import { imageUrls } from "../../../assets/assets";
 import {
   FaAngleLeft,
   FaAngleRight,
@@ -14,7 +13,7 @@ import {
   FaStar,
   FaStarHalf,
 } from "react-icons/fa6";
-// console.log(background_prod,'background')
+
 
 const trending = [...imageUrls].slice(0, imageUrls.length / 2);
 const newArrivals = [...imageUrls].slice(
@@ -130,7 +129,7 @@ const BestSeller = () => {
   };
 
   // select category logic
-  const renderProducts = () => {
+  const RenderProducts = () => {
     if (selectedCategory === "trending") {
       return trending.map((list, index) => {
         return (
@@ -142,11 +141,10 @@ const BestSeller = () => {
               }}
               key={index}
               style={{ transform: `translateX(-${offset}%)` }}
-              className={`${styles["product-card"]} rounded-[10px] shadow-[0_4px_8px_#bbb] overflow-hidden my-[10px] mx-0 md:min-w-[300px] text-center transition-[0.3s_ease] ${hoveredIndex === index ? styles.hover : ""
-                }`}
+              className={`${styles["product-card"]} bg-rose-100 rounded-[10px] shadow-[0_4px_8px_#bbb] overflow-hidden my-[10px] mx-0 md:min-w-[300px] text-center transition-[0.3s_ease] ${hoveredIndex === index ? styles.hover : ""}`}
             >
-              <div className={styles["image-wrapper"]} style={{ overflow: "hidden" }}>
-                <img className="w-full rounded-l-[10px] h-[15rem] md:h-full object-cover"
+              <div className={`${styles["image-wrapper"]} overflow-hidden`}>
+                <img className="w-full rounded-[10px] h-[15rem] md:h-full object-cover"
                   // onMouseLeave={hoverEndHandler} onMouseEnter={()=>{hoverStartHandler(index)}}
                   onMouseEnter={() => {
                     scaleImagehandler(index);
@@ -179,7 +177,7 @@ const BestSeller = () => {
                 <div className="flex flex-col my-[10px] mx-0 items-start">
                   <div className={`${styles["rating"]} flex items-center`}>
                     {[...Array(Math.floor(list.Rating))].map((_, i) => (
-                      <FaStar />
+                      <FaStar key={i}/>
                     ))}
                     {list.Rating % 1 !== 0 ? (
                       list.Rating % 1 <= 0.5 ? (
@@ -191,13 +189,13 @@ const BestSeller = () => {
                       <></>
                     )}
                     {[...Array(5 - Math.ceil(list.Rating))].map((_, i) => (
-                      <FaRegStar />
+                      <FaRegStar key={i}/>
                     ))}
                   </div>
                   <h3 className="text-black my-[5px] mx-0 text-[12px] md:text-[18px] font-medium">{list.Name}</h3>
                   <h4 className="text-[12px] md:text-[16px] text-[#333] font-bold">
                     ₹{list.Price}/-
-                    <del className="ml-[10px] text-[11px] md:text-[14px] text-[#aaa] font-normal">
+                    <del className="ml-[10px] text-[11px] md:text-[14px] text-[green] font-normal">
                       <span className={styles["money"]}>
                         ₹{list.Original_Price}/-
                       </span>
@@ -257,10 +255,10 @@ const BestSeller = () => {
                 </a>
               </div>
               <div className={`${styles["product-info"]} flex justify-around items-center rounded-b-[10px] font-bold`}>
-                <div className="flex flex-col">
+                <div className="flex flex-col my-[10px] mx-0 items-start">
                   <div className={`${styles["rating"]} flex items-center`}>
                     {[...Array(Math.floor(list.Rating))].map((_, i) => (
-                      <FaStar />
+                      <FaStar key={i}/>
                     ))}
                     {list.Rating % 1 !== 0 ? (
                       list.Rating % 1 <= 0.5 ? (
@@ -272,7 +270,7 @@ const BestSeller = () => {
                       <></>
                     )}
                     {[...Array(5 - Math.ceil(list.Rating))].map((_, i) => (
-                      <FaRegStar />
+                      <FaRegStar key={i}/>
                     ))}
                   </div>
                   <h3 className="text-black my-[5px] mx-0 text-[12px] md:text-[18px] font-medium">{list.Name}</h3>
@@ -321,7 +319,7 @@ const BestSeller = () => {
       </div>
 
       <div className={`${styles["products"]} py-[10px] px-0 md:mx-[50px] relative`}>
-        <div className={`${styles["product-container"]} relative flex justify-start items-center gap-[20px] my-[20px] md:mx-[30px] max-w-full overflow-hidden cursor-pointer`}>{renderProducts()}</div>
+        <div className={`${styles["product-container"]} relative flex justify-start items-center gap-[20px] my-[20px] md:mx-[30px] max-w-full overflow-hidden cursor-pointer`}><RenderProducts /></div>
         <div className={`${styles["controllers"]}`}>
           <button className="absolute w-[30px] h-[30px] md:w-[50px] md:h-[50px] flex ml-[5px] mr-[5px] items-center justify-center rounded-[50%] bg-[#fff] text-[#888] border-none shadow-[2px_2px_10px_#888] left-[0%] top-1/2 -translate-y-[50%] " onClick={prevSlide}>
             <FaAngleLeft />
