@@ -4,11 +4,11 @@ export default {
   theme: {
     extend: {},
     // colors: {
-    //   darkestColor: "#E93550",
-    //   darkerColor: "#FF475A",
+    //   rose-700: "#E93550",
+    //   rose-700: "#FF475A",
     //   darkColor: "#F1516D",
     //   lightColor: "#FD667C",
-    //   lighterColor: "#FB7991",
+    //   rose-200: "#FB7991",
     //   lightestColor: "#FF919D",
     // },
   },
