@@ -32,7 +32,7 @@ const TopBrands = () => {
           <div className={`${styles["spot"]} absolute w-[25px] h-[25px] bg-white rounded-[50%] blur-[10px] ${styles["spot1"]}`}></div>
           <div className={`${styles["spot"]} absolute w-[25px] h-[25px] bg-white rounded-[50%] blur-[10px] ${styles["spot2"]}`}></div>
           <div className={`${styles["spot"]} absolute w-[25px] h-[25px] bg-white rounded-[50%] blur-[10px] ${styles["spot3"]}`}></div>
-          <h1 className="font-semibold text-[1.5rem]">Get Div coins on every order</h1>
+          <h1 className="font-semibold text-[2rem]">Get Div coins on every order</h1>
         </div>
       </div>
     </>
