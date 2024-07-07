@@ -36,6 +36,7 @@ body {
 .heading h2 {
   /* font-family: "Playwrite DE Grund", cursive; */
   margin: 20px;
+  margin-block: 25px;
   font-weight: 900;
   font-size: 2rem;
   /* font-family: "Playwrite DE Grund", cursive; */
