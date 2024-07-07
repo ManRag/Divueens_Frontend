@@ -31,7 +31,7 @@ const Carousel = ({ slides }) => {
         {slides.map((_, index) => (
           <span
             key={index}
-            className={index === currentSlide ? 'dot current bg-[#ff5bb1] rounded-2xl w-[2.5vw] h-[0.8vh]' : 'dot w-[1.4vw] h-[2.9vh] bg-[#fbbdbb] rounded-[50%] my-1 mx-[0.1vw] cursor-pointer transition-[background-color_0.3s_ease]'}
+            className={index === currentSlide ? 'dot current bg-lighterColor rounded-2xl w-[2vw] h-[0.8vh]' : 'dot w-[1.4vw] h-[2.9vh] bg-darkestColor rounded-[50%] my-1 mx-[0.1vw] cursor-pointer transition-[background-color_0.3s_ease]'}
             onClick={() => setCurrentSlide(index)}
           >
           </span>

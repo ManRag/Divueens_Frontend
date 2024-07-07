@@ -1,11 +1,21 @@
-import React from 'react';
-import { FaAngleLeft, FaAngleRight } from 'react-icons/fa';
+import React from "react";
+import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 
 const Navigation = ({ changeSlide }) => {
   return (
-    <div className="navigation absolute w-full top-1/2 -translate-y-1/2 flex justify-between">
-      <button className="nav p-[5px] flex items-center justify-center border-none rounded-[50%] bg-white prev ml-[5px] shadow-[1px_0px_3px_#444]" onClick={() => changeSlide(-1)}><FaAngleLeft /></button>
-      <button className="nav p-[5px] flex items-center justify-center border-none rounded-[50%] bg-white next mr-[5px] shadow-[-1px_0px_3px_#444]" onClick={() => changeSlide(1)}><FaAngleRight /></button>
+    <div className="navigation">
+      <button className="nav prev group absolute -left-5 top-0 z-20 flex h-full cursor-pointer 
+      items-center justify-center focus:outline-none" data-slide-previous="" onClick={() => changeSlide(-1)}>
+        <span className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-black">
+          <FaAngleLeft className="h-6 w-6 font-black text-[#fff] dark:text-gray-800" />
+        </span>
+      </button>
+      <button className="nav next group absolute -left-5 top-0 z-20 flex h-full cursor-pointer 
+      items-center justify-center focus:outline-none" data-slide-previous="" onClick={() => changeSlide(1)}>
+        <span className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-black">
+          <FaAngleRight className="h-6 w-6 font-black text-[#fff] dark:text-gray-800" />
+        </span>
+      </button>
     </div>
   );
 };
