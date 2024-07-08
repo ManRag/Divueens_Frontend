@@ -9,6 +9,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 // import required modules
+
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
 const TopBrands = () => {
@@ -20,7 +21,7 @@ const TopBrands = () => {
           <h2 className="text-nowrap">Top Brands</h2>
           <hr className="bg-gradient-to-r from-rose-700" />
         </div>
-
+        
         <div
           className={`${styles["brand-background"]} flex mt-[4px] py-[20px] px-0`}
         >
@@ -49,7 +50,6 @@ const TopBrands = () => {
               </SwiperSlide>
             ))}
           </Swiper>
-
           {/* -------------- */}
         </div>
 
