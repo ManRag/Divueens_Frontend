@@ -4,6 +4,7 @@ import Footer from "./components/Home/Footer/Footer";
 import SignUpPage from "./components/Authenticate/SignUp";
 import LoginPage from "./components/Authenticate/login";
 import Home from "./pages/Home";
+import ProductList from "./components/Home/ProductList/ProductList";
 import TeamSection from "./pages/TeamSection";
 import DivueensCSR from "./pages/DivueensCSR";
 
@@ -14,6 +15,9 @@ function App() {
       <Routes>
         {/* Home Page */}
         <Route path="/" element={<Home />} />
+
+        {/* Product - List */}
+        <Route path="/products" element={<ProductList />} />
 
         {/* Login page */}
         <Route path="/login" element={<LoginPage />} />

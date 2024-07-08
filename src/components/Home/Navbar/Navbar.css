@@ -156,7 +156,7 @@ body {
 }
 
 .popover-content::before {
-  content: '';
+  content: "";
   position: absolute;
   top: -0.5rem;
   left: calc(85% - 0.5rem);
