@@ -157,22 +157,21 @@ const Navbar = () => {
             <input type="text" className="search-input" placeholder="Search" />
             <button className="search-button">Search</button>
           </div> */}
-          {/* <div className="wrap-input-17"><div className="search-box">
-  <button className="btn-search"><img src={searchImage} alt="Search" className="search-icon" /></button>
-  <input type="text" className="input-search" placeholder="Type to Search..."/>
+          {/* <div class="wrap-input-17"><div class="search-box">
+  <button class="btn-search"><img src={searchImage} alt="Search" className="search-icon" /></button>
+  <input type="text" class="input-search" placeholder="Type to Search..."/>
 </div>
 </div> */}
 
           <div className="navbar-icons flex items-center ">
-            <div className="wrap-input-17 box-border relative">
-              <div className="search-box relative">
-                <button className="btn-search w-[3rem] h-[3rem] border-none text-[1.3rem] cursor-pointer absolute bg-[#fff0] ">
+            <div class="wrap-input-17 box-border relative">
+              <div class="search-box relative">
+                <button class="btn-search w-[3rem] h-[3rem] border-none text-[1.3rem] cursor-pointer absolute bg-[#fff0] ">
                   <img src={searchImage} alt="Search" className="search-icon w-[1.15rem]" />
                 </button>
                 <input type="text" className="input-search h-[3rem] w-[3rem] border-none text-[.9rem] outline-none transition-all duration-[0.5s] ease-in-out bg-[#fff0] placeholder:text-rose-200" placeholder="Search on Divueens" />
               </div>
             </div>
-
 
             <span
               className="navbar-icon hover:text-rose-700 flex cursor-pointer text-[1.2rem] ml-[1.5rem] p-[0.1rem]"
@@ -183,7 +182,6 @@ const Navbar = () => {
             </span>
             {/* <FaShoppingCart className="navbar-icon hover:text-rose-700 flex cursor-pointer text-[1.2rem] ml-[1.5rem] p-[0.1rem]" /> */}
 
-
             <span
               className="navbar-icon hover:text-rose-700 flex cursor-pointer text-[1.2rem] ml-[1.5rem] p-[0.1rem]"
               onMouseEnter={() => setIsCartHovered(true)}
@@ -191,7 +189,6 @@ const Navbar = () => {
             >
               {isCartHovered ? <img src={Cart} alt="Cart" className="cart-icon w-[1.3rem] hover:text-rose-700" /> : <img src={ShoppingCart} alt="Cart" className="cart-icon w-[1.3rem] hover:text-rose-700" />}
             </span>
-
 
 
             {/* <img src={ShoppingCart} alt="Cart" className="cart-icon w-[1.3rem] p-[0.5rem] hover:text-rose-700" /> */}
