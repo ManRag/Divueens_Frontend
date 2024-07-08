@@ -87,9 +87,9 @@ function Header() {
   return (
     <div className="app-home">
       <header>
-        <SaleHeader />
         <NavBar />
         <Carousel slides={slides} />
+        <SaleHeader />
       </header>
       {/* <main className='mainhome'>
         

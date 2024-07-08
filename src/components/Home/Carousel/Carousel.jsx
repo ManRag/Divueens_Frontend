@@ -14,7 +14,7 @@ const Carousel = ({ slides }) => {
   }, [slides.length]);
 
   return (
-    <div className="carousel mb-[2%] relative overflow-x-hidden">
+    <div className="carousel mb-[0%] relative overflow-x-hidden">
       <div className="slide-container flex transition-[transform_0.5s_ease-in-out]" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
         {slides.map((slide, index) => (
           <CustomSlide
