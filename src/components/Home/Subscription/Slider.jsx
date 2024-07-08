@@ -1,144 +1,141 @@
 import React, { useState } from "react";
-// import Item from "./Item";
-// import Slide from './Slide';
-import Navigation from "./Navigation";
-import Dots from "./Dots";
+import { Swiper, SwiperSlide } from "swiper/react";
 import { sub_1, sub_2, sub_3, sub_4 } from "../../../assets/assets";
 import { FaRegStar, FaRegStarHalfStroke, FaStar } from "react-icons/fa6";
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+import 'swiper/css/navigation';
+
+// import required modules
+import {Navigation } from "swiper/modules";
+import { Link } from "react-router-dom";
 const slidesData = [
-  [
-    {
-      img: sub_1,
-      name: "Beauty Combo",
-      price: 8400,
-      original_price: 12000,
-      rating: 4.5,
-    },
-    {
-      img: sub_2,
-      name: "Beauty Combo",
-      price: 8400,
-      original_price: 12000,
-      rating: 3.2,
-    },
-    {
-      img: sub_3,
-      name: "Beauty Combo",
-      price: 8400,
-      original_price: 12000,
-      rating: 2.6,
-    },
-    {
-      img: sub_4,
-      name: "Beauty Combo",
-      price: 8400,
-      original_price: 12000,
-      rating: 5,
-    },
-  ],
-  [
-    {
-      img: sub_1,
-      name: "Beauty Combo",
-      price: 8400,
-      original_price: 12000,
-      rating: 3.2,
-    },
-    {
-      img: sub_2,
-      name: "Beauty Combo",
-      price: 8400,
-      original_price: 12000,
-      rating: 3.2,
-    },
-    {
-      img: sub_3,
-      name: "Beauty Combo",
-      price: 8400,
-      original_price: 12000,
-      rating: 3.2,
-    },
-    {
-      img: sub_4,
-      name: "Beauty Combo",
-      price: 8400,
-      original_price: 12000,
-      rating: 3.2,
-    },
-  ],
-  [
-    {
-      img: sub_1,
-      name: "Beauty Combo",
-      price: 8400,
-      original_price: 12000,
-      rating: 3.2,
-    },
-    {
-      img: sub_2,
-      name: "Beauty Combo",
-      price: 8400,
-      original_price: 12000,
-      rating: 3.2,
-    },
-    {
-      img: sub_3,
-      name: "Beauty Combo",
-      price: 8400,
-      original_price: 12000,
-      rating: 3.2,
-    },
-    {
-      img: sub_4,
-      name: "Beauty Combo",
-      price: 8400,
-      original_price: 12000,
-      rating: 3.2,
-    },
-  ],
-  [
-    {
-      img: sub_1,
-      name: "Beauty Combo",
-      price: 8400,
-      original_price: 12000,
-      rating: 3.2,
-    },
-    {
-      img: sub_2,
-      name: "Beauty Combo",
-      price: 8400,
-      original_price: 12000,
-      rating: 3.2,
-    },
-    {
-      img: sub_3,
-      name: "Beauty Combo",
-      price: 8400,
-      original_price: 12000,
-      rating: 3.2,
-    },
-    {
-      img: sub_4,
-      name: "Beauty Combo",
-      price: 8400,
-      original_price: 12000,
-      rating: 3.2,
-    },
-  ],
+  {
+    img: sub_1,
+    name: "Beauty Combo",
+    price: 8400,
+    original_price: 12000,
+    rating: 4.5,
+  },
+  {
+    img: sub_2,
+    name: "Beauty Combo",
+    price: 8400,
+    original_price: 12000,
+    rating: 3.2,
+  },
+  {
+    img: sub_3,
+    name: "Beauty Combo",
+    price: 8400,
+    original_price: 12000,
+    rating: 2.6,
+  },
+  {
+    img: sub_4,
+    name: "Beauty Combo",
+    price: 8400,
+    original_price: 12000,
+    rating: 5,
+  },
+  {
+    img: sub_1,
+    name: "Beauty Combo",
+    price: 8400,
+    original_price: 12000,
+    rating: 3.2,
+  },
+  {
+    img: sub_2,
+    name: "Beauty Combo",
+    price: 8400,
+    original_price: 12000,
+    rating: 3.2,
+  },
+  {
+    img: sub_3,
+    name: "Beauty Combo",
+    price: 8400,
+    original_price: 12000,
+    rating: 3.2,
+  },
+  {
+    img: sub_4,
+    name: "Beauty Combo",
+    price: 8400,
+    original_price: 12000,
+    rating: 3.2,
+  },
+  {
+    img: sub_1,
+    name: "Beauty Combo",
+    price: 8400,
+    original_price: 12000,
+    rating: 3.2,
+  },
+  {
+    img: sub_2,
+    name: "Beauty Combo",
+    price: 8400,
+    original_price: 12000,
+    rating: 3.2,
+  },
+  {
+    img: sub_3,
+    name: "Beauty Combo",
+    price: 8400,
+    original_price: 12000,
+    rating: 3.2,
+  },
+  {
+    img: sub_4,
+    name: "Beauty Combo",
+    price: 8400,
+    original_price: 12000,
+    rating: 3.2,
+  },
+  {
+    img: sub_1,
+    name: "Beauty Combo",
+    price: 8400,
+    original_price: 12000,
+    rating: 3.2,
+  },
+  {
+    img: sub_2,
+    name: "Beauty Combo",
+    price: 8400,
+    original_price: 12000,
+    rating: 3.2,
+  },
+  {
+    img: sub_3,
+    name: "Beauty Combo",
+    price: 8400,
+    original_price: 12000,
+    rating: 3.2,
+  },
+  {
+    img: sub_4,
+    name: "Beauty Combo",
+    price: 8400,
+    original_price: 12000,
+    rating: 3.2,
+  },
 ];
 
 const Item = ({ list }) => {
-  const buyNow = (productName, productPrice) => {
-    alert(`You have selected ${productName} for Rs. ${productPrice}/-`);
-  };
-
   return (
-    <div className="item slide snap-center w-full p-6 duration-1000 ease-in-out">
-      <img src={list.img} alt="Beauty Combo" />
-      <div className="Addedpart">
-        <div>
-          <div className="star icon">
+    <div className="w-[17.5rem] h-[24.5em] bg-[#fff] overflow-hidden rounded-[10px] shadow-[0_4px_8px_#bbb] text-center transition-[0.3s_ease]">
+      <img
+        src={list.img}
+        className="w-full h-auto rounded-t-[10px] object-cover"
+        alt="Beauty Combo"
+      />
+      <div className="flex justify-around items-center rounded-b-[10px] p-1 font-bold">
+        <div className="flex flex-col my-[10px] mx-0 items-start">
+          <div className="star icon flex items-center">
             {[...Array(Math.floor(list.rating))].map((_, i) => (
               <FaStar key={i} />
             ))}
@@ -155,58 +152,43 @@ const Item = ({ list }) => {
               <FaRegStar key={i} />
             ))}
           </div>
-          <p style={{ fontFamily: "Montserrat" }}>
+          <div className="text-black my-[5px] mx-0 text-[12px] md:text-[18px] font-medium text-left">
             {list.name}
-            <br />
-            <span style={{ fontWeight: 600, fontSize: 16 }}>
+            <h3 className="text-[12px] md:text-[16px] text-[#333] font-bold">
               Rs. {list.price}/- <br />
-            </span>
-            <span style={{ fontWeight: 300, fontSize: 12, color: "lightgrey" }}>
+            </h3>
+            <span className="text-[12px] md:text-[14px] text-[grey] font-[300]">
               <del>Rs. {list.original_price}/-</del>
             </span>
-            <span style={{ fontWeight: 300, fontSize: 12, color: "green" }}>
-              {(list.price/list.original_price)*100}%
+            <span className="font-[300] text-[12px] text-[green]">
+              {(list.price / list.original_price) * 100}%
             </span>
-          </p>
+          </div>
         </div>
-        <button
-          onClick={() => buyNow("Beauty Combos", 6000)}
-          style={{ fontFamily: "Montserrat" }}
-        >
-          Buy Now
-        </button>
+        <Link to="/">
+          <button className="bg-rose-700 text-white border-[3px] border-rose-700 text-[12px] md:text-[15px] font-bold rounded-[8px] py-[5px] px-[10px] cursor-pointer shadow-[0px_1px_2px_#000] mb-[5px] hover:bg-white hover:text-rose-700">
+            Buy Now
+          </button>
+        </Link>
       </div>
     </div>
   );
 };
 
 const Slider = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  const changeSlide = (direction) => {
-    setCurrentSlide(
-      (prevSlide) =>
-        (prevSlide + direction + slidesData.length) % slidesData.length
-    );
-  };
-
   return (
-    <div className="slider relative" data-slide-motion="static">
-      <div
-        className="slidesslides-container grid grid-flow-col auto-cols-max gap-4 overflow-auto overflow-y-hidden snap-x snap-mandatory scroll-smooth touch-manipulation" data-slide-container=""
-        style={{ transform: `translateX(${-currentSlide * 100}%)` }}
-      >
-        {slidesData.map((slide) => slide.map((data, index) => <Item key={index} list={data} />))}
-        {/* // <div key={index} className="slide snap-center w-full p-6 duration-1000 ease-in-out">
-        // </div> */}
-      </div>
-      <Navigation changeSlide={changeSlide} />
-      <Dots
-        slidesCount={slidesData.length}
-        currentSlide={currentSlide}
-        setCurrentSlide={setCurrentSlide}
-      />
-    </div>
+    <Swiper
+      navigation={true}
+      slidesPerView={4.3}
+      modules={[Navigation]}
+      className="mySwiper w-[95vw] p-10"
+    >
+      {slidesData.map((data, i) => (
+        <SwiperSlide className="box-border p-10" key={i}>
+          <Item key={i} list={data} />
+        </SwiperSlide>
+      ))}
+    </Swiper>
   );
 };
 

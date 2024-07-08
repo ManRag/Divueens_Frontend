@@ -27,11 +27,11 @@ const Carousel = ({ slides }) => {
           />
         ))}
       </div>
-      <div className="dot-container flex relative items-center justify-center b-[1rem] mb-8">
+      <div className="dot-container flex relative items-center justify-center gap-1 b-[1rem] mb-8">
         {slides.map((_, index) => (
           <span
             key={index}
-            className={index === currentSlide ? 'dot current bg-lighterColor rounded-2xl w-[2vw] h-[0.8vh]' : 'dot w-[1.4vw] h-[2.9vh] bg-darkestColor rounded-[50%] my-1 mx-[0.1vw] cursor-pointer transition-[background-color_0.3s_ease]'}
+            className={index === currentSlide ? 'dot current bg-rose-700 rounded-2xl w-[2vw] h-[0.8vh] shadow-[0px_1px_2px_gray]' : 'dot w-[1.1vw] h-[1.1vw] bg-rose-200 rounded-[50%] my-2 shadow-[0px_1px_2px_gray] cursor-pointer transition-[0.2s_ease]'}
             onClick={() => setCurrentSlide(index)}
           >
           </span>

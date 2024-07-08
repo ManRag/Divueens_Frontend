@@ -25,7 +25,7 @@ const ContactSection = () => {
       <div className="contact-form flex items-center justify-center">
         <input
           type="email"
-          className='p-[26px] border-[2px] border-darkestColor rounded-[5px] w-[300px]'
+          className='p-[26px] border-[2px] border-rose-700 rounded-[5px] w-[300px]'
           placeholder="Your Email Address"
           style={{
             border: "solid 1px pink",
@@ -34,7 +34,7 @@ const ContactSection = () => {
             height: "30px",
           }}
         />
-        <button className='bg-darkeborder-darkestColor text-[#fff] py-[10px] px-[20px] border-none rounded-[5px] cursor-pointer text-[16px] bg-darkestColor'
+        <button className='bg-darkeborder-rose-700 text-[#fff] py-[10px] px-[20px] border-none rounded-[5px] cursor-pointer text-[16px] bg-rose-700'
           onClick={subscribe}
           style={{
             paddingLeft: '25px',
