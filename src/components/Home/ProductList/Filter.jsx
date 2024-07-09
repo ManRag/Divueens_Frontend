@@ -126,17 +126,17 @@ const Shop = () => {
     const menuItem = [... new Set(data.map(val => val.category))]
 
     return (
-        <div className="flex flex-col items-center ml-8 min-h-[600px] w-[250px] rounded-xl border-[2px] border-gray-200 px-6 py-3">
+        <div className="flex flex-col items-center ml-8 min-h-[600px] w-[20rem] rounded-xl border-[2px] border-gray-200 px-6 py-3">
             <div className="flex justify-between items-center w-full">
                 <h1 className="text-[20px] font-semibold text-black">Filters</h1>
                 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAa0lEQVR4nGNgGI4gGYqpKUcfC/ygChZAcTJUjGoWJOPAVPcBMvalRRzgA8lDwoJkEg3xIyJxUGRBMhGJgyo+SMaTOCiygGQwIBb4UZjLCSpMpjCXE+2DZDJzOXkKh6QFyYO6wqGbBQxDCgAAaDA4ICxX1IoAAAAASUVORK5CYII=" />
             </div>
             <hr className="my-4" />
             <div className="w-full">
-                <ul className="text-[15px] leading-[30px] text-gray-600">
+                <ul className="flex flex-col gap-2 text-gray-600">
                     {
                         menuItem.map(val =>
-                            <li className="flex justify-between items-center"><h4>{val}</h4> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAALZJREFUSEtjZKAxYKSx+QyjFhAM4cETRD5hKQ1/mP4s2LFiwQOCzkZSQJQPQIb///+/noGB4cFf5r+OpFhClAUeEQkKzH+Z9zMwMCiQaglRFoB8TK4lRFtAriUkWUCOJeRaMJ+BgcEBFB9bV89VxJeqSLIAGg9EGw6ymGgLyDGcaAvINZxoC7xCkxIYGRhBQUMwzNHjg+ggAlmybfW8BaQUE0T7gFRDkdUT7QNyLRm1gGDI0TyIAEB4Vxkms2PsAAAAAElFTkSuQmCC" /></li>
+                            <li className="flex justify-between items-center text-[1.3rem]"><h4>{val}</h4> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAALZJREFUSEtjZKAxYKSx+QyjFhAM4cETRD5hKQ1/mP4s2LFiwQOCzkZSQJQPQIb///+/noGB4cFf5r+OpFhClAUeEQkKzH+Z9zMwMCiQaglRFoB8TK4lRFtAriUkWUCOJeRaMJ+BgcEBFB9bV89VxJeqSLIAGg9EGw6ymGgLyDGcaAvINZxoC7xCkxIYGRhBQUMwzNHjg+ggAlmybfW8BaQUE0T7gFRDkdUT7QNyLRm1gGDI0TyIAEB4Vxkms2PsAAAAAElFTkSuQmCC" /></li>
                         )
                     }
                 </ul>
@@ -180,12 +180,12 @@ const Shop = () => {
                     <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAJhJREFUSEvtksENgCAQBJdOtBPtRDuxE+3EVixFNzkSYpA9H7zgEoNR2IE5AipXqJyPDpCG21M0mJNLurEJfxQxfAfAcQbggngBMXxKTuCCeABpeNw1v/FdQhTgHT6aotNGCSkBcuGxt/zngpQAizWVu+TO35VC1udER+5mKUXbs4jPVxHCxmfDuUgBvNf9c14HSIVdUQOKbneJGhmNie+rAAAAAElFTkSuQmCC" />
                 </div>
                 <div className='my-4'>
-                    <ul className="text-[15px] leading-[30px] text-gray-600">
-                        <li className="flex justify-between items-center"><h4>Lipstick</h4><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAALZJREFUSEtjZKAxYKSx+QyjFhAM4cETRD5hKQ1/mP4s2LFiwQOCzkZSQJQPQIb///+/noGB4cFf5r+OpFhClAUeEQkKzH+Z9zMwMCiQaglRFoB8TK4lRFtAriUkWUCOJeRaMJ+BgcEBFB9bV89VxJeqSLIAGg9EGw6ymGgLyDGcaAvINZxoC7xCkxIYGRhBQUMwzNHjg+ggAlmybfW8BaQUE0T7gFRDkdUT7QNyLRm1gGDI0TyIAEB4Vxkms2PsAAAAAElFTkSuQmCC" /></li>
-                        <li className="flex justify-between items-center"><h4>Kajal</h4><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAALZJREFUSEtjZKAxYKSx+QyjFhAM4cETRD5hKQ1/mP4s2LFiwQOCzkZSQJQPQIb///+/noGB4cFf5r+OpFhClAUeEQkKzH+Z9zMwMCiQaglRFoB8TK4lRFtAriUkWUCOJeRaMJ+BgcEBFB9bV89VxJeqSLIAGg9EGw6ymGgLyDGcaAvINZxoC7xCkxIYGRhBQUMwzNHjg+ggAlmybfW8BaQUE0T7gFRDkdUT7QNyLRm1gGDI0TyIAEB4Vxkms2PsAAAAAElFTkSuQmCC" /></li>
-                        <li className="flex justify-between items-center"><h4>Maskara</h4><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAALZJREFUSEtjZKAxYKSx+QyjFhAM4cETRD5hKQ1/mP4s2LFiwQOCzkZSQJQPQIb///+/noGB4cFf5r+OpFhClAUeEQkKzH+Z9zMwMCiQaglRFoB8TK4lRFtAriUkWUCOJeRaMJ+BgcEBFB9bV89VxJeqSLIAGg9EGw6ymGgLyDGcaAvINZxoC7xCkxIYGRhBQUMwzNHjg+ggAlmybfW8BaQUE0T7gFRDkdUT7QNyLRm1gGDI0TyIAEB4Vxkms2PsAAAAAElFTkSuQmCC" /></li>
-                        <li className="flex justify-between items-center"><h4>Foundation</h4><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAALZJREFUSEtjZKAxYKSx+QyjFhAM4cETRD5hKQ1/mP4s2LFiwQOCzkZSQJQPQIb///+/noGB4cFf5r+OpFhClAUeEQkKzH+Z9zMwMCiQaglRFoB8TK4lRFtAriUkWUCOJeRaMJ+BgcEBFB9bV89VxJeqSLIAGg9EGw6ymGgLyDGcaAvINZxoC7xCkxIYGRhBQUMwzNHjg+ggAlmybfW8BaQUE0T7gFRDkdUT7QNyLRm1gGDI0TyIAEB4Vxkms2PsAAAAAElFTkSuQmCC" /></li>
-                        <li className="flex justify-between items-center"><h4>Eyeliner</h4><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAALZJREFUSEtjZKAxYKSx+QyjFhAM4cETRD5hKQ1/mP4s2LFiwQOCzkZSQJQPQIb///+/noGB4cFf5r+OpFhClAUeEQkKzH+Z9zMwMCiQaglRFoB8TK4lRFtAriUkWUCOJeRaMJ+BgcEBFB9bV89VxJeqSLIAGg9EGw6ymGgLyDGcaAvINZxoC7xCkxIYGRhBQUMwzNHjg+ggAlmybfW8BaQUE0T7gFRDkdUT7QNyLRm1gGDI0TyIAEB4Vxkms2PsAAAAAElFTkSuQmCC" /></li>
+                    <ul className="flex flex-col gap-2 text-gray-600">
+                        <li className="flex justify-between items-center text-[1.3rem]"><h4>Lipstick</h4><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAALZJREFUSEtjZKAxYKSx+QyjFhAM4cETRD5hKQ1/mP4s2LFiwQOCzkZSQJQPQIb///+/noGB4cFf5r+OpFhClAUeEQkKzH+Z9zMwMCiQaglRFoB8TK4lRFtAriUkWUCOJeRaMJ+BgcEBFB9bV89VxJeqSLIAGg9EGw6ymGgLyDGcaAvINZxoC7xCkxIYGRhBQUMwzNHjg+ggAlmybfW8BaQUE0T7gFRDkdUT7QNyLRm1gGDI0TyIAEB4Vxkms2PsAAAAAElFTkSuQmCC" /></li>
+                        <li className="flex justify-between items-center text-[1.3rem]"><h4>Kajal</h4><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAALZJREFUSEtjZKAxYKSx+QyjFhAM4cETRD5hKQ1/mP4s2LFiwQOCzkZSQJQPQIb///+/noGB4cFf5r+OpFhClAUeEQkKzH+Z9zMwMCiQaglRFoB8TK4lRFtAriUkWUCOJeRaMJ+BgcEBFB9bV89VxJeqSLIAGg9EGw6ymGgLyDGcaAvINZxoC7xCkxIYGRhBQUMwzNHjg+ggAlmybfW8BaQUE0T7gFRDkdUT7QNyLRm1gGDI0TyIAEB4Vxkms2PsAAAAAElFTkSuQmCC" /></li>
+                        <li className="flex justify-between items-center text-[1.3rem]"><h4>Maskara</h4><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAALZJREFUSEtjZKAxYKSx+QyjFhAM4cETRD5hKQ1/mP4s2LFiwQOCzkZSQJQPQIb///+/noGB4cFf5r+OpFhClAUeEQkKzH+Z9zMwMCiQaglRFoB8TK4lRFtAriUkWUCOJeRaMJ+BgcEBFB9bV89VxJeqSLIAGg9EGw6ymGgLyDGcaAvINZxoC7xCkxIYGRhBQUMwzNHjg+ggAlmybfW8BaQUE0T7gFRDkdUT7QNyLRm1gGDI0TyIAEB4Vxkms2PsAAAAAElFTkSuQmCC" /></li>
+                        <li className="flex justify-between items-center text-[1.3rem]"><h4>Foundation</h4><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAALZJREFUSEtjZKAxYKSx+QyjFhAM4cETRD5hKQ1/mP4s2LFiwQOCzkZSQJQPQIb///+/noGB4cFf5r+OpFhClAUeEQkKzH+Z9zMwMCiQaglRFoB8TK4lRFtAriUkWUCOJeRaMJ+BgcEBFB9bV89VxJeqSLIAGg9EGw6ymGgLyDGcaAvINZxoC7xCkxIYGRhBQUMwzNHjg+ggAlmybfW8BaQUE0T7gFRDkdUT7QNyLRm1gGDI0TyIAEB4Vxkms2PsAAAAAElFTkSuQmCC" /></li>
+                        <li className="flex justify-between items-center text-[1.3rem]"><h4>Eyeliner</h4><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAALZJREFUSEtjZKAxYKSx+QyjFhAM4cETRD5hKQ1/mP4s2LFiwQOCzkZSQJQPQIb///+/noGB4cFf5r+OpFhClAUeEQkKzH+Z9zMwMCiQaglRFoB8TK4lRFtAriUkWUCOJeRaMJ+BgcEBFB9bV89VxJeqSLIAGg9EGw6ymGgLyDGcaAvINZxoC7xCkxIYGRhBQUMwzNHjg+ggAlmybfW8BaQUE0T7gFRDkdUT7QNyLRm1gGDI0TyIAEB4Vxkms2PsAAAAAElFTkSuQmCC" /></li>
                     </ul>
                 </div>
             </div>

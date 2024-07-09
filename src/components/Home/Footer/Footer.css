@@ -22,7 +22,7 @@ footer[data-footer-part] {
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
   font-family: "Josefin Sans", sans-serif;
-  background: linear-gradient(to bottom, #ffe4e6,#9f1239);
+  background-image: linear-gradient(to bottom, #ffe4e600,#77283eb9), url('../../../assets/background.jpg');
 }
 
 /* footer[data-footer-part]>p{
