@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import "./Navbar.css";
 import {
   FaHeart,
   FaShoppingCart,
@@ -15,6 +14,7 @@ import {
   searchImage,
   ShoppingCart,
 } from "../../../assets/assets";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 1250);
@@ -176,7 +176,7 @@ const Navbar = () => {
                 <li className="nav-item mb-[0.5rem]">
                   <a
                     className="nav-link no-underline text-[#000] hover:text-rose-700"
-                    href="#"
+                    to="/"
                   >
                     Makeup
                   </a>
@@ -184,7 +184,7 @@ const Navbar = () => {
                 <li className="nav-item mb-[0.5rem]">
                   <a
                     className="nav-link no-underline text-[#000] hover:text-rose-700"
-                    href="#"
+                    to="/"
                   >
                     Skin
                   </a>
@@ -192,7 +192,7 @@ const Navbar = () => {
                 <li className="nav-item mb-[0.5rem]">
                   <a
                     className="nav-link no-underline text-[#000] hover:text-rose-700"
-                    href="#"
+                    to="/"
                   >
                     Hair Care
                   </a>
@@ -200,7 +200,7 @@ const Navbar = () => {
                 <li className="nav-item mb-[0.5rem]">
                   <a
                     className="nav-link no-underline text-[#000] hover:text-rose-700"
-                    href="#"
+                    to="/"
                   >
                     Nail Care
                   </a>
@@ -208,7 +208,7 @@ const Navbar = () => {
                 <li className="nav-item mb-[0.5rem]">
                   <a
                     className="nav-link no-underline text-[#000] hover:text-rose-700"
-                    href="#"
+                    to="/"
                   >
                     Body Care
                   </a>
@@ -216,7 +216,7 @@ const Navbar = () => {
                 <li className="nav-item mb-[0.5rem]">
                   <a
                     className="nav-link no-underline text-[#000] hover:text-rose-700"
-                    href="#"
+                    to="/"
                   >
                     Tools and Accessories
                   </a>
@@ -224,7 +224,7 @@ const Navbar = () => {
                 <li className="nav-item mb-[0.5rem]">
                   <a
                     className="nav-link no-underline text-[#000] hover:text-rose-700"
-                    href="#"
+                    to="/"
                   >
                     Neauty Advice
                   </a>
@@ -232,7 +232,7 @@ const Navbar = () => {
                 <li className="nav-item mb-[0.5rem]">
                   <a
                     className="nav-link no-underline text-[#000] hover:text-rose-700"
-                    href="#"
+                    to="/"
                   >
                     Categories
                   </a>
@@ -243,12 +243,12 @@ const Navbar = () => {
         </div>
       ) : (
         <>
-          <div className="navbar-desktop flex items-center justify-between">
+          <div className="navbar-desktop relative flex items-center justify-between">
             <div className="navbar-brand">
               <img
                 src={DivueensLogoImage}
                 alt="Divueens"
-                className="brand-icon h-[3em]"
+                className="brand-icon absolute top-0 left-4 h-13"
               />
             </div>
 
@@ -265,17 +265,17 @@ const Navbar = () => {
             <div className="navbar-icons flex items-center ">
               <div className="wrap-input-17 box-border relative">
                 <div className="search-box relative mr-32">
-                  <FaSearch className="btn-search ml-2 text-md cursor-pointer absolute top-2 text-slate-400" />
+                  <FaSearch className="btn-search text-md cursor-pointer absolute top-[.4em] left-[.4em] text-slate-400" />
                   <input
                     type="text"
-                    className="input-search h-[2rem] w-52 text-[.9rem] outline-none transition-all duration-[0.5s] ease-in-out bg-[#fff0]  border-b-2 border-b-rose-800 rounded-lg shadow-md px-7 placeholder:text-slate-400"
+                    className="input-search h-8 w-64 text-[.9rem] outline-none transition-all duration-[0.2s] bg-[#fff0]  border-b-2 border-transparent focus:border-b-rose-800 focus:shadow-xl px-7 placeholder:text-slate-400"
                     placeholder="Search on Divueens"
                   />
                 </div>
               </div>
 
               <span
-                className="navbar-icon hover:text-rose-700 flex cursor-pointer text-[1.2rem] mx-2 p-[0.1rem]"
+                className="navbar-icon hover:text-rose-700 flex cursor-pointer text-[1.2rem] mx-4 p-[0.1rem] pt-2"
                 onMouseEnter={() => setIsHeartHovered(true)}
                 onMouseLeave={() => setIsHeartHovered(false)}
               >
@@ -284,7 +284,7 @@ const Navbar = () => {
               {/* <FaShoppingCart className="navbar-icon hover:text-rose-700 flex cursor-pointer text-[1.2rem] ml-[1.5rem] p-[0.1rem]" /> */}
 
               <span
-                className="navbar-icon hover:text-rose-700 flex cursor-pointer text-[1.2rem] mx-2 p-[0.1rem]"
+                className="navbar-icon hover:text-rose-700 flex cursor-pointer text-[1.2rem] mx-4 p-[0.1rem] pt-2"
                 onMouseEnter={() => setIsCartHovered(true)}
                 onMouseLeave={() => setIsCartHovered(false)}
               >
@@ -310,7 +310,7 @@ const Navbar = () => {
                 onMouseLeave={handleMouseLeave}
               >
                 <span
-                  className="navbar-icon hover:text-rose-700 flex cursor-pointer text-[1.2rem] mx-2 p-[0.1rem]"
+                  className="navbar-icon hover:text-rose-700 flex cursor-pointer text-[1.2rem] mx-4 p-[0.1rem] pt-2"
                   onMouseEnter={() => setIsUserHovered(true)}
                   onMouseLeave={() => setIsUserHovered(false)}
                 >
@@ -341,54 +341,54 @@ const Navbar = () => {
             </div>
           </div>
           <div className="navbar-links flex gap-10 justify-center w-[100%] ">
-            <a
+            <Link
               className="text-[#333] p-2 rounded-[0.4rem] hover:text-rose-700"
-              href="#"
+              to="/"
             >
               Makeup
-            </a>
-            <a
+            </Link>
+            <Link
               className="text-[#333] p-2 rounded-[0.4rem] hover:text-rose-700"
-              href="#"
+              to="/"
             >
               Skin
-            </a>
-            <a
+            </Link>
+            <Link
               className="text-[#333] p-2 rounded-[0.4rem] hover:text-rose-700"
-              href="#"
+              to="/"
             >
               Hair Care
-            </a>
-            <a
+            </Link>
+            <Link
               className="text-[#333] p-2 rounded-[0.4rem] hover:text-rose-700"
-              href="#"
+              to="/"
             >
               Nail Care
-            </a>
-            <a
+            </Link>
+            <Link
               className="text-[#333] p-2 rounded-[0.4rem] hover:text-rose-700"
-              href="#"
+              to="/"
             >
               Body Care
-            </a>
-            <a
+            </Link>
+            <Link
               className="text-[#333] p-2 rounded-[0.4rem] hover:text-rose-700"
-              href="#"
+              to="/"
             >
               Tools and Accessories
-            </a>
-            <a
+            </Link>
+            <Link
               className="text-[#333] p-2 rounded-[0.4rem] hover:text-rose-700"
-              href="#"
+              to="/"
             >
               Beauty Advice
-            </a>
-            <a
+            </Link>
+            <Link
               className="nav-link text-[#333] p-2 rounded-[0.4rem] hover:text-rose-700"
-              href="#"
+              to="/products"
             >
               Categories
-            </a>
+            </Link>
           </div>
         </>
       )}

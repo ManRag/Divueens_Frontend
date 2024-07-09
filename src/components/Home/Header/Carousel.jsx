@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './Carousel.css'; 
-import CustomSlide from '../CustomSlide/CustomSlide';
+import CustomSlide from './CustomSlide';
 
 const Carousel = ({ slides }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
