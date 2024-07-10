@@ -23,6 +23,7 @@
 
 body {
   overflow-x: hidden;
+  overflow-x: hidden;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -164,11 +165,12 @@ body {
 .heading .hr-right {
   border-radius: 10px 0px 0px 10px;
   background: linear-gradient(to left, #e9acb600, #e9acb646, #FF919D, #E93550);
+  background: linear-gradient(to left, #e9acb600, #e9acb646, #ff919d, #e93550);
 }
 
 .heading .hr-left {
   border-radius: 0px 10px 10px 0px;
-  background: linear-gradient(to right, #e9acb600, #e9acb646, #FF919D, #E93550);
+  background: linear-gradient(to right, #e9acb600, #e9acb646, #ff919d, #e93550);
 }
 
 .subheading {
@@ -193,6 +195,7 @@ body {
   }
 
   .heading h2 {
+  .heading h2 {
     font-size: 1.2rem;
   }
 
@@ -215,12 +218,14 @@ body {
 }
 
 /* ----------------------------------------------- Footer Style ------------------------------------------------------- */
+/* ----------------------------------------------- Footer Style ------------------------------------------------------- */
 
 footer[data-footer-part] {
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
   font-family: "Josefin Sans", sans-serif;
-  background: linear-gradient(to bottom, #ffe4e6, #9f1239);
+  background-image: linear-gradient(to bottom, #ffe4e600, #77283eb9),
+    url("./assets/background.jpg");
 }
 
 .col_[data-footer-part]>ul>li>.footerList {
@@ -231,6 +236,12 @@ footer[data-footer-part] {
 .col_[data-footer-part]>ul>li>.footerList:hover {
   text-decoration: underline;
 }
+
+.socialIcons[data-footer-part] {
+  text-align: center;
+  font-size: 30px;
+  background: transparent;
+  cursor: pointer;
 
 .socialIcons[data-footer-part] {
   text-align: center;

@@ -152,9 +152,8 @@ function Footer() {
             )}
           </h3>
           <ul
-            className={`close ${
-              toggleView === index + 1 ? "all_Items" : ""
-            } mt-6 space-y-3 text-sm`}
+            className={`close ${toggleView === index + 1 ? "all_Items" : ""
+              } mt-6 space-y-3 text-sm`}
           >
             {lst.chhotiList.map((list2, int) => {
               return (
@@ -222,7 +221,7 @@ function Footer() {
             <li>
               <a
                 href=""
-                 className="text-rose-950 transition hover:text-rose-600"
+                className="text-rose-950 transition hover:text-rose-600"
               >
                 <FaInstagram className="h-6 w-6" />
               </a>
@@ -230,7 +229,7 @@ function Footer() {
             <li>
               <a
                 href=""
-                 className="text-rose-950 transition hover:text-rose-600"
+                className="text-rose-950 transition hover:text-rose-600"
               >
                 <FaWhatsapp className="h-6 w-6" />
               </a>
