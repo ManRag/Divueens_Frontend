@@ -8,7 +8,6 @@ import {
   Nails,
   Face,
 } from "../../../assets/assets";
-import "./ShopByCategory.css";
 
 const ShopByCategory = () => {
   return (

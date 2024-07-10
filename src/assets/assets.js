@@ -34,14 +34,11 @@ import banner_2 from './Banner/banner_2.png'
 import banner_3 from './Banner/banner_3.png'
 import banner_4 from './Banner/banner_4.png'
 
-import bestsellers_1 from './Exclusive_Discount/bestsellers_1.jpg'
-import example from './Exclusive_Discount/EXAMPLE- heading.jpg'
-import freebies from './Exclusive_Discount/freebies.jpg'
-import loreal from './Exclusive_Discount/loreal.jpg'
-import mamaearth from './Exclusive_Discount/mamaearth_1.jpg'
-import output from './Exclusive_Discount/OUTPUT.png'
-import prototype from './Exclusive_Discount/PROTOTYPE.jpg'
-import suntan from './Exclusive_Discount/SunTan-s.jpg'
+import bestsellers_1 from './Exclusive_Discount/bestsellers_1.png'
+import freebies from './Exclusive_Discount/freebies.png'
+import loreal from './Exclusive_Discount/loreal.png'
+import mamaearth from './Exclusive_Discount/mamaearth_1.png'
+import suntan from './Exclusive_Discount/SunTan-s.png'
 
 import background from './Shop_By_Category/background.svg'
 import Face from './Shop_By_Category/Face.jpg'
@@ -97,12 +94,9 @@ export const banner = [
 
 export {
       bestsellers_1,
-      example,
       freebies,
       loreal,
       mamaearth,
-      output,
-      prototype,
       suntan,
 }
 

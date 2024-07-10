@@ -1,12 +1,9 @@
 import React from "react";
 import {
   bestsellers_1,
-  example,
   freebies,
   loreal,
   mamaearth,
-  output,
-  prototype,
   suntan,
 } from "../../../assets/assets";
 

@@ -48,6 +48,8 @@ const Navbar = () => {
     };
   }, []);
 
+  // useEffect(() => , [showPopover])
+
   const handlePopoverToggle = () => {
     setShowPopover(!showPopover);
   };
@@ -252,16 +254,6 @@ const Navbar = () => {
               />
             </div>
 
-            {/* <div className="navbar-search">
-            <input type="text" className="search-input" placeholder="Search" />
-            <button className="search-button">Search</button>
-          </div> */}
-            {/* <div className="wrap-input-17"><div className="search-box">
-  <button className="btn-search"><img src={searchImage} alt="Search" className="search-icon" /></button>
-  <input type="text" className="input-search" placeholder="Type to Search..."/>
-</div>
-</div> */}
-
             <div className="navbar-icons flex items-center ">
               <div className="wrap-input-17 box-border relative">
                 <div className="search-box relative mr-32">
@@ -279,15 +271,11 @@ const Navbar = () => {
                 onMouseEnter={() => setIsHeartHovered(true)}
                 onMouseLeave={() => setIsHeartHovered(false)}
               >
-                {isHeartHovered ? <FaRegHeart /> : <FaRegHeart />}
+              <FaRegHeart />
               </span>
               {/* <FaShoppingCart className="navbar-icon hover:text-rose-700 flex cursor-pointer text-[1.2rem] ml-[1.5rem] p-[0.1rem]" /> */}
 
-              <span
-                className="navbar-icon hover:text-rose-700 flex cursor-pointer text-[1.2rem] mx-4 p-[0.1rem] pt-2"
-                onMouseEnter={() => setIsCartHovered(true)}
-                onMouseLeave={() => setIsCartHovered(false)}
-              >
+              <span className="navbar-icon hover:text-rose-700 flex cursor-pointer text-[1.2rem] mx-4 p-[0.1rem] pt-2">
                 {isCartHovered ? (
                   <img
                     src={Cart}
@@ -304,39 +292,10 @@ const Navbar = () => {
               </span>
 
               {/* <img src={ShoppingCart} alt="Cart" className="cart-icon w-[1.3rem] p-[0.5rem] hover:text-rose-700" /> */}
-              <div
-                className="navbar-icon-wrapper"
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
-              >
-                <span
-                  className="navbar-icon hover:text-rose-700 flex cursor-pointer text-[1.2rem] mx-4 p-[0.1rem] pt-2"
-                  onMouseEnter={() => setIsUserHovered(true)}
-                  onMouseLeave={() => setIsUserHovered(false)}
-                >
-                  {isUserHovered ? <FaRegUser /> : <FaRegUser />}
+              <div className="navbar-icon-wrapper">
+                <span className="navbar-icon hover:text-rose-700 flex cursor-pointer text-[1.2rem] mx-4 p-[0.1rem] pt-2">
+                <FaRegUser onClick={() => setShowPopover(showPopover)} />
                 </span>
-                {showPopover && (
-                  <div className="popover-content">
-                    <h2 className="text-lg text-center drop-shadow-xl">
-                      Login or SignUp
-                    </h2>
-                    <div className="button-loginsignup">
-                      <button className="SignUp bg-rose-700 border-rose-700 border-[0.1rem] w-full my-[0.5rem] text-[#fff] py-[0.5rem] px-[1rem] cursor-pointer font-bold rounded-[0.5rem] hover:bg-[#fff] hover:text-rose-700 hover:border-rose-700 hover:border-[0.1rem]">
-                        {" "}
-                        Sign Up{" "}
-                      </button>
-                      <button className="Login bg-rose-700 border-rose-700 border-[0.1rem] w-full my-[0.5rem] text-[#fff] py-[0.5rem] px-[1rem] cursor-pointer font-bold rounded-[0.5rem] hover:bg-[#fff] hover:text-rose-700 hover:border-rose-700 hover:border-[0.1rem]">
-                        {" "}
-                        Login{" "}
-                      </button>
-                      <button className="ViaGoogle bg-rose-700 border-rose-700 border-[0.1rem] w-full my-[0.5rem] text-[#fff] py-[0.5rem] px-[1rem] cursor-pointer font-bold rounded-[0.5rem] hover:bg-[#fff] hover:text-rose-700 hover:border-rose-700 hover:border-[0.1rem]">
-                        {" "}
-                        Login / Signup via Google{" "}
-                      </button>
-                    </div>
-                  </div>
-                )}
               </div>
             </div>
           </div>
