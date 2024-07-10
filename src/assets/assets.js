@@ -35,7 +35,7 @@ import banner_3 from './Banner/banner_3.png'
 import banner_4 from './Banner/banner_4.png'
 
 import bestsellers_1 from './Exclusive_Discount/bestsellers_1.png'
-import freebies from './Exclusive_Discount/freebies.png'
+import freebies from './Exclusive_Discount/Freebies.png'
 import loreal from './Exclusive_Discount/loreal.png'
 import mamaearth from './Exclusive_Discount/mamaearth_1.png'
 import suntan from './Exclusive_Discount/SunTan-s.png'
