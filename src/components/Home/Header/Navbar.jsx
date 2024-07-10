@@ -15,6 +15,7 @@ import {
   ShoppingCart,
 } from "../../../assets/assets";
 import { Link } from "react-router-dom";
+import navItemList from "./navList";
 
 const Navbar = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 1250);
@@ -300,52 +301,14 @@ const Navbar = () => {
             </div>
           </div>
           <div className="navbar-links flex gap-10 justify-center w-[100%] ">
+            {navItemList.map((item) => 
+            <Link className="text-[#333] p-2 rounded-[0.4rem] hover:text-rose-700">
+             {item.navTitle}
+            </Link>
+            )}
             <Link
               className="text-[#333] p-2 rounded-[0.4rem] hover:text-rose-700"
-              to="/"
-            >
-              Makeup
-            </Link>
-            <Link
-              className="text-[#333] p-2 rounded-[0.4rem] hover:text-rose-700"
-              to="/"
-            >
-              Skin
-            </Link>
-            <Link
-              className="text-[#333] p-2 rounded-[0.4rem] hover:text-rose-700"
-              to="/"
-            >
-              Hair Care
-            </Link>
-            <Link
-              className="text-[#333] p-2 rounded-[0.4rem] hover:text-rose-700"
-              to="/"
-            >
-              Nail Care
-            </Link>
-            <Link
-              className="text-[#333] p-2 rounded-[0.4rem] hover:text-rose-700"
-              to="/"
-            >
-              Body Care
-            </Link>
-            <Link
-              className="text-[#333] p-2 rounded-[0.4rem] hover:text-rose-700"
-              to="/"
-            >
-              Tools and Accessories
-            </Link>
-            <Link
-              className="text-[#333] p-2 rounded-[0.4rem] hover:text-rose-700"
-              to="/"
-            >
-              Beauty Advice
-            </Link>
-            <Link
-              className="nav-link text-[#333] p-2 rounded-[0.4rem] hover:text-rose-700"
-              to="/products"
-            >
+              to="/products">
               Categories
             </Link>
           </div>

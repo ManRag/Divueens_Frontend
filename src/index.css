@@ -195,7 +195,6 @@ body {
   }
 
   .heading h2 {
-  .heading h2 {
     font-size: 1.2rem;
   }
 
@@ -218,7 +217,6 @@ body {
 }
 
 /* ----------------------------------------------- Footer Style ------------------------------------------------------- */
-/* ----------------------------------------------- Footer Style ------------------------------------------------------- */
 
 footer[data-footer-part] {
   border-top-left-radius: 50px;
@@ -236,12 +234,6 @@ footer[data-footer-part] {
 .col_[data-footer-part]>ul>li>.footerList:hover {
   text-decoration: underline;
 }
-
-.socialIcons[data-footer-part] {
-  text-align: center;
-  font-size: 30px;
-  background: transparent;
-  cursor: pointer;
 
 .socialIcons[data-footer-part] {
   text-align: center;

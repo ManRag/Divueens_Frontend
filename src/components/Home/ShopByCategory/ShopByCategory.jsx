@@ -8,6 +8,7 @@ import {
   Nails,
   Face,
 } from "../../../assets/assets";
+import { Link } from "react-router-dom";
 
 const ShopByCategory = () => {
   return (
@@ -30,11 +31,11 @@ const ShopByCategory = () => {
                 style={{ backgroundImage: `url(${Eyes})` }}
                 className="categories-item w-full h-full rounded-[5px] text-[1rem] md:text-[1.5em] box-border bg-center bg-cover relative overflow-hidden cursor-pointer no-underline eyes"
               >
-                <a href="https://">
+                <Link to="/">
                   <div className="label bg-[#fb799196] w-full h-full max-h-[25px] md:max-h-[40px] text-center text-[#fff] absolute bottom-0 transition-[max-height_.3s_ease] overflow-hidden cursor-pointer no-underline">
                     Eyes
                   </div>
-                </a>
+                </Link>
               </div>
               <div
                 style={{
@@ -42,11 +43,11 @@ const ShopByCategory = () => {
                 }}
                 className="categories-item w-full h-full rounded-[5px] text-[1rem] md:text-[1.5em] box-border bg-center bg-cover relative overflow-hidden cursor-pointer no-underline face"
               >
-                <a href="http://">
+                <Link to="/">
                   <div className="label bg-[#fb799196] w-full h-full max-h-[25px] md:max-h-[40px] text-center text-[#fff] absolute bottom-0 transition-[max-height_.3s_ease] overflow-hidden cursor-pointer no-underline">
                     Face
                   </div>
-                </a>
+                </Link>
               </div>
               <div
                 style={{
@@ -54,11 +55,11 @@ const ShopByCategory = () => {
                 }}
                 className="categories-item w-full h-full rounded-[5px] text-[1rem] md:text-[1.5em] box-border bg-center bg-cover relative overflow-hidden cursor-pointer no-underline lips"
               >
-                <a href="http://">
+                <Link to="/">
                   <div className="label bg-[#fb799196] w-full h-full max-h-[25px] md:max-h-[40px] text-center text-[#fff] absolute bottom-0 transition-[max-height_.3s_ease] overflow-hidden cursor-pointer no-underline">
                     Lips
                   </div>
-                </a>
+                </Link>
               </div>
               <div
                 style={{
@@ -66,11 +67,11 @@ const ShopByCategory = () => {
                 }}
                 className="categories-item w-full h-full rounded-[5px] text-[1rem] md:text-[1.5em] box-border bg-center bg-cover relative overflow-hidden cursor-pointer no-underline skincare"
               >
-                <a href="http://">
+                <Link to="/">
                   <div className="label bg-[#fb799196] w-full h-full max-h-[25px] md:max-h-[40px] text-center text-[#fff] absolute bottom-0 transition-[max-height_.3s_ease] overflow-hidden cursor-pointer no-underline">
                     Skincare
                   </div>
-                </a>
+                </Link>
               </div>
               <div
                 style={{
@@ -78,11 +79,11 @@ const ShopByCategory = () => {
                 }}
                 className="categories-item w-full h-full rounded-[5px] text-[1rem] md:text-[1.5em] box-border bg-center bg-cover relative overflow-hidden cursor-pointer no-underline nails"
               >
-                <a href="http://">
+                <Link to="/">
                   <div className="label bg-[#fb799196] w-full h-full max-h-[25px] md:max-h-[40px] text-center text-[#fff] absolute bottom-0 transition-[max-height_.3s_ease] overflow-hidden cursor-pointer no-underline">
                     Nails
                   </div>
-                </a>
+                </Link>
               </div>
               <div
                 style={{
@@ -90,11 +91,11 @@ const ShopByCategory = () => {
                 }}
                 className="categories-item w-full h-full rounded-[5px] text-[1rem] md:text-[1.5em] box-border bg-center bg-cover relative overflow-hidden cursor-pointer no-underline brush"
               >
-                <a href="http://">
-                  <div className="label bg-[#fb799196] w-full h-full max-h-[25px] md:max-h-[40px] text-center text-[#fff] absolute bottom-0 transition-[max-height_.3s_ease] overflow-hidden cursor-pointer no-underline">
+                <Link to="/">
+                  <div className="label bg-[#fb799196] w-full max-h-[25px] md:max-h-[40px] text-center text-[#fff] absolute bottom-0 transition-[max-height_.3s_ease] hover:h-[100%] overflow-hidden cursor-pointer no-underline">
                     Brush
                   </div>
-                </a>
+                </Link>
               </div>
             </div>
           </div>

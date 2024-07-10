@@ -84,7 +84,7 @@ const DropDown = () => {
             func: handleOffer,
             isOpen: isOffer,
             options: ['option1', 'option2']
-        },
+        }, 
 
     ]
     return (
@@ -156,19 +156,19 @@ const DropDown = () => {
 
                     <div className="navbar-nav">
                         {dropdown.map((d) => {
-                            return <div key={d.id} class="py-2">
-                                <details class="group rounded-lg border-[1px] hover:shadow-md">
-                                    <summary class="flex justify-between items-center font-medium cursor-pointer list-none px-3 py-4">
+                            return <div key={d.id} className="py-2">
+                                <details className="group rounded-lg border-[1px] hover:shadow-md">
+                                    <summary className="flex justify-between items-center font-medium cursor-pointer list-none px-3 py-4">
                                         <span className="">
                                             {d.name}
                                         </span>
-                                        <span class="transition group-open:rotate-180">
+                                        <span className="transition group-open:rotate-180">
                                             <IoIosArrowDown />
                                         </span>
                                     </summary>
                                     <hr className="border-[1px] border-[#D3D3D3]" />
                                     {d.options.map((p, i) => {
-                                        return <p key={i} class="group-open:animate-fadeIn px-3 py-4">
+                                        return <p key={i} className="group-open:animate-fadeIn px-3 py-4">
                                             {p}
                                         </p>
                                     })}
