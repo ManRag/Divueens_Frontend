@@ -93,7 +93,7 @@ const DropDown = () => {
                 <div className='flex items-center gap-2'>
                     {dropdown.map((d) => {
                         return <div key={d.id} className='flex items-center relative'>
-                            <button onClick={d.func} className='bg-[#d4d4d4] px-4 py-2 rounded-full flex items-center gap-2 font-medium'>
+                            <button onClick={d.func} className='bg-[#d4d4d4] px-4 py-2 rounded-full flex items-center gap-2 font-medium text-sm'>
                                 {d.name} <IoIosArrowDown size={15} />
                             </button>
 
@@ -118,7 +118,7 @@ const DropDown = () => {
 
                 </div>
                 <div className='relative'>
-                    <button onClick={handlePrices} className='border border-[#d4d4d4] px-4 py-2 rounded-full flex items-center gap-2'>
+                    <button onClick={handlePrices} className='border border-[#d4d4d4] px-4 py-2 rounded-full flex items-center gap-2 text-sm'>
                         <span>Prices</span> <IoIosArrowDown size={15} />
                     </button>
 
