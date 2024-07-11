@@ -1,243 +1,70 @@
-import React, { useState } from 'react';
-import { FaHeart, FaRegHeart } from 'react-icons/fa6';
-import { Lipstick } from '../../../assets/assets';
+import React, { useState } from 'react'
+// import { Lipstick } from '../../../assets/assets'
+import productDetails from './ProductListItemData'
+import { FaHeart, FaRegHeart, FaStar } from 'react-icons/fa6';
+import { Link } from 'react-router-dom';
 
-const CardItem = () => {
+
+const CardItem = ({ item }) => {
+
     const [currentPage, setCurrentPage] = useState(1);
-    const [liked, setLiked] = useState(false);
-
-    const [images, setImages] = useState([
-        {
-            src: Lipstick,
-            alt: 'image',
-            text: 'Moisture Matte Long Stay Lipstick - 2g | Pink Lemonade',
-            rating: 4,
-            price: 500,
-            discount: 30,
-            //   hearted: true,
-            stars: [true, true, true, true, false],
-        },
-        {
-            src: Lipstick,
-            alt: 'image',
-            text: 'Moisture Matte Long Stay Lipstick - 2g | Pink Lemonade',
-            rating: 5,
-            price: 400,
-            discount: 20,
-            //   hearted: false,
-            stars: [true, true, true, true, true],
-        },
-        {
-            src: Lipstick,
-            alt: 'image',
-            text: 'Moisture Matte Long Stay Lipstick - 2g | Pink Lemonade',
-            rating: 4,
-            price: 500,
-            discount: 30,
-            stars: [true, true, true, true, false],
-        },
-        {
-            src: Lipstick,
-            alt: 'image',
-            text: 'Moisture Matte Long Stay Lipstick - 2g | Pink Lemonade',
-            rating: 5,
-            price: 400,
-            discount: 20,
-            stars: [true, true, true, true, true],
-        },
-        {
-            src: Lipstick,
-            alt: 'image',
-            text: 'Moisture Matte Long Stay Lipstick - 2g | Pink Lemonade',
-            rating: 4,
-            price: 500,
-            discount: 30,
-            stars: [true, true, true, true, false],
-        },
-        {
-            src: Lipstick,
-            alt: 'image',
-            text: 'Moisture Matte Long Stay Lipstick - 2g | Pink Lemonade',
-            rating: 5,
-            price: 400,
-            discount: 20,
-            stars: [true, true, true, true, true],
-        },
-        {
-            src: Lipstick,
-            alt: 'image',
-            text: 'Moisture Matte Long Stay Lipstick - 2g | Pink Lemonade',
-            rating: 4,
-            price: 500,
-            discount: 30,
-            stars: [true, true, true, true, false],
-        },
-        {
-            src: Lipstick,
-            alt: 'image',
-            text: 'Moisture Matte Long Stay Lipstick - 2g | Pink Lemonade',
-            rating: 3,
-            price: 400,
-            discount: 20,
-            stars: [true, true, true, false, false],
-        },
-        {
-            src: Lipstick,
-            alt: 'image',
-            text: 'Moisture Matte Long Stay Lipstick - 2g | Pink Lemonade',
-            rating: 4,
-            price: 500,
-            discount: 30,
-            stars: [true, true, true, true, false],
-        },
-        {
-            src: Lipstick,
-            alt: 'image',
-            text: 'Moisture Matte Long Stay Lipstick - 2g | Pink Lemonade',
-            rating: 5,
-            price: 400,
-            discount: 20,
-            stars: [true, true, true, true, true],
-        },
-        {
-            src: Lipstick,
-            alt: 'image',
-            text: 'Moisture Matte Long Stay Lipstick - 2g | Pink Lemonade',
-            rating: 4,
-            price: 500,
-            discount: 30,
-            stars: [true, true, true, true, false],
-        },
-        {
-            src: Lipstick,
-            alt: 'image',
-            text: 'Moisture Matte Long Stay Lipstick - 2g | Pink Lemonade',
-            rating: 1,
-            price: 400,
-            discount: 20,
-            stars: [true, false, false, false],
-        },
-        {
-            src: Lipstick,
-            alt: 'image',
-            text: 'Moisture Matte Long Stay Lipstick - 2g | Pink Lemonade',
-            rating: 1,
-            price: 400,
-            discount: 20,
-            stars: [true, false, false, false],
-        },
-        {
-            src: Lipstick,
-            alt: 'image',
-            text: 'Moisture Matte Long Stay Lipstick - 2g | Pink Lemonade',
-            rating: 1,
-            price: 400,
-            discount: 20,
-            stars: [true, false, false, false],
-        },
-        {
-            src: Lipstick,
-            alt: 'image',
-            text: 'Moisture Matte Long Stay Lipstick - 2g | Pink Lemonade',
-            rating: 1,
-            price: 400,
-            discount: 20,
-            stars: [true, false, false, false],
-        },
-        {
-            src: Lipstick,
-            alt: 'image',
-            text: 'Moisture Matte Long Stay Lipstick - 2g | Pink Lemonade',
-            rating: 1,
-            price: 400,
-            discount: 20,
-            stars: [true, false, false, false],
-        },
-        {
-            src: Lipstick,
-            alt: 'image',
-            text: 'Moisture Matte Long Stay Lipstick - 2g | Pink Lemonade',
-            rating: 1,
-            price: 400,
-            discount: 20,
-            stars: [true, false, false, false],
-        },
-        {
-            src: Lipstick,
-            alt: 'image',
-            text: 'Moisture Matte Long Stay Lipstick - 2g | Pink Lemonade',
-            rating: 1,
-            price: 400,
-            discount: 20,
-            stars: [true, false, false, false],
-        },
-        // add more blocks here to increase no. of elements in the page
-    ]);
+    const lastPage = Math.ceil(item.length / 12)
+    const [likedCards, setLikedCards] = useState({});
 
     const handlePageChange = (page) => {
         setCurrentPage(page);
     };
 
-    const handleLike = (index) => {
-        const newImages = [...images];
-        newImages[index].liked = !newImages[index].liked;
-        setImages(newImages);
+    const handleLike = (id) => {
+        setLikedCards((prevLikedCards) => ({ ...prevLikedCards, [id]: !prevLikedCards[id] }));
     };
 
     const renderImages = () => {
-        const startIndex = (currentPage - 1) * 9;
-        const endIndex = startIndex + 9;
-        const currentPageImages = images.slice(startIndex, endIndex);
+        const startIndex = (currentPage - 1) * 12;
+        const endIndex = startIndex + 12;
+        const currentPageImages = item.slice(startIndex, endIndex);
         return (
-            <div className="grid grid-cols-2 gap-4 px-4 lg:grid-cols-3">
-                {currentPageImages.map((image, index) => (
-                    <div key={index} className="">
-                        <div className="m-auto mt-4 rounded-2xl h-60 md:h-fit">
-                            <img src={image.src} alt={image.alt} className="m-auto w-full h-full md:h-[30rem] object-cover" />
-                        </div>
-                        <p className="text-left text-[0.8rem] font-semibold my-2 mx-0 md:m-4 md:text-[20px]">{image.text}</p>
-                        <div className="flex md:mb-4 md:ml-4">
-                            <div className="star icon text-white">
-                                {[...Array(5)].map((_, i) => (
-                                    <span
-                                        key={i}
-                                        className={`fa fa-star${image.stars[i] ? ' checked text-[#ffa200] ' : '-o text-white'} w-4 h-4 `}
-                                    />
-                                ))}
+            <div className='grid gap-x-4 gap-y-8 grid-cols-[repeat(2,_0.6fr)] md:gap-x-6 md:grid-cols-[repeat(3,_0.6fr)] xl:grid-cols-[repeat(4,_0.6fr)]'>
+                {currentPageImages.map((p) => {
+                    return <div key={p.id} className=''>
+                        <Link to={'/products'} className="group relative mb-2 block md:h-80 overflow-hidden rounded-lg bg-gray-100 lg:mb-3">
+                            <img src={p.image} alt='image' className="h-full w-full object-center transition duration-200 group-hover:scale-110" />
+
+                            <div className="absolute left-0 top-0 right-0 px-3 py-1.5 flex items-center justify-between text-white">
+                                <p className=" text-[0.5rem] text-rose-500 bg-white px-2 rounded-full lg:text-[1rem]" > {p.discount} </p>
+                                <div className='text-[25px] text-rose-600 bg-white p-2 rounded-full' onClick={() => handleLike(p.id)}>
+                                    {likedCards[p.id] ? <FaHeart /> : <FaRegHeart />}
+
+                                </div>
                             </div>
-                            <div>
-                                <p className="ml-4 text-sm md:text-base">{image.rating}/<span className="text-[#00000077] text-sm md:text-base">5</span></p>
+                        </Link>
+
+                        <div className='relative h-36 md:h-32'>
+                            <a href="#" className="hover:text-gray-800 tracking-tighter mb-1 transition duration-100 font-semibold text-[0.8rem] lg:text-lg">{p.name} - {p.category} - {p.shade} - {p.material} - {p.brands}</a>
+                            <div className='flex items-center'>
+                                <div className="text-[#ffa200] flex items-center">
+                                    <FaStar />
+                                    <FaStar />
+                                    <FaStar />
+                                    <FaStar />
+                                </div>
+                                <p className='ml-5'>{p.rating} / <span className='text-[#00000077]'>5</span></p>
+                            </div>
+                            <div className="flex items-end justify-between gap-2 absolute bottom-0 lg:-bottom-2 left-0 right-0">
+                                <span className="font-semibold text-[1rem] md:text-base lg:text-lg">₹ {p.price}</span>
+                                <button className='bg-rose-600 text-white md:w-[120px] rounded-full text-[0.8rem] px-2 py-1 md:p-1 lg:text-base'>Add To Cart</button>
                             </div>
                         </div>
-                        <div className="flex items-center justify-between mt-2 md:ml-4">
-                            <p className="text-[1rem] mt-[6px] font-medium md:text-[20px]">Rs {image.price}</p>
-                            <button className="bg-rose-200 text-black font-semibold text-[0.7rem] w-[100px] p-2 rounded-full md:w-[140px] md:text-[1rem]">
-                                Add To Cart
-                            </button>
-                        </div>
-                        {image.discount > 0 && (
-                            <div>
-                                <p className="text-[15px] text-rose-500 absolute top-12 left-6 bg-white p-1 px-4 rounded-full max-md:text-[8px] max-md:top-[72px] max-md:left-5 max-md:px-3">
-                                    {image.discount}% off
-                                </p>
-                            </div>
-                        )}
-                        <div>
-                            <span
-                                className={`text-[25px] max-md:text-[10px] max-md:top-[72px] max-md:right-5 text-rose-600 absolute top-12 right-6 bg-white p-2 rounded-full`}
-                                onClick={() => handleLike(index)}
-                            >
-                                {image.liked ? (<FaHeart />) : (<FaRegHeart />)}
-                            </span>
-                        </div>
+
                     </div>
-                ))}
+                })}
             </div>
         );
     };
 
+
     return (
-        <div>
+        <div className='w-full m-4'>
             {renderImages()}
             <div className="flex my-10 items-center justify-around">
 
@@ -249,10 +76,10 @@ const CardItem = () => {
                 </button>
 
                 <p className=" text-[20px] mt-1">
-                    {currentPage} of 3
+                    {currentPage} of {lastPage}
                 </p>
 
-                <button className="border p-2 px-12 border-gray-400 rounded-xl max-sm:px-4 flex" onClick={() => handlePageChange(currentPage + 1)} disabled={currentPage === 3}>
+                <button className="border p-2 px-12 border-gray-400 rounded-xl max-sm:px-4 flex" onClick={() => handlePageChange(currentPage + 1)} disabled={currentPage === lastPage}>
                     Next
                     <svg className="h-6 w-6 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
@@ -260,9 +87,8 @@ const CardItem = () => {
                 </button>
 
             </div>
-
         </div>
-    );
+    )
 }
 
-export default CardItem;
+export default CardItem

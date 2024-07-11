@@ -341,49 +341,49 @@ const Navbar = () => {
           </div>
           <div className="navbar-links flex gap-10 justify-center w-[100%] ">
             <Link
-              className="text-[#333] p-2 rounded-[0.4rem] hover:text-rose-700"
+              className="text-[#333] font-semibold p-2 rounded-[0.4rem] hover:text-rose-700"
               to="/"
             >
               Makeup
             </Link>
             <Link
-              className="text-[#333] p-2 rounded-[0.4rem] hover:text-rose-700"
+              className="text-[#333] font-semibold p-2 rounded-[0.4rem] hover:text-rose-700"
               to="/"
             >
               Skin
             </Link>
             <Link
-              className="text-[#333] p-2 rounded-[0.4rem] hover:text-rose-700"
+              className="text-[#333] font-semibold p-2 rounded-[0.4rem] hover:text-rose-700"
               to="/"
             >
               Hair Care
             </Link>
             <Link
-              className="text-[#333] p-2 rounded-[0.4rem] hover:text-rose-700"
+              className="text-[#333] font-semibold p-2 rounded-[0.4rem] hover:text-rose-700"
               to="/"
             >
               Nail Care
             </Link>
             <Link
-              className="text-[#333] p-2 rounded-[0.4rem] hover:text-rose-700"
+              className="text-[#333] font-semibold p-2 rounded-[0.4rem] hover:text-rose-700"
               to="/"
             >
               Body Care
             </Link>
             <Link
-              className="text-[#333] p-2 rounded-[0.4rem] hover:text-rose-700"
+              className="text-[#333] font-semibold p-2 rounded-[0.4rem] hover:text-rose-700"
               to="/"
             >
               Tools and Accessories
             </Link>
             <Link
-              className="text-[#333] p-2 rounded-[0.4rem] hover:text-rose-700"
+              className="text-[#333] font-semibold p-2 rounded-[0.4rem] hover:text-rose-700"
               to="/"
             >
               Beauty Advice
             </Link>
             <Link
-              className="nav-link text-[#333] p-2 rounded-[0.4rem] hover:text-rose-700"
+              className="nav-link text-[#333] font-semibold p-2 rounded-[0.4rem] hover:text-rose-700"
               to="/products"
             >
               Categories
